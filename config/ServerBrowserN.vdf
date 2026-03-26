@@ -1,0 +1,167 @@
+"Filters"
+{
+	"history"
+	{
+		"1"
+		{
+			"name"		"172.23.176.1:27015"
+			"Players"		"0"
+			"maxplayers"		"0"
+			"lastplayed"		"1738753885"
+			"address"		"172.23.176.1:27015"
+		}
+		"2"
+		{
+			"name"		"ZM.CS2.RO -=[Zombie Crown XP Mode]=-"
+			"gamedir"		"cstrike"
+			"Players"		"22"
+			"maxplayers"		"32"
+			"map"		"zm_snowbase3"
+			"lastplayed"		"1738987807"
+			"address"		"188.212.102.182:27015"
+		}
+		"3"
+		{
+			"name"		"CS WaRzOnE Server"
+			"gamedir"		"cstrike"
+			"Players"		"3"
+			"maxplayers"		"24"
+			"map"		"zm_foda"
+			"lastplayed"		"1738816362"
+			"address"		"172.25.208.1:27015"
+		}
+		"4"
+		{
+			"name"		"172.20.208.1:27015"
+			"Players"		"0"
+			"maxplayers"		"0"
+			"lastplayed"		"1738862836"
+			"address"		"172.20.208.1:27015"
+		}
+		"5"
+		{
+			"name"		"172.23.0.1:27015"
+			"Players"		"0"
+			"maxplayers"		"0"
+			"lastplayed"		"1738876222"
+			"address"		"172.23.0.1:27015"
+		}
+		"6"
+		{
+			"name"		"172.31.240.1:27015"
+			"Players"		"0"
+			"maxplayers"		"0"
+			"lastplayed"		"1739116524"
+			"address"		"172.31.240.1:27015"
+		}
+		"7"
+		{
+			"name"		"172.22.160.1:27015"
+			"Players"		"0"
+			"maxplayers"		"0"
+			"lastplayed"		"1739114512"
+			"address"		"172.22.160.1:27015"
+		}
+		"8"
+		{
+			"name"		"172.30.224.1:12346"
+			"Players"		"0"
+			"maxplayers"		"0"
+			"lastplayed"		"1739506415"
+			"address"		"172.30.224.1:12346"
+		}
+		"9"
+		{
+			"name"		"172.19.16.1:27015"
+			"Players"		"0"
+			"maxplayers"		"0"
+			"lastplayed"		"1739635849"
+			"address"		"172.19.16.1:27015"
+		}
+		"10"
+		{
+			"name"		"192.168.32.1:27015"
+			"Players"		"0"
+			"maxplayers"		"0"
+			"lastplayed"		"1739940404"
+			"address"		"192.168.32.1:27015"
+		}
+		"11"
+		{
+			"name"		"172.29.48.1:27015"
+			"Players"		"0"
+			"maxplayers"		"0"
+			"lastplayed"		"1743171522"
+			"address"		"172.29.48.1:27015"
+		}
+		"12"
+		{
+			"name"		"172.22.224.1:27015"
+			"Players"		"0"
+			"maxplayers"		"0"
+			"lastplayed"		"1743469960"
+			"address"		"172.22.224.1:27015"
+		}
+		"13"
+		{
+			"name"		"192.168.100.62:27015"
+			"Players"		"0"
+			"maxplayers"		"0"
+			"lastplayed"		"1774512712"
+			"address"		"192.168.100.62:27015"
+		}
+	}
+	"gamelist"		"internet"
+	"favorites"
+	{
+		"1"
+		{
+			"name"		"zm.lseplay.com | Zombie Crown XP Mode v11.2 | Free VIP 22-08"
+			"gamedir"		"cstrike"
+			"Players"		"7"
+			"maxplayers"		"32"
+			"map"		"zm_2day_2"
+			"address"		"94.23.167.126:27015"
+		}
+	}
+	"Filters"
+	{
+		"InternetGames"
+		{
+			"game"		"cstrike"
+			"ping"		"0"
+			"location"		"0"
+			"NoFull"		"0"
+			"NoEmpty"		"0"
+			"NoPassword"		"0"
+			"NoBoost"		"0"
+		}
+		"FavoriteGames"
+		{
+			"game"		"cstrike"
+			"ping"		"0"
+			"NoFull"		"0"
+			"NoEmpty"		"0"
+			"NoPassword"		"0"
+			"NoBoost"		"0"
+		}
+		"LanGames"
+		{
+			"game"		"cstrike"
+			"ping"		"0"
+			"NoFull"		"0"
+			"NoEmpty"		"0"
+			"NoPassword"		"0"
+			"NoBoost"		"0"
+		}
+		"HistoryGames"
+		{
+			"game"		"cstrike"
+			"ping"		"0"
+			"NoFull"		"0"
+			"NoEmpty"		"0"
+			"NoPassword"		"0"
+			"NoBoost"		"0"
+		}
+	}
+}

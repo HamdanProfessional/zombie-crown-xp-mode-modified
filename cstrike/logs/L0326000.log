@@ -1,0 +1,45 @@
+L 03/26/2026 - 12:57:26: Log file started (file "logs\L0326000.log") (game "cstrike") (version "48/1.1.2.6/4554")
+L 03/26/2026 - 12:57:26: [META] Metamod v1.21p37  2013/05/30
+L 03/26/2026 - 12:57:26: [META] by Will Day
+L 03/26/2026 - 12:57:26: [META]    http://www.metamod.org/
+L 03/26/2026 - 12:57:26: [META]  Patch: Metamod-P (mm-p) v37
+L 03/26/2026 - 12:57:26: [META]  by Jussi Kivilinna
+L 03/26/2026 - 12:57:26: [META]     http://metamod-p.sourceforge.net/
+L 03/26/2026 - 12:57:26: [META] compiled: May 30 2013, 11:41:14 EET (optimized)
+L 03/26/2026 - 12:57:26: [META] Recognized game 'cstrike'; using dllfile 'mp.dll'
+L 03/26/2026 - 12:57:26: [META] Game DLL for 'Counter-Strike' loaded successfully
+L 03/26/2026 - 12:57:26: [META] ini: Begin reading plugins list: e:/zombie crown xp mode/counter-strike warzone/cstrike/addons/metamod/plugins.ini
+L 03/26/2026 - 12:57:26: [META] ini: Read plugin config for: <dproto.dll>
+L 03/26/2026 - 12:57:26: [META] ini: Read plugin config for: <amxmodx_mm.dll>
+L 03/26/2026 - 12:57:26: [META] ini: Read plugin config for: <podbot_mm.dll>
+L 03/26/2026 - 12:57:26: [META] ini: Finished reading plugins list: e:/zombie crown xp mode/counter-strike warzone/cstrike/addons/metamod/plugins.ini; Found 3 plugins to load
+L 03/26/2026 - 12:57:26: [META] dll: Loading plugins...
+L 03/26/2026 - 12:57:26: [DPROTO]: Loading config './cstrike/dproto.cfg'
+L 03/26/2026 - 12:57:26: [DPROTO]:  LoggingMode = 0
+L 03/26/2026 - 12:57:26: [DPROTO]: Config sucessfully loaded.
+L 03/26/2026 - 12:57:26: [DPROTO]: Done.
+L 03/26/2026 - 12:57:26: [META] dll: Loaded plugin 'dproto_EF': dproto_EF v0.9.356 2013-11-09, Crock
+L 03/26/2026 - 12:57:26: [META] dll: Loaded plugin 'MySQL': MySQL v1.8.2 Feb 14 2013, AMX Mod X Dev Team
+L 03/26/2026 - 12:57:26: [META] dll: Loaded plugin 'SQLite': SQLite v1.8.2 Feb 14 2013, AMX Mod X Dev Team
+L 03/26/2026 - 12:57:26: [META] dll: Loaded plugin 'Fun': Fun v1.8.2 Feb 14 2013, AMX Mod X Dev Team
+L 03/26/2026 - 12:57:26: [META] dll: Loaded plugin 'Engine': Engine v1.8.2 Feb 14 2013, AMX Mod X Dev Team
+L 03/26/2026 - 12:57:26: [META] dll: Loaded plugin 'FakeMeta': FakeMeta v1.8.2 Feb 14 2013, AMX Mod X Dev Team
+L 03/26/2026 - 12:57:26: [META] dll: Loaded plugin 'Ham Sandwich': Ham Sandwich v1.8.2 Feb 14 2013, AMX Mod X Dev Team
+L 03/26/2026 - 12:57:26: [META] dll: Loaded plugin 'AMX Mod X': AMX Mod X v1.8.2 Feb 14 2013, AMX Mod X Dev Team
+L 03/26/2026 - 12:57:26: [PODBOTMM] POD-Bot mm: plugin attaching
+L 03/26/2026 - 12:57:26: Server cvar "pb_version" = "V3B21"
+L 03/26/2026 - 12:57:26: [META] dll: Loaded plugin 'POD-Bot mm': POD-Bot mm vV3B21 Jun 13 2010, Count Floyd & Bots United
+L 03/26/2026 - 12:57:26: [META] WARNING: dll: Not loading plugin 'MySQL'; already loaded (status=running)
+L 03/26/2026 - 12:57:26: [META] WARNING: dll: Failed to load plugin 'mysql_amxx.dll'
+L 03/26/2026 - 12:57:26: [META] WARNING: dll: Not loading plugin 'SQLite'; already loaded (status=running)
+L 03/26/2026 - 12:57:26: [META] WARNING: dll: Failed to load plugin 'sqlite_amxx.dll'
+L 03/26/2026 - 12:57:26: [META] WARNING: dll: Not loading plugin 'Fun'; already loaded (status=running)
+L 03/26/2026 - 12:57:26: [META] WARNING: dll: Failed to load plugin 'fun_amxx.dll'
+L 03/26/2026 - 12:57:26: [META] WARNING: dll: Not loading plugin 'Engine'; already loaded (status=running)
+L 03/26/2026 - 12:57:26: [META] WARNING: dll: Failed to load plugin 'engine_amxx.dll'
+L 03/26/2026 - 12:57:26: [META] WARNING: dll: Not loading plugin 'FakeMeta'; already loaded (status=running)
+L 03/26/2026 - 12:57:26: [META] WARNING: dll: Failed to load plugin 'fakemeta_amxx.dll'
+L 03/26/2026 - 12:57:26: [META] WARNING: dll: Not loading plugin 'Ham Sandwich'; already loaded (status=running)
+L 03/26/2026 - 12:57:26: [META] WARNING: dll: Failed to load plugin 'hamsandwich_amxx.dll'
+L 03/26/2026 - 12:57:26: [META] dll: Finished loading 3 plugins
+L 03/26/2026 - 12:57:26: Log file closed

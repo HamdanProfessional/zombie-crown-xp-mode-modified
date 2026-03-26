@@ -1,0 +1,69 @@
+L 02/09/2025 - 20:55:52: -------- Mapchange to zm_foda --------
+L 02/09/2025 - 20:55:52: [AMXX] Plugin "zc_flash.amxx" failed to load: Plugin uses an unknown function (name "zp_get_user_zombie") - check your modules.ini.
+L 02/09/2025 - 20:55:52: [AMXX] Plugin "40_licker.amxx" failed to load: Plugin uses an unknown function (name "zp_get_user_zombie") - check your modules.ini.
+L 02/09/2025 - 20:56:20: -------- Mapchange to zm_fox --------
+L 02/09/2025 - 20:56:20: [AMXX] Plugin "zc_flash.amxx" failed to load: Plugin uses an unknown function (name "zp_get_user_zombie") - check your modules.ini.
+L 02/09/2025 - 20:56:20: [AMXX] Plugin "40_licker.amxx" failed to load: Plugin uses an unknown function (name "zp_get_user_zombie") - check your modules.ini.
+L 02/09/2025 - 20:57:29: -------- Mapchange to zm_foda --------
+L 02/09/2025 - 20:57:29: [CSX] Could not load csstats file: cstrike\
+L 02/09/2025 - 20:57:31: [zc_mode.amxx] sus become VIP. (SteamID: "STEAM_0:0:1861371078") (IP: "loopback") (Flags: "abcde")
+L 02/09/2025 - 20:57:31: [admin.amxx] Login: "sus<6><STEAM_0:0:1861371078><>" became an admin (account "sus") (access "abcdefghijklmnopqrstuvwxz") (address "loopback")
+L 02/09/2025 - 20:57:32: [admin.amxx] Login: "sus<6><STEAM_0:0:1861371078><>" became an admin (account "sus") (access "abcdefghijklmnopqrstuvwxz") (address "loopback")
+L 02/09/2025 - 21:01:17: -------- Mapchange to zm_foda --------
+L 02/09/2025 - 21:01:18: [zc_mode.amxx] sus become VIP. (SteamID: "STEAM_0:0:1861371078") (IP: "loopback") (Flags: "abcde")
+L 02/09/2025 - 21:01:18: [admin.amxx] Login: "sus<7><STEAM_0:0:1861371078><>" became an admin (account "sus") (access "abcdefghijklmnopqrstuvwxz") (address "loopback")
+L 02/09/2025 - 21:01:19: [admin.amxx] Login: "sus<7><STEAM_0:0:1861371078><>" became an admin (account "sus") (access "abcdefghijklmnopqrstuvwxz") (address "loopback")
+L 02/09/2025 - 21:04:01: -------- Mapchange to zm_foda --------
+L 02/09/2025 - 21:04:02: [zc_mode.amxx] sus become VIP. (SteamID: "STEAM_0:0:1861371078") (IP: "loopback") (Flags: "abcde")
+L 02/09/2025 - 21:04:02: [admin.amxx] Login: "sus<13><STEAM_0:0:1861371078><>" became an admin (account "sus") (access "abcdefghijklmnopqrstuvwxz") (address "loopback")
+L 02/09/2025 - 21:04:04: [admin.amxx] Login: "sus<13><STEAM_0:0:1861371078><>" became an admin (account "sus") (access "abcdefghijklmnopqrstuvwxz") (address "loopback")
+L 02/09/2025 - 21:24:08: -------- Mapchange to zm_foda --------
+L 02/09/2025 - 21:24:43: -------- Mapchange to zm_foda --------
+L 02/09/2025 - 21:24:43: [CSX] Could not load csstats file: cstrike\
+L 02/09/2025 - 21:24:45: [zc_mode.amxx] sus become VIP. (SteamID: "STEAM_0:0:1861371078") (IP: "loopback") (Flags: "abcde")
+L 02/09/2025 - 21:24:45: [admin.amxx] Login: "sus<1><STEAM_0:0:1861371078><>" became an admin (account "sus") (access "abcdefghijklmnopqrstuvwxz") (address "loopback")
+L 02/09/2025 - 21:24:46: [admin.amxx] Login: "sus<1><STEAM_0:0:1861371078><>" became an admin (account "sus") (access "abcdefghijklmnopqrstuvwxz") (address "loopback")
+L 02/09/2025 - 21:54:13: [zc_mapchooser.amxx] Vote: Voting for the nextmap started
+L 02/09/2025 - 21:54:26: [zc_mapchooser.amxx] Timeleft expired. The map will be changed in few seconds ...
+L 02/09/2025 - 21:54:29: [zc_mapchooser.amxx] Vote: Voting for the nextmap finished. The nextmap will be zm_3rooms
+L 02/09/2025 - 21:54:50: -------- Mapchange to zm_foda --------
+L 02/09/2025 - 21:54:52: [zc_mode.amxx] sus become VIP. (SteamID: "STEAM_0:0:1861371078") (IP: "loopback") (Flags: "abcde")
+L 02/09/2025 - 21:54:52: [admin.amxx] Login: "sus<7><STEAM_0:0:1861371078><>" became an admin (account "sus") (access "abcdefghijklmnopqrstuvwxz") (address "loopback")
+L 02/09/2025 - 21:54:54: [admin.amxx] Login: "sus<7><STEAM_0:0:1861371078><>" became an admin (account "sus") (access "abcdefghijklmnopqrstuvwxz") (address "loopback")
+L 02/09/2025 - 22:02:39: -------- Mapchange to zm_foda --------
+L 02/09/2025 - 22:02:41: [zc_mode.amxx] sus become VIP. (SteamID: "STEAM_0:0:1861371078") (IP: "loopback") (Flags: "abcde")
+L 02/09/2025 - 22:02:41: [admin.amxx] Login: "sus<13><STEAM_0:0:1861371078><>" became an admin (account "sus") (access "abcdefghijklmnopqrstuvwxz") (address "loopback")
+L 02/09/2025 - 22:02:42: [admin.amxx] Login: "sus<13><STEAM_0:0:1861371078><>" became an admin (account "sus") (access "abcdefghijklmnopqrstuvwxz") (address "loopback")
+L 02/09/2025 - 19:39:17: -------- Mapchange to zm_foda --------
+L 02/09/2025 - 19:39:17: [CSX] Could not load csstats file: cstrike\
+L 02/09/2025 - 19:39:29: [zc_mode.amxx] sus become VIP. (SteamID: "STEAM_0:0:1861371078") (IP: "loopback") (Flags: "abcde")
+L 02/09/2025 - 19:39:29: [admin.amxx] Login: "sus<1><STEAM_0:0:1861371078><>" became an admin (account "sus") (access "abcdefghijklmnopqrstuvwxz") (address "loopback")
+L 02/09/2025 - 19:39:33: [admin.amxx] Login: "sus<1><STEAM_0:0:1861371078><>" became an admin (account "sus") (access "abcdefghijklmnopqrstuvwxz") (address "loopback")
+L 02/09/2025 - 19:46:41: -------- Mapchange to zm_foda --------
+L 02/09/2025 - 19:46:42: [zc_mode.amxx] sus become VIP. (SteamID: "STEAM_0:0:1861371078") (IP: "loopback") (Flags: "abcde")
+L 02/09/2025 - 19:46:42: [admin.amxx] Login: "sus<7><STEAM_0:0:1861371078><>" became an admin (account "sus") (access "abcdefghijklmnopqrstuvwxz") (address "loopback")
+L 02/09/2025 - 19:46:44: [admin.amxx] Login: "sus<7><STEAM_0:0:1861371078><>" became an admin (account "sus") (access "abcdefghijklmnopqrstuvwxz") (address "loopback")
+L 02/09/2025 - 19:55:50: -------- Mapchange to zm_foda --------
+L 02/09/2025 - 19:55:51: [zc_mode.amxx] sus become VIP. (SteamID: "STEAM_0:0:1861371078") (IP: "loopback") (Flags: "abcde")
+L 02/09/2025 - 19:55:51: [admin.amxx] Login: "sus<13><STEAM_0:0:1861371078><>" became an admin (account "sus") (access "abcdefghijklmnopqrstuvwxz") (address "loopback")
+L 02/09/2025 - 19:55:53: [admin.amxx] Login: "sus<13><STEAM_0:0:1861371078><>" became an admin (account "sus") (access "abcdefghijklmnopqrstuvwxz") (address "loopback")
+L 02/09/2025 - 19:56:57: -------- Mapchange to zm_foda --------
+L 02/09/2025 - 19:56:58: [zc_mode.amxx] sus become VIP. (SteamID: "STEAM_0:0:1861371078") (IP: "loopback") (Flags: "abcde")
+L 02/09/2025 - 19:56:58: [admin.amxx] Login: "sus<19><STEAM_0:0:1861371078><>" became an admin (account "sus") (access "abcdefghijklmnopqrstuvwxz") (address "loopback")
+L 02/09/2025 - 19:56:59: [admin.amxx] Login: "sus<19><STEAM_0:0:1861371078><>" became an admin (account "sus") (access "abcdefghijklmnopqrstuvwxz") (address "loopback")
+L 02/09/2025 - 20:07:17: -------- Mapchange to zm_foda --------
+L 02/09/2025 - 20:07:19: [zc_mode.amxx] sus become VIP. (SteamID: "STEAM_0:0:1861371078") (IP: "loopback") (Flags: "abcde")
+L 02/09/2025 - 20:07:19: [admin.amxx] Login: "sus<25><STEAM_0:0:1861371078><>" became an admin (account "sus") (access "abcdefghijklmnopqrstuvwxz") (address "loopback")
+L 02/09/2025 - 20:07:20: [admin.amxx] Login: "sus<25><STEAM_0:0:1861371078><>" became an admin (account "sus") (access "abcdefghijklmnopqrstuvwxz") (address "loopback")
+L 02/09/2025 - 20:11:16: -------- Mapchange to zm_foda --------
+L 02/09/2025 - 20:11:18: [zc_mode.amxx] sus become VIP. (SteamID: "STEAM_0:0:1861371078") (IP: "loopback") (Flags: "abcde")
+L 02/09/2025 - 20:11:18: [admin.amxx] Login: "sus<31><STEAM_0:0:1861371078><>" became an admin (account "sus") (access "abcdefghijklmnopqrstuvwxz") (address "loopback")
+L 02/09/2025 - 20:11:20: [admin.amxx] Login: "sus<31><STEAM_0:0:1861371078><>" became an admin (account "sus") (access "abcdefghijklmnopqrstuvwxz") (address "loopback")
+L 02/09/2025 - 20:15:55: -------- Mapchange to zm_foda --------
+L 02/09/2025 - 20:15:56: [zc_mode.amxx] sus become VIP. (SteamID: "STEAM_0:0:1861371078") (IP: "loopback") (Flags: "abcde")
+L 02/09/2025 - 20:15:56: [admin.amxx] Login: "sus<37><STEAM_0:0:1861371078><>" became an admin (account "sus") (access "abcdefghijklmnopqrstuvwxz") (address "loopback")
+L 02/09/2025 - 20:15:57: [admin.amxx] Login: "sus<37><STEAM_0:0:1861371078><>" became an admin (account "sus") (access "abcdefghijklmnopqrstuvwxz") (address "loopback")
+L 02/09/2025 - 20:21:48: -------- Mapchange to zm_foda --------
+L 02/09/2025 - 20:21:50: [zc_mode.amxx] sus become VIP. (SteamID: "STEAM_0:0:1861371078") (IP: "loopback") (Flags: "abcde")
+L 02/09/2025 - 20:21:50: [admin.amxx] Login: "sus<43><STEAM_0:0:1861371078><>" became an admin (account "sus") (access "abcdefghijklmnopqrstuvwxz") (address "loopback")
+L 02/09/2025 - 20:21:52: [admin.amxx] Login: "sus<43><STEAM_0:0:1861371078><>" became an admin (account "sus") (access "abcdefghijklmnopqrstuvwxz") (address "loopback")

@@ -1,0 +1,9 @@
+maps/ZM_STRIKE_2k18.res
+maps/ZM_STRIKE_2k18.bsp
+maps/ZM_STRIKE_2k18.txt
+gfx/env/TrainYardBk.tga
+gfx/env/TrainYardDn.tga
+gfx/env/TrainYardFt.tga
+gfx/env/TrainYardLf.tga
+gfx/env/TrainYardRt.tga
+gfx/env/TrainYardUp.tga

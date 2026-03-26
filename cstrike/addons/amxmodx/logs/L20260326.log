@@ -1,0 +1,101 @@
+L 03/26/2026 - 11:01:54: -------- Mapchange to zm_foda --------
+L 03/26/2026 - 11:01:54: [CSX] Could not load csstats file: cstrike\
+L 03/26/2026 - 11:02:04: [zc_mode.amxx] sus become VIP. (SteamID: "STEAM_0:0:1144780358") (IP: "loopback") (Flags: "abcde")
+L 03/26/2026 - 11:02:04: [admin.amxx] Login: "sus<1><STEAM_0:0:1144780358><>" became an admin (account "sus") (access "abcdefghijklmnopqrstuvwxz") (address "loopback")
+L 03/26/2026 - 11:02:08: [admin.amxx] Login: "sus<1><STEAM_0:0:1144780358><>" became an admin (account "sus") (access "abcdefghijklmnopqrstuvwxz") (address "loopback")
+L 03/26/2026 - 11:19:59: [zc_mapchooser.amxx] Vote: Voting for the nextmap started
+L 03/26/2026 - 11:20:06: [zc_mapchooser.amxx] Timeleft expired. The map will be changed in few seconds ...
+L 03/26/2026 - 12:57:26: -------- Mapchange to de_dust2 --------
+L 03/26/2026 - 12:57:26: [CSX] Could not load csstats file: cstrike\
+L 03/26/2026 - 13:03:47: -------- Mapchange to de_dust2 --------
+L 03/26/2026 - 13:03:47: [CSX] Could not load csstats file: cstrike\
+L 03/26/2026 - 13:03:47: [zc_kill_effects.amxx] [ZC Kill Effects] zbeam/beam.spr not found, using flare6.spr
+L 03/26/2026 - 13:03:47: [zc_kill_effects.amxx] [ZC Kill Effects] Sprites precached successfully
+L 03/26/2026 - 13:03:49: [zc_achievements.amxx] [ZC Achievements] No achievements loaded, creating defaults...
+L 03/26/2026 - 13:03:49: [zc_achievements.amxx] [ZC Achievements] Created 4 default achievements
+L 03/26/2026 - 13:03:49: [zc_achievements.amxx] [ZC Achievements] Loaded 4 achievements
+L 03/26/2026 - 13:03:49: [zc_prestige.amxx] [ZC Prestige] Creating default perks...
+L 03/26/2026 - 13:03:49: [zc_prestige.amxx] [ZC Prestige] Created 4 default perks
+L 03/26/2026 - 13:03:49: [zc_prestige.amxx] [ZC Prestige] System initialized with 4 perks
+L 03/26/2026 - 13:03:49: [zc_daily_challenges.amxx] [ZC Daily Challenges] Creating default templates...
+L 03/26/2026 - 13:03:49: [zc_daily_challenges.amxx] [ZC Daily Challenges] Created 6 default templates
+L 03/26/2026 - 13:03:49: [zc_daily_challenges.amxx] [ZC Daily Challenges] Loaded 6 challenge templates
+L 03/26/2026 - 13:03:49: [zc_kill_effects.amxx] [ZC Kill Effects] Creating default effects...
+L 03/26/2026 - 13:03:49: [zc_kill_effects.amxx] [ZC Kill Effects] Created 3 default effects
+L 03/26/2026 - 13:03:49: [zc_kill_effects.amxx] [ZC Kill Effects] Loaded 3 effects
+L 03/26/2026 - 13:03:51: [zc_player_profiles.amxx] [ZC Profiles] Failed to create table: Can't connect to MySQL server on '127.0.0.1' (10061)
+L 03/26/2026 - 13:03:53: [zc_player_profiles.amxx] [ZC Profiles] Failed to create table: Can't connect to MySQL server on '127.0.0.1' (10061)
+L 03/26/2026 - 13:03:56: [zc_achievements.amxx] [ZC Achievements] Failed to create table: Can't connect to MySQL server on '127.0.0.1' (10061)
+L 03/26/2026 - 13:03:58: [zc_achievements.amxx] [ZC Achievements] Failed to create table: Can't connect to MySQL server on '127.0.0.1' (10061)
+L 03/26/2026 - 13:03:59: [zc_leaderboard.amxx] [ZC Leaderboards] Initial cache refresh complete
+L 03/26/2026 - 13:04:00: [zc_daily_challenges.amxx] [ZC Daily Challenges] Failed to create table: Can't connect to MySQL server on '127.0.0.1' (10061)
+L 03/26/2026 - 13:04:02: [zc_daily_challenges.amxx] [ZC Daily Challenges] Failed to create table: Can't connect to MySQL server on '127.0.0.1' (10061)
+L 03/26/2026 - 13:04:05: [zc_leaderboard.amxx] [ZC Leaderboards] Failed to refresh Highest Level leaderboard: Can't connect to MySQL server on '127.0.0.1' (10061)
+L 03/26/2026 - 13:04:07: [zc_leaderboard.amxx] [ZC Leaderboards] Failed to refresh Total XP leaderboard: Can't connect to MySQL server on '127.0.0.1' (10061)
+L 03/26/2026 - 13:04:09: [zc_leaderboard.amxx] [ZC Leaderboards] Failed to refresh Total Kills leaderboard: Can't connect to MySQL server on '127.0.0.1' (10061)
+L 03/26/2026 - 13:04:12: [zc_leaderboard.amxx] [ZC Leaderboards] Failed to refresh Total Infections leaderboard: Can't connect to MySQL server on '127.0.0.1' (10061)
+L 03/26/2026 - 13:04:14: [zc_leaderboard.amxx] [ZC Leaderboards] Failed to refresh Playtime leaderboard: Can't connect to MySQL server on '127.0.0.1' (10061)
+L 03/26/2026 - 13:04:16: [zc_leaderboard.amxx] [ZC Leaderboards] Failed to refresh Prestige Level leaderboard: Can't connect to MySQL server on '127.0.0.1' (10061)
+L 03/26/2026 - 13:04:18: [zc_leaderboard.amxx] [ZC Leaderboards] Failed to refresh Total Coins leaderboard: Can't connect to MySQL server on '127.0.0.1' (10061)
+L 03/26/2026 - 13:04:23: [zc_player_profiles.amxx] [ZC Profiles] Failed to load profile for player 1: Can't connect to MySQL server on '127.0.0.1' (10061)
+L 03/26/2026 - 13:04:25: [zc_achievements.amxx] [ZC Achievements] Failed to load achievements for player 1: Can't connect to MySQL server on '127.0.0.1' (10061)
+L 03/26/2026 - 13:04:28: [zc_player_profiles.amxx] [ZC Profiles] Failed to load profile for player 2: Can't connect to MySQL server on '127.0.0.1' (10061)
+L 03/26/2026 - 13:04:30: [zc_achievements.amxx] [ZC Achievements] Failed to load achievements for player 2: Can't connect to MySQL server on '127.0.0.1' (10061)
+L 03/26/2026 - 13:04:32: [zc_player_profiles.amxx] [ZC Profiles] Failed to load profile for player 3: Can't connect to MySQL server on '127.0.0.1' (10061)
+L 03/26/2026 - 13:04:34: [zc_achievements.amxx] [ZC Achievements] Failed to load achievements for player 3: Can't connect to MySQL server on '127.0.0.1' (10061)
+L 03/26/2026 - 13:04:37: [zc_player_profiles.amxx] [ZC Profiles] Failed to load profile for player 4: Can't connect to MySQL server on '127.0.0.1' (10061)
+L 03/26/2026 - 13:04:39: [zc_achievements.amxx] [ZC Achievements] Failed to load achievements for player 4: Can't connect to MySQL server on '127.0.0.1' (10061)
+L 03/26/2026 - 13:04:41: [zc_player_profiles.amxx] [ZC Profiles] Failed to load profile for player 5: Can't connect to MySQL server on '127.0.0.1' (10061)
+L 03/26/2026 - 13:04:44: [zc_achievements.amxx] [ZC Achievements] Failed to load achievements for player 5: Can't connect to MySQL server on '127.0.0.1' (10061)
+L 03/26/2026 - 13:04:46: [zc_player_profiles.amxx] [ZC Profiles] Failed to create new profile for player 1: Can't connect to MySQL server on '127.0.0.1' (10061)
+L 03/26/2026 - 13:11:47: -------- Mapchange to zm_foda --------
+L 03/26/2026 - 13:11:47: [CSX] Could not load csstats file: cstrike\
+L 03/26/2026 - 13:11:47: [zc_kill_effects.amxx] [ZC Kill Effects] zbeam/beam.spr not found, using flare6.spr
+L 03/26/2026 - 13:11:47: [zc_kill_effects.amxx] [ZC Kill Effects] Sprites precached successfully
+L 03/26/2026 - 13:11:49: [zc_achievements.amxx] [ZC Achievements] No achievements loaded, creating defaults...
+L 03/26/2026 - 13:11:49: [zc_achievements.amxx] [ZC Achievements] Created 4 default achievements
+L 03/26/2026 - 13:11:49: [zc_achievements.amxx] [ZC Achievements] Loaded 4 achievements
+L 03/26/2026 - 13:11:49: [zc_prestige.amxx] [ZC Prestige] Creating default perks...
+L 03/26/2026 - 13:11:49: [zc_prestige.amxx] [ZC Prestige] Created 4 default perks
+L 03/26/2026 - 13:11:49: [zc_prestige.amxx] [ZC Prestige] System initialized with 4 perks
+L 03/26/2026 - 13:11:49: [zc_daily_challenges.amxx] [ZC Daily Challenges] Creating default templates...
+L 03/26/2026 - 13:11:49: [zc_daily_challenges.amxx] [ZC Daily Challenges] Created 6 default templates
+L 03/26/2026 - 13:11:49: [zc_daily_challenges.amxx] [ZC Daily Challenges] Loaded 6 challenge templates
+L 03/26/2026 - 13:11:49: [zc_kill_effects.amxx] [ZC Kill Effects] Creating default effects...
+L 03/26/2026 - 13:11:49: [zc_kill_effects.amxx] [ZC Kill Effects] Created 3 default effects
+L 03/26/2026 - 13:11:49: [zc_kill_effects.amxx] [ZC Kill Effects] Loaded 3 effects
+L 03/26/2026 - 13:11:50: [zc_mode.amxx] sus become VIP. (SteamID: "STEAM_0:0:1144780358") (IP: "loopback") (Flags: "abcde")
+L 03/26/2026 - 13:11:50: [admin.amxx] Login: "sus<1><STEAM_0:0:1144780358><>" became an admin (account "sus") (access "abcdefghijklmnopqrstuvwxz") (address "loopback")
+L 03/26/2026 - 13:11:51: [zc_player_profiles.amxx] [ZC Profiles] Failed to create table: Can't connect to MySQL server on '127.0.0.1' (10061)
+L 03/26/2026 - 13:11:52: [admin.amxx] Login: "sus<1><STEAM_0:0:1144780358><>" became an admin (account "sus") (access "abcdefghijklmnopqrstuvwxz") (address "loopback")
+L 03/26/2026 - 13:11:54: [zc_player_profiles.amxx] [ZC Profiles] Failed to create table: Can't connect to MySQL server on '127.0.0.1' (10061)
+L 03/26/2026 - 13:11:56: [zc_achievements.amxx] [ZC Achievements] Failed to create table: Can't connect to MySQL server on '127.0.0.1' (10061)
+L 03/26/2026 - 13:11:58: [zc_achievements.amxx] [ZC Achievements] Failed to create table: Can't connect to MySQL server on '127.0.0.1' (10061)
+L 03/26/2026 - 13:12:00: [zc_leaderboard.amxx] [ZC Leaderboards] Initial cache refresh complete
+L 03/26/2026 - 13:12:01: [zc_daily_challenges.amxx] [ZC Daily Challenges] Failed to create table: Can't connect to MySQL server on '127.0.0.1' (10061)
+L 03/26/2026 - 13:12:03: [zc_daily_challenges.amxx] [ZC Daily Challenges] Failed to create table: Can't connect to MySQL server on '127.0.0.1' (10061)
+L 03/26/2026 - 13:12:05: [zc_player_profiles.amxx] [ZC Profiles] Failed to load profile for player 1: Can't connect to MySQL server on '127.0.0.1' (10061)
+L 03/26/2026 - 13:12:07: [zc_achievements.amxx] [ZC Achievements] Failed to load achievements for player 1: Can't connect to MySQL server on '127.0.0.1' (10061)
+L 03/26/2026 - 13:12:10: [zc_leaderboard.amxx] [ZC Leaderboards] Failed to refresh Highest Level leaderboard: Can't connect to MySQL server on '127.0.0.1' (10061)
+L 03/26/2026 - 13:12:12: [zc_leaderboard.amxx] [ZC Leaderboards] Failed to refresh Total XP leaderboard: Can't connect to MySQL server on '127.0.0.1' (10061)
+L 03/26/2026 - 13:12:14: [zc_leaderboard.amxx] [ZC Leaderboards] Failed to refresh Total Kills leaderboard: Can't connect to MySQL server on '127.0.0.1' (10061)
+L 03/26/2026 - 13:12:17: [zc_leaderboard.amxx] [ZC Leaderboards] Failed to refresh Total Infections leaderboard: Can't connect to MySQL server on '127.0.0.1' (10061)
+L 03/26/2026 - 13:12:19: [zc_leaderboard.amxx] [ZC Leaderboards] Failed to refresh Playtime leaderboard: Can't connect to MySQL server on '127.0.0.1' (10061)
+L 03/26/2026 - 13:12:21: [zc_leaderboard.amxx] [ZC Leaderboards] Failed to refresh Prestige Level leaderboard: Can't connect to MySQL server on '127.0.0.1' (10061)
+L 03/26/2026 - 13:12:23: [zc_leaderboard.amxx] [ZC Leaderboards] Failed to refresh Total Coins leaderboard: Can't connect to MySQL server on '127.0.0.1' (10061)
+L 03/26/2026 - 13:12:28: [zc_player_profiles.amxx] [ZC Profiles] Failed to load profile for player 2: Can't connect to MySQL server on '127.0.0.1' (10061)
+L 03/26/2026 - 13:12:30: [zc_achievements.amxx] [ZC Achievements] Failed to load achievements for player 2: Can't connect to MySQL server on '127.0.0.1' (10061)
+L 03/26/2026 - 13:12:33: [zc_player_profiles.amxx] [ZC Profiles] Failed to load profile for player 3: Can't connect to MySQL server on '127.0.0.1' (10061)
+L 03/26/2026 - 13:12:35: [zc_achievements.amxx] [ZC Achievements] Failed to load achievements for player 3: Can't connect to MySQL server on '127.0.0.1' (10061)
+L 03/26/2026 - 13:12:38: [zc_player_profiles.amxx] [ZC Profiles] Failed to load profile for player 4: Can't connect to MySQL server on '127.0.0.1' (10061)
+L 03/26/2026 - 13:12:40: [zc_achievements.amxx] [ZC Achievements] Failed to load achievements for player 4: Can't connect to MySQL server on '127.0.0.1' (10061)
+L 03/26/2026 - 13:12:42: [zc_player_profiles.amxx] [ZC Profiles] Failed to load profile for player 5: Can't connect to MySQL server on '127.0.0.1' (10061)
+L 03/26/2026 - 13:12:45: [zc_achievements.amxx] [ZC Achievements] Failed to load achievements for player 5: Can't connect to MySQL server on '127.0.0.1' (10061)
+L 03/26/2026 - 13:12:47: [zc_player_profiles.amxx] [ZC Profiles] Failed to create new profile for player 1: Can't connect to MySQL server on '127.0.0.1' (10061)
+L 03/26/2026 - 13:12:49: [zc_player_profiles.amxx] [ZC Profiles] Failed to load profile for player 6: Can't connect to MySQL server on '127.0.0.1' (10061)
+L 03/26/2026 - 13:12:52: [zc_achievements.amxx] [ZC Achievements] Failed to load achievements for player 6: Can't connect to MySQL server on '127.0.0.1' (10061)
+L 03/26/2026 - 13:12:54: [zc_player_profiles.amxx] [ZC Profiles] Failed to create new profile for player 2: Can't connect to MySQL server on '127.0.0.1' (10061)
+L 03/26/2026 - 13:12:56: [zc_player_profiles.amxx] [ZC Profiles] Failed to create new profile for player 3: Can't connect to MySQL server on '127.0.0.1' (10061)
+L 03/26/2026 - 13:12:58: [zc_player_profiles.amxx] [ZC Profiles] Failed to create new profile for player 4: Can't connect to MySQL server on '127.0.0.1' (10061)
+L 03/26/2026 - 13:13:01: [zc_player_profiles.amxx] [ZC Profiles] Failed to create new profile for player 5: Can't connect to MySQL server on '127.0.0.1' (10061)
+L 03/26/2026 - 13:13:03: [zc_player_profiles.amxx] [ZC Profiles] Failed to create new profile for player 6: Can't connect to MySQL server on '127.0.0.1' (10061)

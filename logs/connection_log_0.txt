@@ -1,0 +1,6 @@
+
+
+[2025-02-14 09:10:16][0,0] : Log session started
+[2025-02-14 09:10:16][0,0] : SetSteamID( [A:1:0:0] )
+[2025-02-14 09:10:16][1,2] : Connect() starting connection (eNetQOSLevelLow, 69.28.145.170:27017, UDP)
+[2025-02-14 09:10:21][1,2] : ConnectFailed('Connection Failed') (69.28.145.170:27017, UDP)

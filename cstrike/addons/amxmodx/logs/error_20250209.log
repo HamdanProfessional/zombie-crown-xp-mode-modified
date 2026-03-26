@@ -1,0 +1,534 @@
+L 02/09/2025 - 20:55:52: Start of error session.
+L 02/09/2025 - 20:55:52: Info (map "zm_foda") (file "addons/amxmodx/logs/error_20250209.log")
+L 02/09/2025 - 20:55:52: [AMXX] Plugin file open error (plugin "admin.amxx")
+L 02/09/2025 - 20:55:52: [AMXX] Plugin file open error (plugin "admincmd.amxx")
+L 02/09/2025 - 20:55:52: [AMXX] Plugin file open error (plugin "adminhelp.amxx")
+L 02/09/2025 - 20:55:52: [AMXX] Plugin file open error (plugin "menufront.amxx")
+L 02/09/2025 - 20:55:52: [AMXX] Plugin file open error (plugin "multilingual.amxx")
+L 02/09/2025 - 20:55:52: [AMXX] Plugin file open error (plugin "cmdmenu.amxx")
+L 02/09/2025 - 20:55:52: [AMXX] Plugin file open error (plugin "plmenu.amxx")
+L 02/09/2025 - 20:55:52: [AMXX] Plugin file open error (plugin "mapsmenu.amxx")
+L 02/09/2025 - 20:55:52: [AMXX] Plugin file open error (plugin "pluginmenu.amxx")
+L 02/09/2025 - 20:55:52: [AMXX] Plugin file open error (plugin "adminchat.amxx")
+L 02/09/2025 - 20:55:52: [AMXX] Plugin file open error (plugin "antiflood.amxx")
+L 02/09/2025 - 20:55:52: [AMXX] Plugin file open error (plugin "imessage.amxx")
+L 02/09/2025 - 20:55:52: [AMXX] Plugin file open error (plugin "adminvote.amxx")
+L 02/09/2025 - 20:55:52: [AMXX] Plugin file open error (plugin "nextmap.amxx")
+L 02/09/2025 - 20:55:52: [AMXX] Plugin file open error (plugin "zc_mapchooser.amxx")
+L 02/09/2025 - 20:55:52: [AMXX] Plugin file open error (plugin "pausecfg.amxx")
+L 02/09/2025 - 20:55:52: [AMXX] Plugin file open error (plugin "zc_statsnew.amxx")
+L 02/09/2025 - 20:55:52: [AMXX] Plugin file open error (plugin "stats_logging.amxx")
+L 02/09/2025 - 20:55:52: [AMXX] Plugin file open error (plugin "statscfg.amxx")
+L 02/09/2025 - 20:55:52: [AMXX] Plugin file open error (plugin "miscstats.amxx")
+L 02/09/2025 - 20:55:52: [AMXX] Plugin file open error (plugin "zc_precachex.amxx")
+L 02/09/2025 - 20:55:52: [AMXX] Plugin file open error (plugin "amx_who.amxx")
+L 02/09/2025 - 20:55:52: [AMXX] Plugin file open error (plugin "AutoJoin.amxx")
+L 02/09/2025 - 20:55:52: [AMXX] Plugin file open error (plugin "zc_specbots.amxx")
+L 02/09/2025 - 20:55:52: [AMXX] Plugin file open error (plugin "zc_nickfunc.amxx")
+L 02/09/2025 - 20:55:52: [AMXX] Plugin file open error (plugin "zc_functions.amxx")
+L 02/09/2025 - 20:55:52: [AMXX] Plugin file open error (plugin "zc_tags.amxx")
+L 02/09/2025 - 20:55:52: [AMXX] Plugin file open error (plugin "zc_pingfaker.amxx")
+L 02/09/2025 - 20:55:52: [AMXX] Plugin file open error (plugin "zc_fuckoff.amxx")
+L 02/09/2025 - 20:55:52: [AMXX] Plugin file open error (plugin "zc_mode.amxx")
+L 02/09/2025 - 20:55:52: [AMXX] Plugin file open error (plugin "zc_resetwpn.amxx")
+L 02/09/2025 - 20:55:52: [AMXX] Plugin file open error (plugin "zc_supply.amxx")
+L 02/09/2025 - 20:55:52: [AMXX] Plugin file open error (plugin "zc_coord.amxx")
+L 02/09/2025 - 20:55:52: [AMXX] Plugin file open error (plugin "zc_crystal.amxx")
+L 02/09/2025 - 20:55:52: [AMXX] Plugin file open error (plugin "zc_guillotine.amxx")
+L 02/09/2025 - 20:55:52: [AMXX] Plugin file open error (plugin "zc_coilgun.amxx")
+L 02/09/2025 - 20:55:52: [AMXX] Plugin file open error (plugin "zc_janus5.amxx")
+L 02/09/2025 - 20:55:52: [AMXX] Plugin file open error (plugin "zc_cannon.amxx")
+L 02/09/2025 - 20:55:52: [AMXX] Plugin file open error (plugin "zc_humans.amxx")
+L 02/09/2025 - 20:55:52: [AMXX] Plugin file open error (plugin "1_classic.amxx")
+L 02/09/2025 - 20:55:52: [AMXX] Plugin file open error (plugin "4_bunnyzm.amxx")
+L 02/09/2025 - 20:55:52: [AMXX] Plugin file open error (plugin "8_houndeye.amxx")
+L 02/09/2025 - 20:55:52: [AMXX] Plugin file open error (plugin "12_warlock.amxx")
+L 02/09/2025 - 20:55:52: [AMXX] Plugin file open error (plugin "16_thermal.amxx")
+L 02/09/2025 - 20:55:52: [AMXX] Plugin file open error (plugin "20_doom.amxx")
+L 02/09/2025 - 20:55:52: [AMXX] Plugin file open error (plugin "24_lockers.amxx")
+L 02/09/2025 - 20:55:52: [AMXX] Plugin file open error (plugin "28_camouflage.amxx")
+L 02/09/2025 - 20:55:52: [AMXX] Plugin file open error (plugin "32_deimos.amxx")
+L 02/09/2025 - 20:55:52: [AMXX] Plugin file open error (plugin "36_ghost.amxx")
+L 02/09/2025 - 20:55:52: [AMXX] Plugin file open error (plugin "44_hunterzm.amxx")
+L 02/09/2025 - 20:55:52: [AMXX] Plugin file open error (plugin "48_tank.amxx")
+L 02/09/2025 - 20:55:52: [AMXX] Plugin file open error (plugin "52_jumper.amxx")
+L 02/09/2025 - 20:55:52: [AMXX] Plugin file open error (plugin "56_smoker.amxx")
+L 02/09/2025 - 20:55:52: [AMXX] Plugin file open error (plugin "60_siren.amxx")
+L 02/09/2025 - 20:55:52: [AMXX] Plugin file open error (plugin "64_blink.amxx")
+L 02/09/2025 - 20:55:52: [AMXX] Plugin file open error (plugin "67_revenant.amxx")
+L 02/09/2025 - 20:55:52: [AMXX] Plugin file open error (plugin "70_fleshpound.amxx")
+L 02/09/2025 - 20:55:52: [AMXX] Plugin file open error (plugin "74_spitter.amxx")
+L 02/09/2025 - 20:55:52: [AMXX] Plugin file open error (plugin "78_cereberus.amxx")
+L 02/09/2025 - 20:55:52: [AMXX] Plugin file open error (plugin "82_suicide.amxx")
+L 02/09/2025 - 20:55:52: [AMXX] Plugin file open error (plugin "86_crow.amxx")
+L 02/09/2025 - 20:55:52: [AMXX] Plugin file open error (plugin "89_boomer.amxx")
+L 02/09/2025 - 20:55:52: [AMXX] Plugin file open error (plugin "93_exec.amxx")
+L 02/09/2025 - 20:55:52: [AMXX] Plugin file open error (plugin "97_irichol.amxx")
+L 02/09/2025 - 20:55:52: [AMXX] Plugin file open error (plugin "100_bop.amxx")
+L 02/09/2025 - 20:55:52: [AMXX] Plugin file open error (plugin "zc_harmor.amxx")
+L 02/09/2025 - 20:55:52: [AMXX] Plugin file open error (plugin "zc_tryder.amxx")
+L 02/09/2025 - 20:55:52: [AMXX] Plugin file open error (plugin "zc_unlimitedclip.amxx")
+L 02/09/2025 - 20:55:52: [AMXX] Plugin file open error (plugin "zc_unlimitedclip_map.amxx")
+L 02/09/2025 - 20:55:52: [AMXX] Plugin file open error (plugin "zc_norecoil.amxx")
+L 02/09/2025 - 20:55:52: [AMXX] Plugin file open error (plugin "zc_jetpack.amxx")
+L 02/09/2025 - 20:55:52: [AMXX] Plugin file open error (plugin "zc_knifeb.amxx")
+L 02/09/2025 - 20:55:52: [AMXX] Plugin file open error (plugin "zc_m16.amxx")
+L 02/09/2025 - 20:55:52: [AMXX] Plugin file open error (plugin "zc_gasmask.amxx")
+L 02/09/2025 - 20:55:52: [AMXX] Plugin file open error (plugin "zc_stripbomb.amxx")
+L 02/09/2025 - 20:55:52: [AMXX] Plugin file open error (plugin "zc_tripmine.amxx")
+L 02/09/2025 - 20:55:52: [AMXX] Plugin file open error (plugin "zc_tmpdragon.amxx")
+L 02/09/2025 - 20:55:52: [AMXX] Plugin file open error (plugin "zc_heavyzg.amxx")
+L 02/09/2025 - 20:55:52: [AMXX] Plugin file open error (plugin "zc_gdeagle.amxx")
+L 02/09/2025 - 20:55:52: [AMXX] Plugin file open error (plugin "zc_bombmask.amxx")
+L 02/09/2025 - 20:55:52: [AMXX] Plugin file open error (plugin "zc_supermask.amxx")
+L 02/09/2025 - 20:55:52: [AMXX] Plugin file open error (plugin "zc_bladeimpact.amxx")
+L 02/09/2025 - 20:55:52: [AMXX] Plugin file open error (plugin "zc_dualinfinity.amxx")
+L 02/09/2025 - 20:55:52: [AMXX] Plugin file open error (plugin "zc_silver_ak.amxx")
+L 02/09/2025 - 20:55:52: [AMXX] Plugin file open error (plugin "zc_diamond_ak.amxx")
+L 02/09/2025 - 20:55:52: [AMXX] Plugin file open error (plugin "zc_member_diamond_m4.amxx")
+L 02/09/2025 - 20:55:52: [AMXX] Plugin file open error (plugin "zc_member_silver_m4.amxx")
+L 02/09/2025 - 20:55:52: [AMXX] Plugin file open error (plugin "zc_minigun.amxx")
+L 02/09/2025 - 20:55:52: [AMXX] Plugin file open error (plugin "zc_brickpeace.amxx")
+L 02/09/2025 - 20:55:52: [AMXX] Plugin file open error (plugin "zc_air_burster.amxx")
+L 02/09/2025 - 20:55:52: [AMXX] Plugin file open error (plugin "zc_member_armor.amxx")
+L 02/09/2025 - 20:55:52: [AMXX] Plugin file open error (plugin "zc_member_blindbmb.amxx")
+L 02/09/2025 - 20:55:52: [AMXX] Plugin file open error (plugin "zc_member_killbmb.amxx")
+L 02/09/2025 - 20:55:52: [AMXX] Plugin file open error (plugin "zc_member_at4cs.amxx")
+L 02/09/2025 - 20:55:52: [AMXX] Plugin file open error (plugin "zc_member_ak47.amxx")
+L 02/09/2025 - 20:55:52: [AMXX] Plugin file open error (plugin "zc_member_concbomb.amxx")
+L 02/09/2025 - 20:55:52: [AMXX] Plugin file open error (plugin "zc_member_eth.amxx")
+L 02/09/2025 - 20:55:52: [AMXX] Plugin file open error (plugin "zc_member_blaster.amxx")
+L 02/09/2025 - 20:55:52: [AMXX] Plugin file open error (plugin "zc_member_gm4a1.amxx")
+L 02/09/2025 - 20:55:52: [AMXX] Plugin file open error (plugin "zc_member_plasma.amxx")
+L 02/09/2025 - 20:55:52: [AMXX] Plugin file open error (plugin "zc_member_watergun.amxx")
+L 02/09/2025 - 20:55:52: [AMXX] Plugin file open error (plugin "zc_member_janus11.amxx")
+L 02/09/2025 - 20:55:52: [AMXX] Plugin file open error (plugin "zc_member_rustler.amxx")
+L 02/09/2025 - 20:55:52: [AMXX] Plugin file open error (plugin "zc_member_gak47.amxx")
+L 02/09/2025 - 20:55:52: [AMXX] Plugin file open error (plugin "zc_member_augcrow2.amxx")
+L 02/09/2025 - 20:55:52: [AMXX] Plugin file open error (plugin "zc_blockradio.amxx")
+L 02/09/2025 - 20:55:52: [AMXX] Plugin file open error (plugin "bullet_damage.amxx")
+L 02/09/2025 - 20:55:52: [AMXX] Plugin file open error (plugin "zc_get.amxx")
+L 02/09/2025 - 20:55:52: [AMXX] Plugin file open error (plugin "zc_mission.amxx")
+L 02/09/2025 - 20:55:52: [AMXX] Plugin file open error (plugin "zc_random_legend.amxx")
+L 02/09/2025 - 20:55:52: [AMXX] Plugin file open error (plugin "zc_aiminfo.amxx")
+L 02/09/2025 - 20:56:20: Start of error session.
+L 02/09/2025 - 20:56:20: Info (map "zm_fox") (file "addons/amxmodx/logs/error_20250209.log")
+L 02/09/2025 - 20:56:20: [AMXX] Plugin file open error (plugin "admin.amxx")
+L 02/09/2025 - 20:56:20: [AMXX] Plugin file open error (plugin "admincmd.amxx")
+L 02/09/2025 - 20:56:20: [AMXX] Plugin file open error (plugin "adminhelp.amxx")
+L 02/09/2025 - 20:56:20: [AMXX] Plugin file open error (plugin "menufront.amxx")
+L 02/09/2025 - 20:56:20: [AMXX] Plugin file open error (plugin "multilingual.amxx")
+L 02/09/2025 - 20:56:20: [AMXX] Plugin file open error (plugin "cmdmenu.amxx")
+L 02/09/2025 - 20:56:20: [AMXX] Plugin file open error (plugin "plmenu.amxx")
+L 02/09/2025 - 20:56:20: [AMXX] Plugin file open error (plugin "mapsmenu.amxx")
+L 02/09/2025 - 20:56:20: [AMXX] Plugin file open error (plugin "pluginmenu.amxx")
+L 02/09/2025 - 20:56:20: [AMXX] Plugin file open error (plugin "adminchat.amxx")
+L 02/09/2025 - 20:56:20: [AMXX] Plugin file open error (plugin "antiflood.amxx")
+L 02/09/2025 - 20:56:20: [AMXX] Plugin file open error (plugin "imessage.amxx")
+L 02/09/2025 - 20:56:20: [AMXX] Plugin file open error (plugin "adminvote.amxx")
+L 02/09/2025 - 20:56:20: [AMXX] Plugin file open error (plugin "nextmap.amxx")
+L 02/09/2025 - 20:56:20: [AMXX] Plugin file open error (plugin "zc_mapchooser.amxx")
+L 02/09/2025 - 20:56:20: [AMXX] Plugin file open error (plugin "pausecfg.amxx")
+L 02/09/2025 - 20:56:20: [AMXX] Plugin file open error (plugin "zc_statsnew.amxx")
+L 02/09/2025 - 20:56:20: [AMXX] Plugin file open error (plugin "stats_logging.amxx")
+L 02/09/2025 - 20:56:20: [AMXX] Plugin file open error (plugin "statscfg.amxx")
+L 02/09/2025 - 20:56:20: [AMXX] Plugin file open error (plugin "miscstats.amxx")
+L 02/09/2025 - 20:56:20: [AMXX] Plugin file open error (plugin "zc_precachex.amxx")
+L 02/09/2025 - 20:56:20: [AMXX] Plugin file open error (plugin "amx_who.amxx")
+L 02/09/2025 - 20:56:20: [AMXX] Plugin file open error (plugin "AutoJoin.amxx")
+L 02/09/2025 - 20:56:20: [AMXX] Plugin file open error (plugin "zc_specbots.amxx")
+L 02/09/2025 - 20:56:20: [AMXX] Plugin file open error (plugin "zc_nickfunc.amxx")
+L 02/09/2025 - 20:56:20: [AMXX] Plugin file open error (plugin "zc_functions.amxx")
+L 02/09/2025 - 20:56:20: [AMXX] Plugin file open error (plugin "zc_tags.amxx")
+L 02/09/2025 - 20:56:20: [AMXX] Plugin file open error (plugin "zc_pingfaker.amxx")
+L 02/09/2025 - 20:56:20: [AMXX] Plugin file open error (plugin "zc_fuckoff.amxx")
+L 02/09/2025 - 20:56:20: [AMXX] Plugin file open error (plugin "zc_mode.amxx")
+L 02/09/2025 - 20:56:20: [AMXX] Plugin file open error (plugin "zc_resetwpn.amxx")
+L 02/09/2025 - 20:56:20: [AMXX] Plugin file open error (plugin "zc_supply.amxx")
+L 02/09/2025 - 20:56:20: [AMXX] Plugin file open error (plugin "zc_coord.amxx")
+L 02/09/2025 - 20:56:20: [AMXX] Plugin file open error (plugin "zc_crystal.amxx")
+L 02/09/2025 - 20:56:20: [AMXX] Plugin file open error (plugin "zc_guillotine.amxx")
+L 02/09/2025 - 20:56:20: [AMXX] Plugin file open error (plugin "zc_coilgun.amxx")
+L 02/09/2025 - 20:56:20: [AMXX] Plugin file open error (plugin "zc_janus5.amxx")
+L 02/09/2025 - 20:56:20: [AMXX] Plugin file open error (plugin "zc_cannon.amxx")
+L 02/09/2025 - 20:56:20: [AMXX] Plugin file open error (plugin "zc_humans.amxx")
+L 02/09/2025 - 20:56:20: [AMXX] Plugin file open error (plugin "1_classic.amxx")
+L 02/09/2025 - 20:56:20: [AMXX] Plugin file open error (plugin "4_bunnyzm.amxx")
+L 02/09/2025 - 20:56:20: [AMXX] Plugin file open error (plugin "8_houndeye.amxx")
+L 02/09/2025 - 20:56:20: [AMXX] Plugin file open error (plugin "12_warlock.amxx")
+L 02/09/2025 - 20:56:20: [AMXX] Plugin file open error (plugin "16_thermal.amxx")
+L 02/09/2025 - 20:56:20: [AMXX] Plugin file open error (plugin "20_doom.amxx")
+L 02/09/2025 - 20:56:20: [AMXX] Plugin file open error (plugin "24_lockers.amxx")
+L 02/09/2025 - 20:56:20: [AMXX] Plugin file open error (plugin "28_camouflage.amxx")
+L 02/09/2025 - 20:56:20: [AMXX] Plugin file open error (plugin "32_deimos.amxx")
+L 02/09/2025 - 20:56:20: [AMXX] Plugin file open error (plugin "36_ghost.amxx")
+L 02/09/2025 - 20:56:20: [AMXX] Plugin file open error (plugin "44_hunterzm.amxx")
+L 02/09/2025 - 20:56:20: [AMXX] Plugin file open error (plugin "48_tank.amxx")
+L 02/09/2025 - 20:56:20: [AMXX] Plugin file open error (plugin "52_jumper.amxx")
+L 02/09/2025 - 20:56:20: [AMXX] Plugin file open error (plugin "56_smoker.amxx")
+L 02/09/2025 - 20:56:20: [AMXX] Plugin file open error (plugin "60_siren.amxx")
+L 02/09/2025 - 20:56:20: [AMXX] Plugin file open error (plugin "64_blink.amxx")
+L 02/09/2025 - 20:56:20: [AMXX] Plugin file open error (plugin "67_revenant.amxx")
+L 02/09/2025 - 20:56:20: [AMXX] Plugin file open error (plugin "70_fleshpound.amxx")
+L 02/09/2025 - 20:56:20: [AMXX] Plugin file open error (plugin "74_spitter.amxx")
+L 02/09/2025 - 20:56:20: [AMXX] Plugin file open error (plugin "78_cereberus.amxx")
+L 02/09/2025 - 20:56:20: [AMXX] Plugin file open error (plugin "82_suicide.amxx")
+L 02/09/2025 - 20:56:20: [AMXX] Plugin file open error (plugin "86_crow.amxx")
+L 02/09/2025 - 20:56:20: [AMXX] Plugin file open error (plugin "89_boomer.amxx")
+L 02/09/2025 - 20:56:20: [AMXX] Plugin file open error (plugin "93_exec.amxx")
+L 02/09/2025 - 20:56:20: [AMXX] Plugin file open error (plugin "97_irichol.amxx")
+L 02/09/2025 - 20:56:20: [AMXX] Plugin file open error (plugin "100_bop.amxx")
+L 02/09/2025 - 20:56:20: [AMXX] Plugin file open error (plugin "zc_harmor.amxx")
+L 02/09/2025 - 20:56:20: [AMXX] Plugin file open error (plugin "zc_tryder.amxx")
+L 02/09/2025 - 20:56:20: [AMXX] Plugin file open error (plugin "zc_unlimitedclip.amxx")
+L 02/09/2025 - 20:56:20: [AMXX] Plugin file open error (plugin "zc_unlimitedclip_map.amxx")
+L 02/09/2025 - 20:56:20: [AMXX] Plugin file open error (plugin "zc_norecoil.amxx")
+L 02/09/2025 - 20:56:20: [AMXX] Plugin file open error (plugin "zc_jetpack.amxx")
+L 02/09/2025 - 20:56:20: [AMXX] Plugin file open error (plugin "zc_knifeb.amxx")
+L 02/09/2025 - 20:56:20: [AMXX] Plugin file open error (plugin "zc_m16.amxx")
+L 02/09/2025 - 20:56:20: [AMXX] Plugin file open error (plugin "zc_gasmask.amxx")
+L 02/09/2025 - 20:56:20: [AMXX] Plugin file open error (plugin "zc_stripbomb.amxx")
+L 02/09/2025 - 20:56:20: [AMXX] Plugin file open error (plugin "zc_tripmine.amxx")
+L 02/09/2025 - 20:56:20: [AMXX] Plugin file open error (plugin "zc_tmpdragon.amxx")
+L 02/09/2025 - 20:56:20: [AMXX] Plugin file open error (plugin "zc_heavyzg.amxx")
+L 02/09/2025 - 20:56:20: [AMXX] Plugin file open error (plugin "zc_gdeagle.amxx")
+L 02/09/2025 - 20:56:20: [AMXX] Plugin file open error (plugin "zc_bombmask.amxx")
+L 02/09/2025 - 20:56:20: [AMXX] Plugin file open error (plugin "zc_supermask.amxx")
+L 02/09/2025 - 20:56:20: [AMXX] Plugin file open error (plugin "zc_bladeimpact.amxx")
+L 02/09/2025 - 20:56:20: [AMXX] Plugin file open error (plugin "zc_dualinfinity.amxx")
+L 02/09/2025 - 20:56:20: [AMXX] Plugin file open error (plugin "zc_silver_ak.amxx")
+L 02/09/2025 - 20:56:20: [AMXX] Plugin file open error (plugin "zc_diamond_ak.amxx")
+L 02/09/2025 - 20:56:20: [AMXX] Plugin file open error (plugin "zc_member_diamond_m4.amxx")
+L 02/09/2025 - 20:56:20: [AMXX] Plugin file open error (plugin "zc_member_silver_m4.amxx")
+L 02/09/2025 - 20:56:20: [AMXX] Plugin file open error (plugin "zc_minigun.amxx")
+L 02/09/2025 - 20:56:20: [AMXX] Plugin file open error (plugin "zc_brickpeace.amxx")
+L 02/09/2025 - 20:56:20: [AMXX] Plugin file open error (plugin "zc_air_burster.amxx")
+L 02/09/2025 - 20:56:20: [AMXX] Plugin file open error (plugin "zc_member_armor.amxx")
+L 02/09/2025 - 20:56:20: [AMXX] Plugin file open error (plugin "zc_member_blindbmb.amxx")
+L 02/09/2025 - 20:56:20: [AMXX] Plugin file open error (plugin "zc_member_killbmb.amxx")
+L 02/09/2025 - 20:56:20: [AMXX] Plugin file open error (plugin "zc_member_at4cs.amxx")
+L 02/09/2025 - 20:56:20: [AMXX] Plugin file open error (plugin "zc_member_ak47.amxx")
+L 02/09/2025 - 20:56:20: [AMXX] Plugin file open error (plugin "zc_member_concbomb.amxx")
+L 02/09/2025 - 20:56:20: [AMXX] Plugin file open error (plugin "zc_member_eth.amxx")
+L 02/09/2025 - 20:56:20: [AMXX] Plugin file open error (plugin "zc_member_blaster.amxx")
+L 02/09/2025 - 20:56:20: [AMXX] Plugin file open error (plugin "zc_member_gm4a1.amxx")
+L 02/09/2025 - 20:56:20: [AMXX] Plugin file open error (plugin "zc_member_plasma.amxx")
+L 02/09/2025 - 20:56:20: [AMXX] Plugin file open error (plugin "zc_member_watergun.amxx")
+L 02/09/2025 - 20:56:20: [AMXX] Plugin file open error (plugin "zc_member_janus11.amxx")
+L 02/09/2025 - 20:56:20: [AMXX] Plugin file open error (plugin "zc_member_rustler.amxx")
+L 02/09/2025 - 20:56:20: [AMXX] Plugin file open error (plugin "zc_member_gak47.amxx")
+L 02/09/2025 - 20:56:20: [AMXX] Plugin file open error (plugin "zc_member_augcrow2.amxx")
+L 02/09/2025 - 20:56:20: [AMXX] Plugin file open error (plugin "zc_blockradio.amxx")
+L 02/09/2025 - 20:56:20: [AMXX] Plugin file open error (plugin "bullet_damage.amxx")
+L 02/09/2025 - 20:56:20: [AMXX] Plugin file open error (plugin "zc_get.amxx")
+L 02/09/2025 - 20:56:20: [AMXX] Plugin file open error (plugin "zc_mission.amxx")
+L 02/09/2025 - 20:56:20: [AMXX] Plugin file open error (plugin "zc_random_legend.amxx")
+L 02/09/2025 - 20:56:20: [AMXX] Plugin file open error (plugin "zc_aiminfo.amxx")
+L 02/09/2025 - 20:57:30: Start of error session.
+L 02/09/2025 - 20:57:30: Info (map "zm_foda") (file "addons/amxmodx/logs/error_20250209.log")
+L 02/09/2025 - 20:57:30: Function "give_gun_silverak" was not found
+L 02/09/2025 - 20:57:30: [AMXX] Displaying debug trace (plugin "zc_silver_ak.amxx")
+L 02/09/2025 - 20:57:30: [AMXX] Run time error 19: function not found 
+L 02/09/2025 - 20:57:30: [AMXX]    [0] zc_silver_ak.sma::plugin_init (line 36)
+L 02/09/2025 - 20:57:30: Function "give_gun_diamondak" was not found
+L 02/09/2025 - 20:57:30: [AMXX] Displaying debug trace (plugin "zc_diamond_ak.amxx")
+L 02/09/2025 - 20:57:30: [AMXX] Run time error 19: function not found 
+L 02/09/2025 - 20:57:30: [AMXX]    [0] zc_diamond_ak.sma::plugin_init (line 36)
+L 02/09/2025 - 20:57:30: Function "give_gun_sm4a1" was not found
+L 02/09/2025 - 20:57:30: [AMXX] Displaying debug trace (plugin "zc_member_silver_m4.amxx")
+L 02/09/2025 - 20:57:30: [AMXX] Run time error 19: function not found 
+L 02/09/2025 - 20:57:30: [AMXX]    [0] zc_member_silver_m4.sma::plugin_init (line 37)
+L 02/09/2025 - 20:57:30: Function "give_gun_goldenak" was not found
+L 02/09/2025 - 20:57:30: [AMXX] Displaying debug trace (plugin "zc_member_gak47.amxx")
+L 02/09/2025 - 20:57:30: [AMXX] Run time error 19: function not found 
+L 02/09/2025 - 20:57:30: [AMXX]    [0] zc_member_gak47.sma::plugin_init (line 37)
+L 02/09/2025 - 20:57:30: [HAMSANDWICH] Function fw_TakeDamage not found.
+L 02/09/2025 - 20:57:30: [AMXX] Displaying debug trace (plugin "zc_random_legend.amxx")
+L 02/09/2025 - 20:57:30: [AMXX] Run time error 10: native error (native "RegisterHam")
+L 02/09/2025 - 20:57:30: [AMXX]    [0] zc_random_legend.sma::plugin_init (line 18)
+L 02/09/2025 - 21:01:18: Start of error session.
+L 02/09/2025 - 21:01:18: Info (map "zm_foda") (file "addons/amxmodx/logs/error_20250209.log")
+L 02/09/2025 - 21:01:18: Function "give_gun_silverak" was not found
+L 02/09/2025 - 21:01:18: [AMXX] Displaying debug trace (plugin "zc_silver_ak.amxx")
+L 02/09/2025 - 21:01:18: [AMXX] Run time error 19: function not found 
+L 02/09/2025 - 21:01:18: [AMXX]    [0] zc_silver_ak.sma::plugin_init (line 36)
+L 02/09/2025 - 21:01:18: Function "give_gun_diamondak" was not found
+L 02/09/2025 - 21:01:18: [AMXX] Displaying debug trace (plugin "zc_diamond_ak.amxx")
+L 02/09/2025 - 21:01:18: [AMXX] Run time error 19: function not found 
+L 02/09/2025 - 21:01:18: [AMXX]    [0] zc_diamond_ak.sma::plugin_init (line 36)
+L 02/09/2025 - 21:01:18: Function "give_gun_sm4a1" was not found
+L 02/09/2025 - 21:01:18: [AMXX] Displaying debug trace (plugin "zc_member_silver_m4.amxx")
+L 02/09/2025 - 21:01:18: [AMXX] Run time error 19: function not found 
+L 02/09/2025 - 21:01:18: [AMXX]    [0] zc_member_silver_m4.sma::plugin_init (line 37)
+L 02/09/2025 - 21:01:18: Function "give_gun_goldenak" was not found
+L 02/09/2025 - 21:01:18: [AMXX] Displaying debug trace (plugin "zc_member_gak47.amxx")
+L 02/09/2025 - 21:01:18: [AMXX] Run time error 19: function not found 
+L 02/09/2025 - 21:01:18: [AMXX]    [0] zc_member_gak47.sma::plugin_init (line 37)
+L 02/09/2025 - 21:01:18: [HAMSANDWICH] Function fw_TakeDamage not found.
+L 02/09/2025 - 21:01:18: [AMXX] Displaying debug trace (plugin "zc_random_legend.amxx")
+L 02/09/2025 - 21:01:18: [AMXX] Run time error 10: native error (native "RegisterHam")
+L 02/09/2025 - 21:01:18: [AMXX]    [0] zc_random_legend.sma::plugin_init (line 18)
+L 02/09/2025 - 21:04:01: Start of error session.
+L 02/09/2025 - 21:04:01: Info (map "zm_foda") (file "addons/amxmodx/logs/error_20250209.log")
+L 02/09/2025 - 21:04:01: Function "give_gun_silverak" was not found
+L 02/09/2025 - 21:04:01: [AMXX] Displaying debug trace (plugin "zc_silver_ak.amxx")
+L 02/09/2025 - 21:04:01: [AMXX] Run time error 19: function not found 
+L 02/09/2025 - 21:04:01: [AMXX]    [0] zc_silver_ak.sma::plugin_init (line 36)
+L 02/09/2025 - 21:04:01: Function "give_gun_diamondak" was not found
+L 02/09/2025 - 21:04:01: [AMXX] Displaying debug trace (plugin "zc_diamond_ak.amxx")
+L 02/09/2025 - 21:04:01: [AMXX] Run time error 19: function not found 
+L 02/09/2025 - 21:04:01: [AMXX]    [0] zc_diamond_ak.sma::plugin_init (line 36)
+L 02/09/2025 - 21:04:01: Function "give_gun_sm4a1" was not found
+L 02/09/2025 - 21:04:01: [AMXX] Displaying debug trace (plugin "zc_member_silver_m4.amxx")
+L 02/09/2025 - 21:04:01: [AMXX] Run time error 19: function not found 
+L 02/09/2025 - 21:04:01: [AMXX]    [0] zc_member_silver_m4.sma::plugin_init (line 37)
+L 02/09/2025 - 21:04:01: Function "give_gun_goldenak" was not found
+L 02/09/2025 - 21:04:01: [AMXX] Displaying debug trace (plugin "zc_member_gak47.amxx")
+L 02/09/2025 - 21:04:01: [AMXX] Run time error 19: function not found 
+L 02/09/2025 - 21:04:01: [AMXX]    [0] zc_member_gak47.sma::plugin_init (line 37)
+L 02/09/2025 - 21:04:01: [HAMSANDWICH] Function fw_TakeDamage not found.
+L 02/09/2025 - 21:04:01: [AMXX] Displaying debug trace (plugin "zc_random_legend.amxx")
+L 02/09/2025 - 21:04:01: [AMXX] Run time error 10: native error (native "RegisterHam")
+L 02/09/2025 - 21:04:01: [AMXX]    [0] zc_random_legend.sma::plugin_init (line 18)
+L 02/09/2025 - 21:24:44: Start of error session.
+L 02/09/2025 - 21:24:44: Info (map "zm_foda") (file "addons/amxmodx/logs/error_20250209.log")
+L 02/09/2025 - 21:24:44: Function "give_gun_silverak" was not found
+L 02/09/2025 - 21:24:44: [AMXX] Displaying debug trace (plugin "zc_silver_ak.amxx")
+L 02/09/2025 - 21:24:44: [AMXX] Run time error 19: function not found 
+L 02/09/2025 - 21:24:44: [AMXX]    [0] zc_silver_ak.sma::plugin_init (line 36)
+L 02/09/2025 - 21:24:44: Function "give_gun_diamondak" was not found
+L 02/09/2025 - 21:24:44: [AMXX] Displaying debug trace (plugin "zc_diamond_ak.amxx")
+L 02/09/2025 - 21:24:44: [AMXX] Run time error 19: function not found 
+L 02/09/2025 - 21:24:44: [AMXX]    [0] zc_diamond_ak.sma::plugin_init (line 36)
+L 02/09/2025 - 21:24:44: Function "give_gun_sm4a1" was not found
+L 02/09/2025 - 21:24:44: [AMXX] Displaying debug trace (plugin "zc_member_silver_m4.amxx")
+L 02/09/2025 - 21:24:44: [AMXX] Run time error 19: function not found 
+L 02/09/2025 - 21:24:44: [AMXX]    [0] zc_member_silver_m4.sma::plugin_init (line 37)
+L 02/09/2025 - 21:24:44: Function "give_gun_goldenak" was not found
+L 02/09/2025 - 21:24:44: [AMXX] Displaying debug trace (plugin "zc_member_gak47.amxx")
+L 02/09/2025 - 21:24:44: [AMXX] Run time error 19: function not found 
+L 02/09/2025 - 21:24:44: [AMXX]    [0] zc_member_gak47.sma::plugin_init (line 37)
+L 02/09/2025 - 21:24:44: [HAMSANDWICH] Function fw_TakeDamage not found.
+L 02/09/2025 - 21:24:44: [AMXX] Displaying debug trace (plugin "zc_random_legend.amxx")
+L 02/09/2025 - 21:24:44: [AMXX] Run time error 10: native error (native "RegisterHam")
+L 02/09/2025 - 21:24:44: [AMXX]    [0] zc_random_legend.sma::plugin_init (line 18)
+L 02/09/2025 - 21:54:51: Start of error session.
+L 02/09/2025 - 21:54:51: Info (map "zm_foda") (file "addons/amxmodx/logs/error_20250209.log")
+L 02/09/2025 - 21:54:51: Function "give_gun_silverak" was not found
+L 02/09/2025 - 21:54:51: [AMXX] Displaying debug trace (plugin "zc_silver_ak.amxx")
+L 02/09/2025 - 21:54:51: [AMXX] Run time error 19: function not found 
+L 02/09/2025 - 21:54:51: [AMXX]    [0] zc_silver_ak.sma::plugin_init (line 36)
+L 02/09/2025 - 21:54:51: Function "give_gun_diamondak" was not found
+L 02/09/2025 - 21:54:51: [AMXX] Displaying debug trace (plugin "zc_diamond_ak.amxx")
+L 02/09/2025 - 21:54:51: [AMXX] Run time error 19: function not found 
+L 02/09/2025 - 21:54:51: [AMXX]    [0] zc_diamond_ak.sma::plugin_init (line 36)
+L 02/09/2025 - 21:54:51: Function "give_gun_sm4a1" was not found
+L 02/09/2025 - 21:54:51: [AMXX] Displaying debug trace (plugin "zc_member_silver_m4.amxx")
+L 02/09/2025 - 21:54:51: [AMXX] Run time error 19: function not found 
+L 02/09/2025 - 21:54:51: [AMXX]    [0] zc_member_silver_m4.sma::plugin_init (line 37)
+L 02/09/2025 - 21:54:51: Function "give_gun_goldenak" was not found
+L 02/09/2025 - 21:54:51: [AMXX] Displaying debug trace (plugin "zc_member_gak47.amxx")
+L 02/09/2025 - 21:54:51: [AMXX] Run time error 19: function not found 
+L 02/09/2025 - 21:54:51: [AMXX]    [0] zc_member_gak47.sma::plugin_init (line 37)
+L 02/09/2025 - 21:54:51: [HAMSANDWICH] Function fw_TakeDamage not found.
+L 02/09/2025 - 21:54:51: [AMXX] Displaying debug trace (plugin "zc_random_legend.amxx")
+L 02/09/2025 - 21:54:51: [AMXX] Run time error 10: native error (native "RegisterHam")
+L 02/09/2025 - 21:54:51: [AMXX]    [0] zc_random_legend.sma::plugin_init (line 18)
+L 02/09/2025 - 22:02:40: Start of error session.
+L 02/09/2025 - 22:02:40: Info (map "zm_foda") (file "addons/amxmodx/logs/error_20250209.log")
+L 02/09/2025 - 22:02:40: Function "give_gun_silverak" was not found
+L 02/09/2025 - 22:02:40: [AMXX] Displaying debug trace (plugin "zc_silver_ak.amxx")
+L 02/09/2025 - 22:02:40: [AMXX] Run time error 19: function not found 
+L 02/09/2025 - 22:02:40: [AMXX]    [0] zc_silver_ak.sma::plugin_init (line 36)
+L 02/09/2025 - 22:02:40: Function "give_gun_diamondak" was not found
+L 02/09/2025 - 22:02:40: [AMXX] Displaying debug trace (plugin "zc_diamond_ak.amxx")
+L 02/09/2025 - 22:02:40: [AMXX] Run time error 19: function not found 
+L 02/09/2025 - 22:02:40: [AMXX]    [0] zc_diamond_ak.sma::plugin_init (line 36)
+L 02/09/2025 - 22:02:40: Function "give_gun_sm4a1" was not found
+L 02/09/2025 - 22:02:40: [AMXX] Displaying debug trace (plugin "zc_member_silver_m4.amxx")
+L 02/09/2025 - 22:02:40: [AMXX] Run time error 19: function not found 
+L 02/09/2025 - 22:02:40: [AMXX]    [0] zc_member_silver_m4.sma::plugin_init (line 37)
+L 02/09/2025 - 22:02:40: Function "give_gun_goldenak" was not found
+L 02/09/2025 - 22:02:40: [AMXX] Displaying debug trace (plugin "zc_member_gak47.amxx")
+L 02/09/2025 - 22:02:40: [AMXX] Run time error 19: function not found 
+L 02/09/2025 - 22:02:40: [AMXX]    [0] zc_member_gak47.sma::plugin_init (line 37)
+L 02/09/2025 - 22:02:40: [HAMSANDWICH] Function fw_TakeDamage not found.
+L 02/09/2025 - 22:02:40: [AMXX] Displaying debug trace (plugin "zc_random_legend.amxx")
+L 02/09/2025 - 22:02:40: [AMXX] Run time error 10: native error (native "RegisterHam")
+L 02/09/2025 - 22:02:40: [AMXX]    [0] zc_random_legend.sma::plugin_init (line 18)
+L 02/09/2025 - 19:39:28: Start of error session.
+L 02/09/2025 - 19:39:28: Info (map "zm_foda") (file "addons/amxmodx/logs/error_20250209.log")
+L 02/09/2025 - 19:39:28: Function "give_gun_silverak" was not found
+L 02/09/2025 - 19:39:28: [AMXX] Displaying debug trace (plugin "zc_silver_ak.amxx")
+L 02/09/2025 - 19:39:28: [AMXX] Run time error 19: function not found 
+L 02/09/2025 - 19:39:28: [AMXX]    [0] zc_silver_ak.sma::plugin_init (line 36)
+L 02/09/2025 - 19:39:28: Function "give_gun_diamondak" was not found
+L 02/09/2025 - 19:39:28: [AMXX] Displaying debug trace (plugin "zc_diamond_ak.amxx")
+L 02/09/2025 - 19:39:28: [AMXX] Run time error 19: function not found 
+L 02/09/2025 - 19:39:28: [AMXX]    [0] zc_diamond_ak.sma::plugin_init (line 36)
+L 02/09/2025 - 19:39:28: Function "give_gun_sm4a1" was not found
+L 02/09/2025 - 19:39:28: [AMXX] Displaying debug trace (plugin "zc_member_silver_m4.amxx")
+L 02/09/2025 - 19:39:28: [AMXX] Run time error 19: function not found 
+L 02/09/2025 - 19:39:28: [AMXX]    [0] zc_member_silver_m4.sma::plugin_init (line 37)
+L 02/09/2025 - 19:39:28: Function "give_gun_goldenak" was not found
+L 02/09/2025 - 19:39:28: [AMXX] Displaying debug trace (plugin "zc_member_gak47.amxx")
+L 02/09/2025 - 19:39:28: [AMXX] Run time error 19: function not found 
+L 02/09/2025 - 19:39:28: [AMXX]    [0] zc_member_gak47.sma::plugin_init (line 37)
+L 02/09/2025 - 19:39:28: [HAMSANDWICH] Function fw_TakeDamage not found.
+L 02/09/2025 - 19:39:28: [AMXX] Displaying debug trace (plugin "zc_random_legend.amxx")
+L 02/09/2025 - 19:39:28: [AMXX] Run time error 10: native error (native "RegisterHam")
+L 02/09/2025 - 19:39:28: [AMXX]    [0] zc_random_legend.sma::plugin_init (line 18)
+L 02/09/2025 - 19:46:42: Start of error session.
+L 02/09/2025 - 19:46:42: Info (map "zm_foda") (file "addons/amxmodx/logs/error_20250209.log")
+L 02/09/2025 - 19:46:42: Function "give_gun_silverak" was not found
+L 02/09/2025 - 19:46:42: [AMXX] Displaying debug trace (plugin "zc_silver_ak.amxx")
+L 02/09/2025 - 19:46:42: [AMXX] Run time error 19: function not found 
+L 02/09/2025 - 19:46:42: [AMXX]    [0] zc_silver_ak.sma::plugin_init (line 36)
+L 02/09/2025 - 19:46:42: Function "give_gun_diamondak" was not found
+L 02/09/2025 - 19:46:42: [AMXX] Displaying debug trace (plugin "zc_diamond_ak.amxx")
+L 02/09/2025 - 19:46:42: [AMXX] Run time error 19: function not found 
+L 02/09/2025 - 19:46:42: [AMXX]    [0] zc_diamond_ak.sma::plugin_init (line 36)
+L 02/09/2025 - 19:46:42: Function "give_gun_sm4a1" was not found
+L 02/09/2025 - 19:46:42: [AMXX] Displaying debug trace (plugin "zc_member_silver_m4.amxx")
+L 02/09/2025 - 19:46:42: [AMXX] Run time error 19: function not found 
+L 02/09/2025 - 19:46:42: [AMXX]    [0] zc_member_silver_m4.sma::plugin_init (line 37)
+L 02/09/2025 - 19:46:42: Function "give_gun_goldenak" was not found
+L 02/09/2025 - 19:46:42: [AMXX] Displaying debug trace (plugin "zc_member_gak47.amxx")
+L 02/09/2025 - 19:46:42: [AMXX] Run time error 19: function not found 
+L 02/09/2025 - 19:46:42: [AMXX]    [0] zc_member_gak47.sma::plugin_init (line 37)
+L 02/09/2025 - 19:46:42: [HAMSANDWICH] Function fw_TakeDamage not found.
+L 02/09/2025 - 19:46:42: [AMXX] Displaying debug trace (plugin "zc_random_legend.amxx")
+L 02/09/2025 - 19:46:42: [AMXX] Run time error 10: native error (native "RegisterHam")
+L 02/09/2025 - 19:46:42: [AMXX]    [0] zc_random_legend.sma::plugin_init (line 18)
+L 02/09/2025 - 19:55:51: Start of error session.
+L 02/09/2025 - 19:55:51: Info (map "zm_foda") (file "addons/amxmodx/logs/error_20250209.log")
+L 02/09/2025 - 19:55:51: Function "give_gun_silverak" was not found
+L 02/09/2025 - 19:55:51: [AMXX] Displaying debug trace (plugin "zc_silver_ak.amxx")
+L 02/09/2025 - 19:55:51: [AMXX] Run time error 19: function not found 
+L 02/09/2025 - 19:55:51: [AMXX]    [0] zc_silver_ak.sma::plugin_init (line 36)
+L 02/09/2025 - 19:55:51: Function "give_gun_diamondak" was not found
+L 02/09/2025 - 19:55:51: [AMXX] Displaying debug trace (plugin "zc_diamond_ak.amxx")
+L 02/09/2025 - 19:55:51: [AMXX] Run time error 19: function not found 
+L 02/09/2025 - 19:55:51: [AMXX]    [0] zc_diamond_ak.sma::plugin_init (line 36)
+L 02/09/2025 - 19:55:51: Function "give_gun_sm4a1" was not found
+L 02/09/2025 - 19:55:51: [AMXX] Displaying debug trace (plugin "zc_member_silver_m4.amxx")
+L 02/09/2025 - 19:55:51: [AMXX] Run time error 19: function not found 
+L 02/09/2025 - 19:55:51: [AMXX]    [0] zc_member_silver_m4.sma::plugin_init (line 37)
+L 02/09/2025 - 19:55:51: Function "give_gun_goldenak" was not found
+L 02/09/2025 - 19:55:51: [AMXX] Displaying debug trace (plugin "zc_member_gak47.amxx")
+L 02/09/2025 - 19:55:51: [AMXX] Run time error 19: function not found 
+L 02/09/2025 - 19:55:51: [AMXX]    [0] zc_member_gak47.sma::plugin_init (line 37)
+L 02/09/2025 - 19:55:51: [HAMSANDWICH] Function fw_TakeDamage not found.
+L 02/09/2025 - 19:55:51: [AMXX] Displaying debug trace (plugin "zc_random_legend.amxx")
+L 02/09/2025 - 19:55:51: [AMXX] Run time error 10: native error (native "RegisterHam")
+L 02/09/2025 - 19:55:51: [AMXX]    [0] zc_random_legend.sma::plugin_init (line 18)
+L 02/09/2025 - 19:56:58: Start of error session.
+L 02/09/2025 - 19:56:58: Info (map "zm_foda") (file "addons/amxmodx/logs/error_20250209.log")
+L 02/09/2025 - 19:56:58: Function "give_gun_silverak" was not found
+L 02/09/2025 - 19:56:58: [AMXX] Displaying debug trace (plugin "zc_silver_ak.amxx")
+L 02/09/2025 - 19:56:58: [AMXX] Run time error 19: function not found 
+L 02/09/2025 - 19:56:58: [AMXX]    [0] zc_silver_ak.sma::plugin_init (line 36)
+L 02/09/2025 - 19:56:58: Function "give_gun_diamondak" was not found
+L 02/09/2025 - 19:56:58: [AMXX] Displaying debug trace (plugin "zc_diamond_ak.amxx")
+L 02/09/2025 - 19:56:58: [AMXX] Run time error 19: function not found 
+L 02/09/2025 - 19:56:58: [AMXX]    [0] zc_diamond_ak.sma::plugin_init (line 36)
+L 02/09/2025 - 19:56:58: Function "give_gun_sm4a1" was not found
+L 02/09/2025 - 19:56:58: [AMXX] Displaying debug trace (plugin "zc_member_silver_m4.amxx")
+L 02/09/2025 - 19:56:58: [AMXX] Run time error 19: function not found 
+L 02/09/2025 - 19:56:58: [AMXX]    [0] zc_member_silver_m4.sma::plugin_init (line 37)
+L 02/09/2025 - 19:56:58: Function "give_gun_goldenak" was not found
+L 02/09/2025 - 19:56:58: [AMXX] Displaying debug trace (plugin "zc_member_gak47.amxx")
+L 02/09/2025 - 19:56:58: [AMXX] Run time error 19: function not found 
+L 02/09/2025 - 19:56:58: [AMXX]    [0] zc_member_gak47.sma::plugin_init (line 37)
+L 02/09/2025 - 19:56:58: [HAMSANDWICH] Function fw_TakeDamage not found.
+L 02/09/2025 - 19:56:58: [AMXX] Displaying debug trace (plugin "zc_random_legend.amxx")
+L 02/09/2025 - 19:56:58: [AMXX] Run time error 10: native error (native "RegisterHam")
+L 02/09/2025 - 19:56:58: [AMXX]    [0] zc_random_legend.sma::plugin_init (line 18)
+L 02/09/2025 - 20:07:18: Start of error session.
+L 02/09/2025 - 20:07:18: Info (map "zm_foda") (file "addons/amxmodx/logs/error_20250209.log")
+L 02/09/2025 - 20:07:18: Function "give_gun_silverak" was not found
+L 02/09/2025 - 20:07:18: [AMXX] Displaying debug trace (plugin "zc_silver_ak.amxx")
+L 02/09/2025 - 20:07:18: [AMXX] Run time error 19: function not found 
+L 02/09/2025 - 20:07:18: [AMXX]    [0] zc_silver_ak.sma::plugin_init (line 36)
+L 02/09/2025 - 20:07:18: Function "give_gun_diamondak" was not found
+L 02/09/2025 - 20:07:18: [AMXX] Displaying debug trace (plugin "zc_diamond_ak.amxx")
+L 02/09/2025 - 20:07:18: [AMXX] Run time error 19: function not found 
+L 02/09/2025 - 20:07:18: [AMXX]    [0] zc_diamond_ak.sma::plugin_init (line 36)
+L 02/09/2025 - 20:07:18: Function "give_gun_sm4a1" was not found
+L 02/09/2025 - 20:07:18: [AMXX] Displaying debug trace (plugin "zc_member_silver_m4.amxx")
+L 02/09/2025 - 20:07:18: [AMXX] Run time error 19: function not found 
+L 02/09/2025 - 20:07:18: [AMXX]    [0] zc_member_silver_m4.sma::plugin_init (line 37)
+L 02/09/2025 - 20:07:18: Function "give_gun_goldenak" was not found
+L 02/09/2025 - 20:07:18: [AMXX] Displaying debug trace (plugin "zc_member_gak47.amxx")
+L 02/09/2025 - 20:07:18: [AMXX] Run time error 19: function not found 
+L 02/09/2025 - 20:07:18: [AMXX]    [0] zc_member_gak47.sma::plugin_init (line 37)
+L 02/09/2025 - 20:07:18: [HAMSANDWICH] Function fw_TakeDamage not found.
+L 02/09/2025 - 20:07:18: [AMXX] Displaying debug trace (plugin "zc_random_legend.amxx")
+L 02/09/2025 - 20:07:18: [AMXX] Run time error 10: native error (native "RegisterHam")
+L 02/09/2025 - 20:07:18: [AMXX]    [0] zc_random_legend.sma::plugin_init (line 18)
+L 02/09/2025 - 20:11:17: Start of error session.
+L 02/09/2025 - 20:11:17: Info (map "zm_foda") (file "addons/amxmodx/logs/error_20250209.log")
+L 02/09/2025 - 20:11:17: Function "give_gun_silverak" was not found
+L 02/09/2025 - 20:11:17: [AMXX] Displaying debug trace (plugin "zc_silver_ak.amxx")
+L 02/09/2025 - 20:11:17: [AMXX] Run time error 19: function not found 
+L 02/09/2025 - 20:11:17: [AMXX]    [0] zc_silver_ak.sma::plugin_init (line 36)
+L 02/09/2025 - 20:11:17: Function "give_gun_diamondak" was not found
+L 02/09/2025 - 20:11:17: [AMXX] Displaying debug trace (plugin "zc_diamond_ak.amxx")
+L 02/09/2025 - 20:11:17: [AMXX] Run time error 19: function not found 
+L 02/09/2025 - 20:11:17: [AMXX]    [0] zc_diamond_ak.sma::plugin_init (line 36)
+L 02/09/2025 - 20:11:17: Function "give_gun_sm4a1" was not found
+L 02/09/2025 - 20:11:17: [AMXX] Displaying debug trace (plugin "zc_member_silver_m4.amxx")
+L 02/09/2025 - 20:11:17: [AMXX] Run time error 19: function not found 
+L 02/09/2025 - 20:11:17: [AMXX]    [0] zc_member_silver_m4.sma::plugin_init (line 37)
+L 02/09/2025 - 20:11:17: Function "give_gun_goldenak" was not found
+L 02/09/2025 - 20:11:17: [AMXX] Displaying debug trace (plugin "zc_member_gak47.amxx")
+L 02/09/2025 - 20:11:17: [AMXX] Run time error 19: function not found 
+L 02/09/2025 - 20:11:17: [AMXX]    [0] zc_member_gak47.sma::plugin_init (line 37)
+L 02/09/2025 - 20:11:17: [HAMSANDWICH] Function fw_TakeDamage not found.
+L 02/09/2025 - 20:11:17: [AMXX] Displaying debug trace (plugin "zc_random_legend.amxx")
+L 02/09/2025 - 20:11:17: [AMXX] Run time error 10: native error (native "RegisterHam")
+L 02/09/2025 - 20:11:17: [AMXX]    [0] zc_random_legend.sma::plugin_init (line 18)
+L 02/09/2025 - 20:15:56: Start of error session.
+L 02/09/2025 - 20:15:56: Info (map "zm_foda") (file "addons/amxmodx/logs/error_20250209.log")
+L 02/09/2025 - 20:15:56: Function "give_gun_silverak" was not found
+L 02/09/2025 - 20:15:56: [AMXX] Displaying debug trace (plugin "zc_silver_ak.amxx")
+L 02/09/2025 - 20:15:56: [AMXX] Run time error 19: function not found 
+L 02/09/2025 - 20:15:56: [AMXX]    [0] zc_silver_ak.sma::plugin_init (line 36)
+L 02/09/2025 - 20:15:56: Function "give_gun_diamondak" was not found
+L 02/09/2025 - 20:15:56: [AMXX] Displaying debug trace (plugin "zc_diamond_ak.amxx")
+L 02/09/2025 - 20:15:56: [AMXX] Run time error 19: function not found 
+L 02/09/2025 - 20:15:56: [AMXX]    [0] zc_diamond_ak.sma::plugin_init (line 36)
+L 02/09/2025 - 20:15:56: Function "give_gun_sm4a1" was not found
+L 02/09/2025 - 20:15:56: [AMXX] Displaying debug trace (plugin "zc_member_silver_m4.amxx")
+L 02/09/2025 - 20:15:56: [AMXX] Run time error 19: function not found 
+L 02/09/2025 - 20:15:56: [AMXX]    [0] zc_member_silver_m4.sma::plugin_init (line 37)
+L 02/09/2025 - 20:15:56: Function "give_gun_goldenak" was not found
+L 02/09/2025 - 20:15:56: [AMXX] Displaying debug trace (plugin "zc_member_gak47.amxx")
+L 02/09/2025 - 20:15:56: [AMXX] Run time error 19: function not found 
+L 02/09/2025 - 20:15:56: [AMXX]    [0] zc_member_gak47.sma::plugin_init (line 37)
+L 02/09/2025 - 20:15:56: [HAMSANDWICH] Function fw_TakeDamage not found.
+L 02/09/2025 - 20:15:56: [AMXX] Displaying debug trace (plugin "zc_random_legend.amxx")
+L 02/09/2025 - 20:15:56: [AMXX] Run time error 10: native error (native "RegisterHam")
+L 02/09/2025 - 20:15:56: [AMXX]    [0] zc_random_legend.sma::plugin_init (line 18)
+L 02/09/2025 - 20:21:49: Start of error session.
+L 02/09/2025 - 20:21:49: Info (map "zm_foda") (file "addons/amxmodx/logs/error_20250209.log")
+L 02/09/2025 - 20:21:49: Function "give_gun_silverak" was not found
+L 02/09/2025 - 20:21:49: [AMXX] Displaying debug trace (plugin "zc_silver_ak.amxx")
+L 02/09/2025 - 20:21:49: [AMXX] Run time error 19: function not found 
+L 02/09/2025 - 20:21:49: [AMXX]    [0] zc_silver_ak.sma::plugin_init (line 36)
+L 02/09/2025 - 20:21:49: Function "give_gun_diamondak" was not found
+L 02/09/2025 - 20:21:49: [AMXX] Displaying debug trace (plugin "zc_diamond_ak.amxx")
+L 02/09/2025 - 20:21:49: [AMXX] Run time error 19: function not found 
+L 02/09/2025 - 20:21:49: [AMXX]    [0] zc_diamond_ak.sma::plugin_init (line 36)
+L 02/09/2025 - 20:21:49: Function "give_gun_sm4a1" was not found
+L 02/09/2025 - 20:21:49: [AMXX] Displaying debug trace (plugin "zc_member_silver_m4.amxx")
+L 02/09/2025 - 20:21:49: [AMXX] Run time error 19: function not found 
+L 02/09/2025 - 20:21:49: [AMXX]    [0] zc_member_silver_m4.sma::plugin_init (line 37)
+L 02/09/2025 - 20:21:49: Function "give_gun_goldenak" was not found
+L 02/09/2025 - 20:21:49: [AMXX] Displaying debug trace (plugin "zc_member_gak47.amxx")
+L 02/09/2025 - 20:21:49: [AMXX] Run time error 19: function not found 
+L 02/09/2025 - 20:21:49: [AMXX]    [0] zc_member_gak47.sma::plugin_init (line 37)
+L 02/09/2025 - 20:21:49: [HAMSANDWICH] Function fw_TakeDamage not found.
+L 02/09/2025 - 20:21:49: [AMXX] Displaying debug trace (plugin "zc_random_legend.amxx")
+L 02/09/2025 - 20:21:49: [AMXX] Run time error 10: native error (native "RegisterHam")
+L 02/09/2025 - 20:21:49: [AMXX]    [0] zc_random_legend.sma::plugin_init (line 18)
