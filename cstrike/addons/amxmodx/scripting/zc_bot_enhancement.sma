@@ -5,7 +5,7 @@
 #include <zombiecrown>
 
 #define PLUGIN "[ZC] Ultimate Bot Enhancement"
-#define VERSION "5.2"
+#define VERSION "5.3"
 #define AUTHOR "Zombie Crown Team"
 
 // CVars
@@ -69,8 +69,8 @@ public plugin_init()
 	// Bot think - update every 0.1 seconds
 	set_task(0.1, "Bot_Think", _, _, _, "b")
 
-	// Initialize items after ZP loads
-	set_task(2.0, "Init_Items")
+	// Initialize items after ZP loads (increased delay for safety)
+	set_task(5.0, "Init_Items")
 
 	register_event("HLTV", "Event_NewRound", "a", "1=0", "2=0")
 	register_logevent("Event_RoundStart", 2, "1=Round_Start")
@@ -85,11 +85,14 @@ public Init_Items()
 	g_itemid_knife_blink = zp_get_extra_item_id("Knife Blink")
 	g_itemid_zombie_madness = zp_get_extra_item_id("Zombie Madness")
 
-	if(get_pcvar_num(cvar_debug))
-	{
-		log_amx("[ZC Bot Enhancement] Knife Blink ID: %d", g_itemid_knife_blink)
-		log_amx("[ZC Bot Enhancement] Zombie Madness ID: %d", g_itemid_zombie_madness)
-	}
+	// Always log item IDs (not just in debug mode)
+	log_amx("[ZC Bot Enhancement] Knife Blink ID: %d (expected: valid ID or -1 if not found)", g_itemid_knife_blink)
+	log_amx("[ZC Bot Enhancement] Zombie Madness ID: %d (expected: valid ID or -1 if not found)", g_itemid_zombie_madness)
+
+	if(g_itemid_knife_blink == -1)
+		log_amx("[ZC Bot Enhancement] WARNING: Knife Blink item not found!")
+	if(g_itemid_zombie_madness == -1)
+		log_amx("[ZC Bot Enhancement] WARNING: Zombie Madness item not found!")
 
 	g_items_initialized = true
 }

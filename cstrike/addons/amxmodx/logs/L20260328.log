@@ -1368,3 +1368,98 @@ L 03/28/2026 - 08:49:51: [zc_full_bright.amxx] [ZC FullBright] Set lighting to l
 L 03/28/2026 - 08:50:01: [zc_full_bright.amxx] [ZC FullBright] Set lighting to level 100 (kkkkkkkkkkkkkkkkkkkkkkkkkk)
 L 03/28/2026 - 08:50:11: [zc_full_bright.amxx] [ZC FullBright] Set lighting to level 100 (kkkkkkkkkkkkkkkkkkkkkkkkkk)
 L 03/28/2026 - 08:50:21: [zc_full_bright.amxx] [ZC FullBright] Set lighting to level 100 (kkkkkkkkkkkkkkkkkkkkkkkkkk)
+L 03/28/2026 - 08:50:25: [zc_full_bright.amxx] [ZC FullBright] Set lighting to level 100 (kkkkkkkkkkkkkkkkkkkkkkkkkk)
+L 03/28/2026 - 08:50:26: [zc_full_bright.amxx] [ZC FullBright] Set lighting to level 100 (kkkkkkkkkkkkkkkkkkkkkkkkkk)
+L 03/28/2026 - 08:50:31: [zc_full_bright.amxx] [ZC FullBright] Set lighting to level 100 (kkkkkkkkkkkkkkkkkkkkkkkkkk)
+L 03/28/2026 - 08:50:41: [zc_full_bright.amxx] [ZC FullBright] Set lighting to level 100 (kkkkkkkkkkkkkkkkkkkkkkkkkk)
+L 03/28/2026 - 08:50:51: [zc_full_bright.amxx] [ZC FullBright] Set lighting to level 100 (kkkkkkkkkkkkkkkkkkkkkkkkkk)
+L 03/28/2026 - 08:51:01: [zc_full_bright.amxx] [ZC FullBright] Set lighting to level 100 (kkkkkkkkkkkkkkkkkkkkkkkkkk)
+L 03/28/2026 - 08:51:11: [zc_full_bright.amxx] [ZC FullBright] Set lighting to level 100 (kkkkkkkkkkkkkkkkkkkkkkkkkk)
+L 03/28/2026 - 08:51:21: [zc_full_bright.amxx] [ZC FullBright] Set lighting to level 100 (kkkkkkkkkkkkkkkkkkkkkkkkkk)
+L 03/28/2026 - 08:51:31: [zc_full_bright.amxx] [ZC FullBright] Set lighting to level 100 (kkkkkkkkkkkkkkkkkkkkkkkkkk)
+L 03/28/2026 - 08:51:41: [zc_full_bright.amxx] [ZC FullBright] Set lighting to level 100 (kkkkkkkkkkkkkkkkkkkkkkkkkk)
+L 03/28/2026 - 08:51:51: [zc_full_bright.amxx] [ZC FullBright] Set lighting to level 100 (kkkkkkkkkkkkkkkkkkkkkkkkkk)
+L 03/28/2026 - 08:52:01: [zc_full_bright.amxx] [ZC FullBright] Set lighting to level 100 (kkkkkkkkkkkkkkkkkkkkkkkkkk)
+L 03/28/2026 - 08:52:01: -------- Mapchange to zm_foda --------
+L 03/28/2026 - 08:52:01: [zc_kill_effects.amxx] [ZC Kill Effects] zbeam/beam.spr not found, using flare6.spr
+L 03/28/2026 - 08:52:01: [zc_kill_effects.amxx] [ZC Kill Effects] Sprites precached successfully
+L 03/28/2026 - 08:52:02: [zc_balrog5.amxx] [ZC Balrog-V] Custom model not found, using fallback: models/v_galil.mdl
+L 03/28/2026 - 08:52:02: [zc_skull11.amxx] [ZC Skull-11] Custom model not found, using fallback: models/v_m4a1.mdl
+L 03/28/2026 - 08:52:02: [zc_thanatos7.amxx] [ZC Thanatos-7] Custom model not found, using fallback: models/v_m4a1.mdl
+L 03/28/2026 - 08:52:02: [zc_achievements.amxx] [ZC Achievements] No achievements loaded, creating defaults...
+L 03/28/2026 - 08:52:02: [zc_achievements.amxx] [ZC Achievements] Created 4 default achievements
+L 03/28/2026 - 08:52:02: [zc_achievements.amxx] [ZC Achievements] Loaded 4 achievements
+L 03/28/2026 - 08:52:02: [zc_prestige.amxx] [ZC Prestige] Creating default perks...
+L 03/28/2026 - 08:52:02: [zc_prestige.amxx] [ZC Prestige] Created 4 default perks
+L 03/28/2026 - 08:52:02: [zc_prestige.amxx] [ZC Prestige] System initialized with 4 perks
+L 03/28/2026 - 08:52:02: [zc_daily_challenges.amxx] [ZC Daily Challenges] Creating default templates...
+L 03/28/2026 - 08:52:02: [zc_daily_challenges.amxx] [ZC Daily Challenges] Created 6 default templates
+L 03/28/2026 - 08:52:02: [zc_daily_challenges.amxx] [ZC Daily Challenges] Loaded 6 challenge templates
+L 03/28/2026 - 08:52:02: [zc_kill_effects.amxx] [ZC Kill Effects] Creating default effects...
+L 03/28/2026 - 08:52:02: [zc_kill_effects.amxx] [ZC Kill Effects] Created 3 default effects
+L 03/28/2026 - 08:52:02: [zc_kill_effects.amxx] [ZC Kill Effects] Loaded 3 effects
+L 03/28/2026 - 08:52:02: [zc_bot_enhancement.amxx] [ZC Bot Enhancement] Plugin loaded
+L 03/28/2026 - 08:52:03: [zc_mode.amxx] sus become VIP. (SteamID: "STEAM_0:0:1144780358") (IP: "192.168.100.62") (Flags: "abcde")
+L 03/28/2026 - 08:52:03: [admin.amxx] Login: "sus<1><STEAM_0:0:1144780358><>" became an admin (account "sus") (access "abcdefghijklmnopqrstuvwxz") (address "192.168.100.62")
+L 03/28/2026 - 08:52:03: [zc_full_bright.amxx] [ZC FullBright] Set lighting to level 100 (kkkkkkkkkkkkkkkkkkkkkkkkkk)
+L 03/28/2026 - 08:52:04: [zc_full_bright.amxx] [ZC FullBright] Set lighting to level 100 (kkkkkkkkkkkkkkkkkkkkkkkkkk)
+L 03/28/2026 - 08:52:04: [zc_bot_enhancement.amxx] [ZC Bot Enhancement] Initializing item IDs...
+L 03/28/2026 - 08:52:05: [zc_player_profiles.amxx] [ZC Profiles] Failed to create table: Unknown MySQL server host 'host' (11001)
+L 03/28/2026 - 08:52:07: [zc_player_profiles.amxx] [ZC Profiles] Failed to create table: Unknown MySQL server host 'host' (11001)
+L 03/28/2026 - 08:52:10: [zc_achievements.amxx] [ZC Achievements] Failed to create table: Unknown MySQL server host 'host' (11001)
+L 03/28/2026 - 08:52:10: [zc_full_bright.amxx] [ZC FullBright] Set lighting to level 100 (kkkkkkkkkkkkkkkkkkkkkkkkkk)
+L 03/28/2026 - 08:52:11: [zc_full_bright.amxx] [ZC FullBright] Set lighting to level 100 (kkkkkkkkkkkkkkkkkkkkkkkkkk)
+L 03/28/2026 - 08:52:12: [zc_achievements.amxx] [ZC Achievements] Failed to create table: Unknown MySQL server host 'host' (11001)
+L 03/28/2026 - 08:52:12: [zc_full_bright.amxx] [ZC FullBright] Set lighting to level 100 (kkkkkkkkkkkkkkkkkkkkkkkkkk)
+L 03/28/2026 - 08:52:15: [zc_daily_challenges.amxx] [ZC Daily Challenges] Failed to create table: Unknown MySQL server host 'host' (11001)
+L 03/28/2026 - 08:52:17: [zc_daily_challenges.amxx] [ZC Daily Challenges] Failed to create table: Unknown MySQL server host 'host' (11001)
+L 03/28/2026 - 08:52:20: [zc_player_profiles.amxx] [ZC Profiles] Failed to load profile for player 1: Unknown MySQL server host 'host' (11001)
+L 03/28/2026 - 08:52:22: [zc_achievements.amxx] [ZC Achievements] Failed to load achievements for player 1: Unknown MySQL server host 'host' (11001)
+L 03/28/2026 - 08:52:22: [zc_full_bright.amxx] [ZC FullBright] Set lighting to level 100 (kkkkkkkkkkkkkkkkkkkkkkkkkk)
+L 03/28/2026 - 08:52:25: [zc_player_profiles.amxx] [ZC Profiles] Failed to load profile for player 2: Unknown MySQL server host 'host' (11001)
+L 03/28/2026 - 08:52:27: [zc_achievements.amxx] [ZC Achievements] Failed to load achievements for player 2: Unknown MySQL server host 'host' (11001)
+L 03/28/2026 - 08:52:30: [zc_player_profiles.amxx] [ZC Profiles] Failed to load profile for player 3: Unknown MySQL server host 'host' (11001)
+L 03/28/2026 - 08:52:32: [zc_full_bright.amxx] [ZC FullBright] Set lighting to level 100 (kkkkkkkkkkkkkkkkkkkkkkkkkk)
+L 03/28/2026 - 08:52:32: [zc_achievements.amxx] [ZC Achievements] Failed to load achievements for player 3: Unknown MySQL server host 'host' (11001)
+L 03/28/2026 - 08:52:35: [zc_player_profiles.amxx] [ZC Profiles] Failed to load profile for player 4: Unknown MySQL server host 'host' (11001)
+L 03/28/2026 - 08:52:38: [zc_achievements.amxx] [ZC Achievements] Failed to load achievements for player 4: Unknown MySQL server host 'host' (11001)
+L 03/28/2026 - 08:52:40: [zc_player_profiles.amxx] [ZC Profiles] Failed to load profile for player 5: Unknown MySQL server host 'host' (11001)
+L 03/28/2026 - 08:52:42: [zc_full_bright.amxx] [ZC FullBright] Set lighting to level 100 (kkkkkkkkkkkkkkkkkkkkkkkkkk)
+L 03/28/2026 - 08:52:43: [zc_achievements.amxx] [ZC Achievements] Failed to load achievements for player 5: Unknown MySQL server host 'host' (11001)
+L 03/28/2026 - 08:52:45: [zc_player_profiles.amxx] [ZC Profiles] Failed to load profile for player 6: Unknown MySQL server host 'host' (11001)
+L 03/28/2026 - 08:52:48: [zc_achievements.amxx] [ZC Achievements] Failed to load achievements for player 6: Unknown MySQL server host 'host' (11001)
+L 03/28/2026 - 08:52:50: [zc_player_profiles.amxx] [ZC Profiles] Failed to load profile for player 7: Unknown MySQL server host 'host' (11001)
+L 03/28/2026 - 08:52:52: [zc_full_bright.amxx] [ZC FullBright] Set lighting to level 100 (kkkkkkkkkkkkkkkkkkkkkkkkkk)
+L 03/28/2026 - 08:52:53: [zc_achievements.amxx] [ZC Achievements] Failed to load achievements for player 7: Unknown MySQL server host 'host' (11001)
+L 03/28/2026 - 08:52:55: [zc_player_profiles.amxx] [ZC Profiles] Failed to create new profile for player 1: Unknown MySQL server host 'host' (11001)
+L 03/28/2026 - 08:52:58: [zc_player_profiles.amxx] [ZC Profiles] Failed to create new profile for player 2: Unknown MySQL server host 'host' (11001)
+L 03/28/2026 - 08:53:01: [zc_player_profiles.amxx] [ZC Profiles] Failed to create new profile for player 3: Unknown MySQL server host 'host' (11001)
+L 03/28/2026 - 08:53:02: [zc_full_bright.amxx] [ZC FullBright] Set lighting to level 100 (kkkkkkkkkkkkkkkkkkkkkkkkkk)
+L 03/28/2026 - 08:53:03: [zc_player_profiles.amxx] [ZC Profiles] Failed to load profile for player 8: Unknown MySQL server host 'host' (11001)
+L 03/28/2026 - 08:53:06: [zc_achievements.amxx] [ZC Achievements] Failed to load achievements for player 8: Unknown MySQL server host 'host' (11001)
+L 03/28/2026 - 08:53:08: [zc_player_profiles.amxx] [ZC Profiles] Failed to create new profile for player 4: Unknown MySQL server host 'host' (11001)
+L 03/28/2026 - 08:53:11: [zc_player_profiles.amxx] [ZC Profiles] Failed to create new profile for player 5: Unknown MySQL server host 'host' (11001)
+L 03/28/2026 - 08:53:12: [zc_full_bright.amxx] [ZC FullBright] Set lighting to level 100 (kkkkkkkkkkkkkkkkkkkkkkkkkk)
+L 03/28/2026 - 08:53:13: [zc_player_profiles.amxx] [ZC Profiles] Failed to create new profile for player 6: Unknown MySQL server host 'host' (11001)
+L 03/28/2026 - 08:53:16: [zc_player_profiles.amxx] [ZC Profiles] Failed to create new profile for player 7: Unknown MySQL server host 'host' (11001)
+L 03/28/2026 - 08:53:18: [zc_player_profiles.amxx] [ZC Profiles] Failed to create new profile for player 8: Unknown MySQL server host 'host' (11001)
+L 03/28/2026 - 08:53:22: [zc_full_bright.amxx] [ZC FullBright] Set lighting to level 100 (kkkkkkkkkkkkkkkkkkkkkkkkkk)
+L 03/28/2026 - 08:53:32: [zc_full_bright.amxx] [ZC FullBright] Set lighting to level 100 (kkkkkkkkkkkkkkkkkkkkkkkkkk)
+L 03/28/2026 - 08:53:42: [zc_full_bright.amxx] [ZC FullBright] Set lighting to level 100 (kkkkkkkkkkkkkkkkkkkkkkkkkk)
+L 03/28/2026 - 08:53:52: [zc_full_bright.amxx] [ZC FullBright] Set lighting to level 100 (kkkkkkkkkkkkkkkkkkkkkkkkkk)
+L 03/28/2026 - 08:54:01: [zc_full_bright.amxx] [ZC FullBright] Set lighting to level 100 (kkkkkkkkkkkkkkkkkkkkkkkkkk)
+L 03/28/2026 - 08:54:01: [zc_full_bright.amxx] [ZC FullBright] Set lighting to level 100 (kkkkkkkkkkkkkkkkkkkkkkkkkk)
+L 03/28/2026 - 08:54:02: [zc_full_bright.amxx] [ZC FullBright] Set lighting to level 100 (kkkkkkkkkkkkkkkkkkkkkkkkkk)
+L 03/28/2026 - 08:54:12: [zc_full_bright.amxx] [ZC FullBright] Set lighting to level 100 (kkkkkkkkkkkkkkkkkkkkkkkkkk)
+L 03/28/2026 - 08:54:22: [zc_full_bright.amxx] [ZC FullBright] Set lighting to level 100 (kkkkkkkkkkkkkkkkkkkkkkkkkk)
+L 03/28/2026 - 08:54:32: [zc_full_bright.amxx] [ZC FullBright] Set lighting to level 100 (kkkkkkkkkkkkkkkkkkkkkkkkkk)
+L 03/28/2026 - 08:54:42: [zc_full_bright.amxx] [ZC FullBright] Set lighting to level 100 (kkkkkkkkkkkkkkkkkkkkkkkkkk)
+L 03/28/2026 - 08:54:52: [zc_full_bright.amxx] [ZC FullBright] Set lighting to level 100 (kkkkkkkkkkkkkkkkkkkkkkkkkk)
+L 03/28/2026 - 08:55:02: [zc_full_bright.amxx] [ZC FullBright] Set lighting to level 100 (kkkkkkkkkkkkkkkkkkkkkkkkkk)
+L 03/28/2026 - 08:55:12: [zc_full_bright.amxx] [ZC FullBright] Set lighting to level 100 (kkkkkkkkkkkkkkkkkkkkkkkkkk)
+L 03/28/2026 - 08:55:22: [zc_full_bright.amxx] [ZC FullBright] Set lighting to level 100 (kkkkkkkkkkkkkkkkkkkkkkkkkk)
+L 03/28/2026 - 08:55:23: [zc_full_bright.amxx] [ZC FullBright] Set lighting to level 100 (kkkkkkkkkkkkkkkkkkkkkkkkkk)
+L 03/28/2026 - 08:55:23: [zc_full_bright.amxx] [ZC FullBright] Set lighting to level 100 (kkkkkkkkkkkkkkkkkkkkkkkkkk)
+L 03/28/2026 - 08:55:32: [zc_full_bright.amxx] [ZC FullBright] Set lighting to level 100 (kkkkkkkkkkkkkkkkkkkkkkkkkk)
+L 03/28/2026 - 08:55:42: [zc_full_bright.amxx] [ZC FullBright] Set lighting to level 100 (kkkkkkkkkkkkkkkkkkkkkkkkkk)
+L 03/28/2026 - 08:55:52: [zc_full_bright.amxx] [ZC FullBright] Set lighting to level 100 (kkkkkkkkkkkkkkkkkkkkkkkkkk)
