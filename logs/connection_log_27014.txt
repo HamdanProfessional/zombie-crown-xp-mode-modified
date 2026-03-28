@@ -1,0 +1,57 @@
+
+
+[2026-03-28 07:22:51][0,0] : Log session started
+[2026-03-28 07:22:51][0,0] : SetSteamID( [A:1:0:0] )
+[2026-03-28 07:22:51][1,2] : Connect() starting connection (eNetQOSLevelLow, 68.142.91.34:27017, UDP)
+[2026-03-28 07:22:56][1,2] : ConnectFailed('Connection Failed') (68.142.91.34:27017, UDP)
+[2026-03-28 07:22:56][0,0] : StartAutoReconnect() will start in 3 seconds
+[2026-03-28 07:23:00][1,6] : Connect() starting connection (eNetQOSLevelMedium, 68.142.91.34:27017, UDP)
+[2026-03-28 07:23:05][1,6] : ConnectFailed('Connection Failed') (68.142.91.34:27017, UDP)
+[2026-03-28 07:23:05][0,0] : StartAutoReconnect() will start in 5 seconds
+[2026-03-28 07:23:10][1,8] : Connect() starting connection (eNetQOSLevelMedium, 68.142.91.34:27017, UDP)
+[2026-03-28 07:23:15][1,8] : ConnectFailed('Connection Failed') (68.142.91.34:27017, UDP)
+[2026-03-28 07:23:15][0,0] : StartAutoReconnect() will start in 7 seconds
+[2026-03-28 07:23:22][1,10] : Connect() starting connection (eNetQOSLevelMedium, 68.142.91.34:27017, UDP)
+[2026-03-28 07:23:27][1,10] : ConnectFailed('Connection Failed') (68.142.91.34:27017, UDP)
+[2026-03-28 07:23:27][0,0] : StartAutoReconnect() will start in 8 seconds
+[2026-03-28 07:23:35][1,11] : Connect() starting connection (eNetQOSLevelMedium, 68.142.91.34:27017, TCP)
+[2026-03-28 07:23:56][1,11] : ConnectFailed('Invalid State') (68.142.91.34:27017, TCP)
+[2026-03-28 07:23:56][0,0] : StartAutoReconnect() will start in 11 seconds
+[2026-03-28 07:24:07][1,13] : Connect() starting connection (eNetQOSLevelMedium, 68.142.91.34:27017, TCP)
+[2026-03-28 07:24:28][1,13] : ConnectFailed('Invalid State') (68.142.91.34:27017, TCP)
+[2026-03-28 07:24:28][0,0] : StartAutoReconnect() will start in 8 seconds
+[2026-03-28 07:24:36][1,16] : Connect() starting connection (eNetQOSLevelMedium, 68.142.91.34:27017, UDP)
+[2026-03-28 07:24:41][1,16] : ConnectFailed('Connection Failed') (68.142.91.34:27017, UDP)
+[2026-03-28 07:24:41][0,0] : StartAutoReconnect() will start in 20 seconds
+[2026-03-28 07:25:01][1,18] : Connect() starting connection (eNetQOSLevelMedium, 68.142.91.34:27017, UDP)
+[2026-03-28 07:25:06][1,18] : ConnectFailed('Connection Failed') (68.142.91.34:27017, UDP)
+[2026-03-28 07:25:06][0,0] : StartAutoReconnect() will start in 17 seconds
+[2026-03-28 07:25:23][1,20] : Connect() starting connection (eNetQOSLevelMedium, 68.142.91.34:27017, UDP)
+[2026-03-28 07:25:28][1,20] : ConnectFailed('Connection Failed') (68.142.91.34:27017, UDP)
+[2026-03-28 07:25:28][0,0] : StartAutoReconnect() will start in 16 seconds
+[2026-03-28 07:25:44][1,22] : Connect() starting connection (eNetQOSLevelMedium, 68.142.91.34:27017, UDP)
+[2026-03-28 07:25:49][1,22] : ConnectFailed('Connection Failed') (68.142.91.34:27017, UDP)
+[2026-03-28 07:25:49][0,0] : StartAutoReconnect() will start in 27 seconds
+[2026-03-28 07:26:16][1,23] : Connect() starting connection (eNetQOSLevelMedium, 68.142.91.34:27017, TCP)
+[2026-03-28 07:26:37][1,23] : ConnectFailed('Invalid State') (68.142.91.34:27017, TCP)
+[2026-03-28 07:26:37][0,0] : StartAutoReconnect() will start in 55 seconds
+[2026-03-28 07:27:32][1,25] : Connect() starting connection (eNetQOSLevelMedium, 68.142.91.34:27017, TCP)
+[2026-03-28 07:27:53][1,25] : ConnectFailed('Invalid State') (68.142.91.34:27017, TCP)
+[2026-03-28 07:27:53][0,0] : StartAutoReconnect() will start in 98 seconds
+[2026-03-28 07:29:31][1,28] : Connect() starting connection (eNetQOSLevelMedium, 68.142.91.34:27017, UDP)
+[2026-03-28 07:29:36][1,28] : ConnectFailed('Connection Failed') (68.142.91.34:27017, UDP)
+[2026-03-28 07:29:36][0,0] : StartAutoReconnect() will start in 60 seconds
+[2026-03-28 07:30:36][1,30] : Connect() starting connection (eNetQOSLevelMedium, 68.142.91.34:27017, UDP)
+[2026-03-28 07:30:41][1,30] : ConnectFailed('Connection Failed') (68.142.91.34:27017, UDP)
+[2026-03-28 07:30:41][0,0] : StartAutoReconnect() will start in 167 seconds
+[2026-03-28 07:33:28][1,32] : Connect() starting connection (eNetQOSLevelMedium, 68.142.91.34:27017, UDP)
+[2026-03-28 07:33:34][1,32] : ConnectFailed('Connection Failed') (68.142.91.34:27017, UDP)
+[2026-03-28 07:33:34][0,0] : StartAutoReconnect() will start in 92 seconds
+[2026-03-28 07:35:06][1,34] : Connect() starting connection (eNetQOSLevelMedium, 68.142.91.34:27017, UDP)
+[2026-03-28 07:35:11][1,34] : ConnectFailed('Connection Failed') (68.142.91.34:27017, UDP)
+[2026-03-28 07:35:11][0,0] : StartAutoReconnect() will start in 104 seconds
+[2026-03-28 07:36:55][1,35] : Connect() starting connection (eNetQOSLevelMedium, 68.142.91.34:27017, TCP)
+[2026-03-28 07:37:16][1,35] : ConnectFailed('Invalid State') (68.142.91.34:27017, TCP)
+[2026-03-28 07:37:16][0,0] : StartAutoReconnect() will start in 116 seconds
+[2026-03-28 07:39:12][1,37] : Connect() starting connection (eNetQOSLevelMedium, 68.142.91.34:27017, TCP)
+[2026-03-28 07:39:33][1,37] : ConnectFailed('Invalid State') (68.142.91.34:27017, TCP)

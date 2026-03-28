@@ -367,3 +367,10 @@ L 03/28/2026 - 07:40:21: [zc_thanatos7.amxx] [ZC Thanatos-7] Item matched! Calli
 L 03/28/2026 - 07:40:21: [zc_thanatos7.amxx] [ZC Thanatos-7] Get_Thanatos7 called for player 1
 L 03/28/2026 - 07:40:21: [zc_thanatos7.amxx] [ZC Thanatos-7] Player 1 is not alive yet, setting flag for weapon
 L 03/28/2026 - 07:40:21: [zc_thanatos7.amxx] [ZC Thanatos-7] Get_Thanatos7 completed for player 1
+L 03/28/2026 - 07:41:33: [zc_leaderboard.amxx] [ZC Leaderboards] Periodic cache refresh complete
+L 03/28/2026 - 07:41:35: [zc_leaderboard.amxx] [ZC Leaderboards] Failed to refresh Highest Level leaderboard: Unknown MySQL server host 'host' (11001)
+L 03/28/2026 - 07:41:38: [zc_leaderboard.amxx] [ZC Leaderboards] Failed to refresh Total XP leaderboard: Unknown MySQL server host 'host' (11001)
+L 03/28/2026 - 07:41:41: [zc_leaderboard.amxx] [ZC Leaderboards] Failed to refresh Total Kills leaderboard: Unknown MySQL server host 'host' (11001)
+L 03/28/2026 - 07:41:43: [zc_leaderboard.amxx] [ZC Leaderboards] Failed to refresh Total Infections leaderboard: Unknown MySQL server host 'host' (11001)
+L 03/28/2026 - 07:41:46: [zc_leaderboard.amxx] [ZC Leaderboards] Failed to refresh Playtime leaderboard: Unknown MySQL server host 'host' (11001)
+L 03/28/2026 - 07:41:48: [zc_leaderboard.amxx] [ZC Leaderboards] Failed to refresh Prestige Level leaderboard: Unknown MySQL server host 'host' (11001)
