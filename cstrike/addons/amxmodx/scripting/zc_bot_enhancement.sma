@@ -2,16 +2,17 @@
 #include <fakemeta>
 #include <hamsandwich>
 #include <xs>
-#include <zombieplague>
+#include <zombiecrown>
 
 #define PLUGIN "[ZC] Ultimate Bot Enhancement"
-#define VERSION "5.0"
+#define VERSION "5.1"
 #define AUTHOR "Zombie Crown Team"
 
 // CVars
 new cvar_enabled
 new cvar_perfect_aim
 new cvar_bot_items
+new cvar_debug
 
 new bool:g_ZombieRound
 new g_MaxPlayers
@@ -19,13 +20,13 @@ new g_MaxPlayers
 // Item IDs
 new g_itemid_knife_blink = -1
 new g_itemid_zombie_madness = -1
+new bool:g_items_initialized = false
 
 // Player tracking
 new Float:player_last_origin[33][3]
 new Float:player_last_vel[33][3]
 new player_last_buttons[33]
 new bool:player_is_jumping[33]
-new Float:player_last_seen_time[33]
 
 // Bot state
 new Float:bot_last_jump_time[33]
@@ -34,9 +35,9 @@ new Float:bot_last_doublejump_time[33]
 new Float:bot_last_item_time[33]
 new Float:bot_target_update_time[33]
 new bot_target[33]
-new bot_strafe_dir[33]  // 0 = left, 1 = right
-new bool:bot_can_doublejump[33]
+new bot_strafe_dir[33]
 new bool:bot_has_jumped_once[33]
+new bool:bot_stacking_enabled[33]
 
 public plugin_init()
 {
@@ -45,6 +46,7 @@ public plugin_init()
 	cvar_enabled = register_cvar("zc_bot_enhanced", "1")
 	cvar_perfect_aim = register_cvar("zc_bot_perfect_aim", "1")
 	cvar_bot_items = register_cvar("zc_bot_buy_items", "1")
+	cvar_debug = register_cvar("zc_bot_debug", "0")
 
 	g_MaxPlayers = get_maxplayers()
 
@@ -68,20 +70,29 @@ public plugin_init()
 	// Bot think - update every 0.1 seconds
 	set_task(0.1, "Bot_Think", _, _, _, "b")
 
+	// Initialize items after ZP loads
+	set_task(5.0, "Init_Items")
+
 	register_event("HLTV", "Event_NewRound", "a", "1=0", "2=0")
 	register_logevent("Event_RoundStart", 2, "1=Round_Start")
-}
 
-public plugin_precache()
-{
-	// Get item IDs after ZP loads
-	set_task(1.0, "Init_Items")
+	log_amx("[ZC Bot Enhancement] Plugin loaded")
 }
 
 public Init_Items()
 {
+	log_amx("[ZC Bot Enhancement] Initializing item IDs...")
+
 	g_itemid_knife_blink = zp_get_extra_item_id("Knife Blink")
 	g_itemid_zombie_madness = zp_get_extra_item_id("Zombie Madness")
+
+	if(get_pcvar_num(cvar_debug))
+	{
+		log_amx("[ZC Bot Enhancement] Knife Blink ID: %d", g_itemid_knife_blink)
+		log_amx("[ZC Bot Enhancement] Zombie Madness ID: %d", g_itemid_zombie_madness)
+	}
+
+	g_items_initialized = true
 }
 
 // Track real players
@@ -107,7 +118,6 @@ public fw_PlayerPreThink(id)
 
 	player_last_buttons[id] = buttons
 	player_is_jumping[id] = (vel[2] > 100.0) ? true : false
-	player_last_seen_time[id] = get_gametime()
 
 	return FMRES_IGNORED
 }
@@ -152,12 +162,20 @@ public fw_StartFrame()
 		if(player_high)
 		{
 			// Disable solid with other bots (allow stacking)
-			set_pev(i, pev_solid, SOLID_NOT)
+			if(!bot_stacking_enabled[i])
+			{
+				set_pev(i, pev_solid, SOLID_NOT)
+				bot_stacking_enabled[i] = true
+			}
 		}
 		else
 		{
 			// Re-enable solid
-			set_pev(i, pev_solid, SOLID_SLIDEBOX)
+			if(bot_stacking_enabled[i])
+			{
+				set_pev(i, pev_solid, SOLID_SLIDEBOX)
+				bot_stacking_enabled[i] = false
+			}
 		}
 	}
 
@@ -248,6 +266,9 @@ public fw_CmdStart(id, uc_handle)
 					pev(id, pev_velocity, vel)
 					vel[2] = 300.0
 					set_pev(id, pev_velocity, vel)
+
+					if(get_pcvar_num(cvar_debug))
+						log_amx("[ZC Bot] Bot %d double jumping (height diff: %.1f)", id, height_diff)
 				}
 				else if(!(flags & FL_ONGROUND) && bot_has_jumped_once[id] && (time - bot_last_doublejump_time[id] < 0.3))
 				{
@@ -387,7 +408,7 @@ public Zombie_Bot_Think(id)
 		set_pev(id, pev_fixangle, 1)
 
 		// Buy items occasionally
-		if(get_pcvar_num(cvar_bot_items) && (time - bot_last_item_time[id] > 30.0))
+		if(get_pcvar_num(cvar_bot_items) && g_items_initialized && (time - bot_last_item_time[id] > 30.0))
 		{
 			// Buy knife blink if target is far or high
 			if((dist > 300.0 || height_diff > 80.0) && g_itemid_knife_blink != -1)
@@ -396,6 +417,9 @@ public Zombie_Bot_Think(id)
 				{
 					zp_force_buy_extra_item(id, g_itemid_knife_blink, 1)
 					bot_last_item_time[id] = time
+
+					if(get_pcvar_num(cvar_debug))
+						log_amx("[ZC Bot] Bot %d bought Knife Blink (dist: %.1f, height: %.1f)", id, dist, height_diff)
 				}
 			}
 			// Buy zombie madness if close to target
@@ -405,6 +429,9 @@ public Zombie_Bot_Think(id)
 				{
 					zp_force_buy_extra_item(id, g_itemid_zombie_madness, 1)
 					bot_last_item_time[id] = time
+
+					if(get_pcvar_num(cvar_debug))
+						log_amx("[ZC Bot] Bot %d bought Zombie Madness (dist: %.1f)", id, dist)
 				}
 			}
 		}
@@ -584,9 +611,8 @@ public Event_NewRound()
 		bot_last_item_time[i] = 0.0
 		bot_target_update_time[i] = 0.0
 		bot_strafe_dir[i] = 0
-		bot_can_doublejump[i] = false
 		bot_has_jumped_once[i] = false
-		player_is_jumping[i] = false
+		bot_stacking_enabled[i] = false
 	}
 }
 
