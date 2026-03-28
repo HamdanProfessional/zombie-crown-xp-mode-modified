@@ -601,3 +601,11 @@ L 03/28/2026 - 08:00:39: [zc_leaderboard.amxx] [ZC Leaderboards] Failed to refre
 L 03/28/2026 - 08:00:42: [zc_leaderboard.amxx] [ZC Leaderboards] Failed to refresh Playtime leaderboard: Unknown MySQL server host 'host' (11001)
 L 03/28/2026 - 08:00:45: [zc_leaderboard.amxx] [ZC Leaderboards] Failed to refresh Prestige Level leaderboard: Unknown MySQL server host 'host' (11001)
 L 03/28/2026 - 08:00:47: [zc_leaderboard.amxx] [ZC Leaderboards] Failed to refresh Total Coins leaderboard: Unknown MySQL server host 'host' (11001)
+L 03/28/2026 - 08:05:30: [zc_leaderboard.amxx] [ZC Leaderboards] Periodic cache refresh complete
+L 03/28/2026 - 08:05:32: [zc_leaderboard.amxx] [ZC Leaderboards] Failed to refresh Highest Level leaderboard: Unknown MySQL server host 'host' (11001)
+L 03/28/2026 - 08:05:34: [zc_leaderboard.amxx] [ZC Leaderboards] Failed to refresh Total XP leaderboard: Unknown MySQL server host 'host' (11001)
+L 03/28/2026 - 08:05:37: [zc_leaderboard.amxx] [ZC Leaderboards] Failed to refresh Total Kills leaderboard: Unknown MySQL server host 'host' (11001)
+L 03/28/2026 - 08:05:39: [zc_leaderboard.amxx] [ZC Leaderboards] Failed to refresh Total Infections leaderboard: Unknown MySQL server host 'host' (11001)
+L 03/28/2026 - 08:05:42: [zc_leaderboard.amxx] [ZC Leaderboards] Failed to refresh Playtime leaderboard: Unknown MySQL server host 'host' (11001)
+L 03/28/2026 - 08:05:45: [zc_leaderboard.amxx] [ZC Leaderboards] Failed to refresh Prestige Level leaderboard: Unknown MySQL server host 'host' (11001)
+L 03/28/2026 - 08:05:47: [zc_leaderboard.amxx] [ZC Leaderboards] Failed to refresh Total Coins leaderboard: Unknown MySQL server host 'host' (11001)
