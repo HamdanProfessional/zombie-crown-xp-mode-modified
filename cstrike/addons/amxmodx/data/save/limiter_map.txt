@@ -1,0 +1,2 @@
+"Infection Bomb" "sus" "1"
+"T-Virus Antidote" "sus" "2"

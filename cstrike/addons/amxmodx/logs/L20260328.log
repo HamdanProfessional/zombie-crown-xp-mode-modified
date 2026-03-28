@@ -541,3 +541,55 @@ L 03/28/2026 - 07:54:12: [zc_player_profiles.amxx] [ZC Profiles] Failed to creat
 L 03/28/2026 - 07:54:15: [zc_player_profiles.amxx] [ZC Profiles] Failed to create new profile for player 4: Unknown MySQL server host 'host' (11001)
 L 03/28/2026 - 07:54:18: [zc_player_profiles.amxx] [ZC Profiles] Failed to create new profile for player 5: Unknown MySQL server host 'host' (11001)
 L 03/28/2026 - 07:54:20: [zc_player_profiles.amxx] [ZC Profiles] Failed to create new profile for player 6: Unknown MySQL server host 'host' (11001)
+L 03/28/2026 - 07:55:28: -------- Mapchange to zm_foda --------
+L 03/28/2026 - 07:55:28: [zc_kill_effects.amxx] [ZC Kill Effects] zbeam/beam.spr not found, using flare6.spr
+L 03/28/2026 - 07:55:28: [zc_kill_effects.amxx] [ZC Kill Effects] Sprites precached successfully
+L 03/28/2026 - 07:55:29: [zc_balrog5.amxx] [ZC Balrog-V] Custom model not found, using fallback: models/v_galil.mdl
+L 03/28/2026 - 07:55:29: [zc_skull11.amxx] [ZC Skull-11] Custom model not found, using fallback: models/v_m4a1.mdl
+L 03/28/2026 - 07:55:29: [zc_thanatos7.amxx] [ZC Thanatos-7] Custom model not found, using fallback: models/v_m4a1.mdl
+L 03/28/2026 - 07:55:29: [zc_achievements.amxx] [ZC Achievements] No achievements loaded, creating defaults...
+L 03/28/2026 - 07:55:29: [zc_achievements.amxx] [ZC Achievements] Created 4 default achievements
+L 03/28/2026 - 07:55:29: [zc_achievements.amxx] [ZC Achievements] Loaded 4 achievements
+L 03/28/2026 - 07:55:29: [zc_prestige.amxx] [ZC Prestige] Creating default perks...
+L 03/28/2026 - 07:55:29: [zc_prestige.amxx] [ZC Prestige] Created 4 default perks
+L 03/28/2026 - 07:55:29: [zc_prestige.amxx] [ZC Prestige] System initialized with 4 perks
+L 03/28/2026 - 07:55:29: [zc_daily_challenges.amxx] [ZC Daily Challenges] Creating default templates...
+L 03/28/2026 - 07:55:29: [zc_daily_challenges.amxx] [ZC Daily Challenges] Created 6 default templates
+L 03/28/2026 - 07:55:29: [zc_daily_challenges.amxx] [ZC Daily Challenges] Loaded 6 challenge templates
+L 03/28/2026 - 07:55:29: [zc_kill_effects.amxx] [ZC Kill Effects] Creating default effects...
+L 03/28/2026 - 07:55:29: [zc_kill_effects.amxx] [ZC Kill Effects] Created 3 default effects
+L 03/28/2026 - 07:55:29: [zc_kill_effects.amxx] [ZC Kill Effects] Loaded 3 effects
+L 03/28/2026 - 07:55:30: [zc_mode.amxx] sus become VIP. (SteamID: "STEAM_0:0:1144780358") (IP: "192.168.100.62") (Flags: "abcde")
+L 03/28/2026 - 07:55:30: [admin.amxx] Login: "sus<1><STEAM_0:0:1144780358><>" became an admin (account "sus") (access "abcdefghijklmnopqrstuvwxz") (address "192.168.100.62")
+L 03/28/2026 - 07:55:31: [zc_player_profiles.amxx] [ZC Profiles] Failed to create table: Unknown MySQL server host 'host' (11001)
+L 03/28/2026 - 07:55:34: [zc_player_profiles.amxx] [ZC Profiles] Failed to create table: Unknown MySQL server host 'host' (11001)
+L 03/28/2026 - 07:55:37: [zc_achievements.amxx] [ZC Achievements] Failed to create table: Unknown MySQL server host 'host' (11001)
+L 03/28/2026 - 07:55:39: [zc_achievements.amxx] [ZC Achievements] Failed to create table: Unknown MySQL server host 'host' (11001)
+L 03/28/2026 - 07:55:40: [zc_leaderboard.amxx] [ZC Leaderboards] Initial cache refresh complete
+L 03/28/2026 - 07:55:42: [zc_daily_challenges.amxx] [ZC Daily Challenges] Failed to create table: Unknown MySQL server host 'host' (11001)
+L 03/28/2026 - 07:55:44: [zc_daily_challenges.amxx] [ZC Daily Challenges] Failed to create table: Unknown MySQL server host 'host' (11001)
+L 03/28/2026 - 07:55:47: [zc_player_profiles.amxx] [ZC Profiles] Failed to load profile for player 1: Unknown MySQL server host 'host' (11001)
+L 03/28/2026 - 07:55:49: [zc_achievements.amxx] [ZC Achievements] Failed to load achievements for player 1: Unknown MySQL server host 'host' (11001)
+L 03/28/2026 - 07:55:52: [zc_leaderboard.amxx] [ZC Leaderboards] Failed to refresh Highest Level leaderboard: Unknown MySQL server host 'host' (11001)
+L 03/28/2026 - 07:55:54: [zc_leaderboard.amxx] [ZC Leaderboards] Failed to refresh Total XP leaderboard: Unknown MySQL server host 'host' (11001)
+L 03/28/2026 - 07:55:57: [zc_leaderboard.amxx] [ZC Leaderboards] Failed to refresh Total Kills leaderboard: Unknown MySQL server host 'host' (11001)
+L 03/28/2026 - 07:55:59: [zc_leaderboard.amxx] [ZC Leaderboards] Failed to refresh Total Infections leaderboard: Unknown MySQL server host 'host' (11001)
+L 03/28/2026 - 07:56:02: [zc_leaderboard.amxx] [ZC Leaderboards] Failed to refresh Playtime leaderboard: Unknown MySQL server host 'host' (11001)
+L 03/28/2026 - 07:56:04: [zc_leaderboard.amxx] [ZC Leaderboards] Failed to refresh Prestige Level leaderboard: Unknown MySQL server host 'host' (11001)
+L 03/28/2026 - 07:56:07: [zc_leaderboard.amxx] [ZC Leaderboards] Failed to refresh Total Coins leaderboard: Unknown MySQL server host 'host' (11001)
+L 03/28/2026 - 07:56:12: [zc_player_profiles.amxx] [ZC Profiles] Failed to load profile for player 2: Unknown MySQL server host 'host' (11001)
+L 03/28/2026 - 07:56:15: [zc_achievements.amxx] [ZC Achievements] Failed to load achievements for player 2: Unknown MySQL server host 'host' (11001)
+L 03/28/2026 - 07:56:17: [zc_player_profiles.amxx] [ZC Profiles] Failed to load profile for player 3: Unknown MySQL server host 'host' (11001)
+L 03/28/2026 - 07:56:20: [zc_achievements.amxx] [ZC Achievements] Failed to load achievements for player 3: Unknown MySQL server host 'host' (11001)
+L 03/28/2026 - 07:56:22: [zc_player_profiles.amxx] [ZC Profiles] Failed to load profile for player 4: Unknown MySQL server host 'host' (11001)
+L 03/28/2026 - 07:56:25: [zc_achievements.amxx] [ZC Achievements] Failed to load achievements for player 4: Unknown MySQL server host 'host' (11001)
+L 03/28/2026 - 07:56:27: [zc_player_profiles.amxx] [ZC Profiles] Failed to load profile for player 5: Unknown MySQL server host 'host' (11001)
+L 03/28/2026 - 07:56:30: [zc_achievements.amxx] [ZC Achievements] Failed to load achievements for player 5: Unknown MySQL server host 'host' (11001)
+L 03/28/2026 - 07:56:32: [zc_player_profiles.amxx] [ZC Profiles] Failed to create new profile for player 1: Unknown MySQL server host 'host' (11001)
+L 03/28/2026 - 07:56:35: [zc_player_profiles.amxx] [ZC Profiles] Failed to load profile for player 6: Unknown MySQL server host 'host' (11001)
+L 03/28/2026 - 07:56:37: [zc_achievements.amxx] [ZC Achievements] Failed to load achievements for player 6: Unknown MySQL server host 'host' (11001)
+L 03/28/2026 - 07:56:40: [zc_player_profiles.amxx] [ZC Profiles] Failed to create new profile for player 2: Unknown MySQL server host 'host' (11001)
+L 03/28/2026 - 07:56:42: [zc_player_profiles.amxx] [ZC Profiles] Failed to create new profile for player 3: Unknown MySQL server host 'host' (11001)
+L 03/28/2026 - 07:56:45: [zc_player_profiles.amxx] [ZC Profiles] Failed to create new profile for player 4: Unknown MySQL server host 'host' (11001)
+L 03/28/2026 - 07:56:48: [zc_player_profiles.amxx] [ZC Profiles] Failed to create new profile for player 5: Unknown MySQL server host 'host' (11001)
+L 03/28/2026 - 07:56:50: [zc_player_profiles.amxx] [ZC Profiles] Failed to create new profile for player 6: Unknown MySQL server host 'host' (11001)
