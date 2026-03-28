@@ -161,7 +161,7 @@ public client_disconnect(id)
 
 public Get_Balrog5(id)
 {
-	if(!Get_BitVar(g_IsAlive, id))
+	if(!is_player(id, 1))
 		return
 
 	Set_BitVar(g_Had_Balrog5, id)
@@ -192,7 +192,7 @@ public Get_Balrog5(id)
 
 public Event_CurWeapon(id)
 {
-	if(!Get_BitVar(g_IsAlive, id))
+	if(!is_player(id, 1))
 		return
 
 	new CSWID = read_data(2)
@@ -211,7 +211,7 @@ public Event_CurWeapon(id)
 
 public fw_UpdateClientData_Post(id, sendweapons, cd_handle)
 {
-	if(!Get_BitVar(g_IsAlive, id))
+	if(!is_player(id, 1))
 		return FMRES_IGNORED
 
 	if(get_user_weapon(id) == CSW_BALROG5 && Get_BitVar(g_Had_Balrog5, id))
@@ -276,7 +276,7 @@ public fw_Item_Deploy_Post(Ent)
 
 	static id; id = get_pdata_cbase(Ent, 41, 4)
 
-	if(!Get_BitVar(g_IsAlive, id))
+	if(!is_player(id, 1))
 		return
 
 	if(Get_BitVar(g_Had_Balrog5, id))
@@ -309,7 +309,7 @@ public fw_Item_AddToPlayer_Post(Ent, id)
 	if(!pev_valid(Ent))
 		return
 
-	if(!Get_BitVar(g_IsAlive, id))
+	if(!is_player(id, 1))
 		return
 
 	if(pev(Ent, pev_impulse) == 68415)
@@ -326,7 +326,7 @@ public fw_Weapon_PrimaryAttack(Ent)
 
 	static id; id = get_pdata_cbase(Ent, 41, 4)
 
-	if(!Get_BitVar(g_IsAlive, id))
+	if(!is_player(id, 1))
 		return HAM_IGNORED
 
 	if(!Get_BitVar(g_Had_Balrog5, id))
@@ -364,7 +364,7 @@ public fw_Weapon_Reload(Ent)
 
 	static id; id = get_pdata_cbase(Ent, 41, 4)
 
-	if(!Get_BitVar(g_IsAlive, id))
+	if(!is_player(id, 1))
 		return HAM_IGNORED
 
 	if(!Get_BitVar(g_Had_Balrog5, id))
@@ -382,7 +382,7 @@ public fw_Weapon_WeaponIdle_Post(Ent)
 
 	static id; id = get_pdata_cbase(Ent, 41, 4)
 
-	if(!Get_BitVar(g_IsAlive, id))
+	if(!is_player(id, 1))
 		return
 
 	if(Get_BitVar(g_Had_Balrog5, id))
@@ -478,7 +478,7 @@ public Safety_Disconnected(id)
 
 public Safety_CurWeapon(id)
 {
-	if(!Get_BitVar(g_IsAlive, id))
+	if(!is_player(id, 1))
 		return
 
 	new CSWID = read_data(2)
@@ -486,4 +486,27 @@ public Safety_CurWeapon(id)
 	{
 		g_PlayerWeapon[id] = CSWID
 	}
+}
+
+public is_player(id, IsAliveCheck)
+{
+	if(!(1 <= id <= 32))
+		return 0
+	if(!Get_BitVar(g_IsConnected, id))
+		return 0
+	if(IsAliveCheck)
+	{
+		if(Get_BitVar(g_IsAlive, id)) return 1
+		else return 0
+	}
+
+	return 1
+}
+
+public get_player_weapon(id)
+{
+	if(!is_player(id, 1))
+		return 0
+
+	return g_PlayerWeapon[id]
 }
