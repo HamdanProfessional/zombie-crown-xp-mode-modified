@@ -120,16 +120,25 @@ public fw_CmdStart(id, uc_handle)
 				if(player_last_buttons[target] & IN_MOVERIGHT)
 					buttons |= IN_MOVERIGHT
 
-				// Match player's speed
+				// Match player's horizontal speed only (don't copy vertical)
 				new Float:target_speed = floatsqroot(player_last_vel[target][0]*player_last_vel[target][0] + player_last_vel[target][1]*player_last_vel[target][1])
 				if(target_speed > 50.0)
 				{
 					new Float:vel[3]
+					new flags = pev(id, pev_flags)
 					pev(id, pev_velocity, vel)
+
+					// Only copy horizontal movement
 					vel[0] = player_last_vel[target][0]
 					vel[1] = player_last_vel[target][1]
-					if(player_last_buttons[target] & IN_JUMP)
-						vel[2] = 300.0
+
+					// Only add Z velocity if on ground and player jumped
+					if((flags & FL_ONGROUND) && (player_last_buttons[target] & IN_JUMP))
+						vel[2] = 260.0
+					// Otherwise let gravity work naturally
+					else if(!(flags & FL_ONGROUND) && vel[2] > 0.0)
+						vel[2] *= 0.9  // Slight dampening while falling
+
 					set_pev(id, pev_velocity, vel)
 				}
 			}
@@ -230,6 +239,8 @@ public Zombie_Bot_Think(id)
 
 		new Float:dist = get_distance_f(bot_origin, target_origin)
 		new Float:height_diff = target_origin[2] - bot_origin[2]
+		new flags = pev(id, pev_flags)
+		new onground = (flags & FL_ONGROUND) ? 1 : 0
 
 		// Player is moving or hard to reach? Enter mirror/learn mode
 		if(player_moving[target] || (height_diff > 60.0 && dist > 120.0))
@@ -246,18 +257,17 @@ public Zombie_Bot_Think(id)
 			bot_mirror_mode[id] = false
 			bot_swarm_target[id] = target
 
-			// Direct approach - chase the player
+			// Direct approach - chase the player on ground
 			new Float:dir[3]
 			dir[0] = target_origin[0] - bot_origin[0]
 			dir[1] = target_origin[1] - bot_origin[1]
-			dir[2] = target_origin[2] - bot_origin[2]
+			dir[2] = 0.0  // Keep horizontal only
 
-			new Float:len = floatsqroot(dir[0]*dir[0] + dir[1]*dir[1] + dir[2]*dir[2])
+			new Float:len = floatsqroot(dir[0]*dir[0] + dir[1]*dir[1])
 			if(len > 0.0)
 			{
 				dir[0] /= len
 				dir[1] /= len
-				dir[2] /= len
 			}
 
 			// Face target instantly
@@ -267,31 +277,39 @@ public Zombie_Bot_Think(id)
 			set_pev(id, pev_angles, viewangle)
 			set_pev(id, pev_fixangle, 1)
 
-			// Move toward target fast
+			// Get current velocity
 			new Float:vel[3]
 			pev(id, pev_velocity, vel)
-			vel[0] = dir[0] * 350.0
-			vel[1] = dir[1] * 350.0
 
-			// Smart jumping - jump when needed
-			new flags = pev(id, pev_flags)
-			if(flags & FL_ONGROUND)
+			// Only set horizontal speed
+			vel[0] = dir[0] * 300.0
+			vel[1] = dir[1] * 300.0
+
+			// Smart jumping - ONLY when on ground
+			if(onground)
 			{
-				// Jump if target is above
-				if(height_diff > 40.0)
+				// Jump if target is significantly above
+				if(height_diff > 50.0)
 				{
-					vel[2] = 300.0
+					vel[2] = 270.0
 				}
-				// Jump if player is jumping (copy them)
+				// Jump if player just jumped
 				else if(player_last_buttons[target] & IN_JUMP)
 				{
-					vel[2] = 280.0
+					vel[2] = 260.0
 				}
-				// Random jump to be unpredictable
-				else if(random_num(0, 100) < 5)
+				// Otherwise stay on ground
+				else
 				{
-					vel[2] = 250.0
+					vel[2] = 0.0
 				}
+			}
+			// In air - let gravity work, don't add more Z velocity
+			else
+			{
+				// Don't modify Z velocity while in air
+				if(vel[2] > 0.0)
+					vel[2] *= 0.95  // Slight dampening
 			}
 
 			set_pev(id, pev_velocity, vel)
@@ -329,12 +347,13 @@ public Swarm_Think(id)
 		target_origin[1] += target_vel[1] * predict_time
 		target_origin[2] += target_vel[2] * predict_time
 
-		// Aim at predicted position
+		// Aim at predicted position (horizontal only for movement)
 		new Float:dir[3]
 		dir[0] = target_origin[0] - my_origin[0]
 		dir[1] = target_origin[1] - my_origin[1]
 		dir[2] = target_origin[2] - my_origin[2]
 
+		// For aiming, use full direction
 		new Float:len = floatsqroot(dir[0]*dir[0] + dir[1]*dir[1] + dir[2]*dir[2])
 		if(len > 0.0)
 		{
@@ -349,14 +368,26 @@ public Swarm_Think(id)
 		set_pev(id, pev_angles, viewangle)
 		set_pev(id, pev_fixangle, 1)
 
-		// If zombie, move fast toward target
+		// If zombie, move fast toward target (horizontal only)
 		new team = get_user_team(id)
 		if(g_ZombieRound && team == 1)
 		{
 			new Float:vel[3]
+			new flags = pev(id, pev_flags)
 			pev(id, pev_velocity, vel)
+
+			// Only horizontal movement
 			vel[0] = dir[0] * 320.0
 			vel[1] = dir[1] * 320.0
+
+			// Only jump if on ground and target is above
+			if(flags & FL_ONGROUND)
+			{
+				new Float:height_diff = target_origin[2] - my_origin[2]
+				if(height_diff > 50.0)
+					vel[2] = 260.0
+			}
+
 			set_pev(id, pev_velocity, vel)
 		}
 	}
