@@ -56,3 +56,314 @@ L 03/28/2026 - 07:14:00: [zc_player_profiles.amxx] [ZC Profiles] Failed to creat
 L 03/28/2026 - 07:14:03: [zc_player_profiles.amxx] [ZC Profiles] Failed to create new profile for player 4: Can't connect to MySQL server on '127.0.0.1' (10061)
 L 03/28/2026 - 07:14:05: [zc_player_profiles.amxx] [ZC Profiles] Failed to create new profile for player 5: Can't connect to MySQL server on '127.0.0.1' (10061)
 L 03/28/2026 - 07:14:08: [zc_player_profiles.amxx] [ZC Profiles] Failed to create new profile for player 6: Can't connect to MySQL server on '127.0.0.1' (10061)
+L 03/28/2026 - 07:18:04: [zc_leaderboard.amxx] [ZC Leaderboards] Periodic cache refresh complete
+L 03/28/2026 - 07:18:06: [zc_leaderboard.amxx] [ZC Leaderboards] Failed to refresh Highest Level leaderboard: Can't connect to MySQL server on '127.0.0.1' (10061)
+L 03/28/2026 - 07:18:08: [zc_leaderboard.amxx] [ZC Leaderboards] Failed to refresh Total XP leaderboard: Can't connect to MySQL server on '127.0.0.1' (10061)
+L 03/28/2026 - 07:18:10: [zc_leaderboard.amxx] [ZC Leaderboards] Failed to refresh Total Kills leaderboard: Can't connect to MySQL server on '127.0.0.1' (10061)
+L 03/28/2026 - 07:18:13: [zc_leaderboard.amxx] [ZC Leaderboards] Failed to refresh Total Infections leaderboard: Can't connect to MySQL server on '127.0.0.1' (10061)
+L 03/28/2026 - 07:18:15: [zc_leaderboard.amxx] [ZC Leaderboards] Failed to refresh Playtime leaderboard: Can't connect to MySQL server on '127.0.0.1' (10061)
+L 03/28/2026 - 07:18:17: [zc_leaderboard.amxx] [ZC Leaderboards] Failed to refresh Prestige Level leaderboard: Can't connect to MySQL server on '127.0.0.1' (10061)
+L 03/28/2026 - 07:18:20: [zc_leaderboard.amxx] [ZC Leaderboards] Failed to refresh Total Coins leaderboard: Can't connect to MySQL server on '127.0.0.1' (10061)
+L 03/28/2026 - 07:22:50: -------- Mapchange to zm_foda --------
+L 03/28/2026 - 07:22:50: [CSX] Could not load csstats file: cstrike\
+L 03/28/2026 - 07:22:50: [zc_kill_effects.amxx] [ZC Kill Effects] zbeam/beam.spr not found, using flare6.spr
+L 03/28/2026 - 07:22:50: [zc_kill_effects.amxx] [ZC Kill Effects] Sprites precached successfully
+L 03/28/2026 - 07:22:50: [zc_balrog5.amxx] [ZC Balrog-V] Custom model not found, using fallback: models/v_galil.mdl
+L 03/28/2026 - 07:22:50: [zc_skull11.amxx] [ZC Skull-11] Custom model not found, using fallback: models/v_m4a1.mdl
+L 03/28/2026 - 07:22:50: [zc_thanatos7.amxx] [ZC Thanatos-7] Custom model not found, using fallback: models/v_m4a1.mdl
+L 03/28/2026 - 07:22:51: [zc_achievements.amxx] [ZC Achievements] No achievements loaded, creating defaults...
+L 03/28/2026 - 07:22:51: [zc_achievements.amxx] [ZC Achievements] Created 4 default achievements
+L 03/28/2026 - 07:22:51: [zc_achievements.amxx] [ZC Achievements] Loaded 4 achievements
+L 03/28/2026 - 07:22:51: [zc_prestige.amxx] [ZC Prestige] Creating default perks...
+L 03/28/2026 - 07:22:51: [zc_prestige.amxx] [ZC Prestige] Created 4 default perks
+L 03/28/2026 - 07:22:51: [zc_prestige.amxx] [ZC Prestige] System initialized with 4 perks
+L 03/28/2026 - 07:22:51: [zc_daily_challenges.amxx] [ZC Daily Challenges] Creating default templates...
+L 03/28/2026 - 07:22:51: [zc_daily_challenges.amxx] [ZC Daily Challenges] Created 6 default templates
+L 03/28/2026 - 07:22:51: [zc_daily_challenges.amxx] [ZC Daily Challenges] Loaded 6 challenge templates
+L 03/28/2026 - 07:22:51: [zc_kill_effects.amxx] [ZC Kill Effects] Creating default effects...
+L 03/28/2026 - 07:22:51: [zc_kill_effects.amxx] [ZC Kill Effects] Created 3 default effects
+L 03/28/2026 - 07:22:51: [zc_kill_effects.amxx] [ZC Kill Effects] Loaded 3 effects
+L 03/28/2026 - 07:22:53: [zc_player_profiles.amxx] [ZC Profiles] Failed to create table: Can't connect to MySQL server on '127.0.0.1' (10061)
+L 03/28/2026 - 07:22:55: [zc_player_profiles.amxx] [ZC Profiles] Failed to create table: Can't connect to MySQL server on '127.0.0.1' (10061)
+L 03/28/2026 - 07:22:55: [zc_mode.amxx] sus become VIP. (SteamID: "STEAM_0:0:1144780358") (IP: "192.168.100.62") (Flags: "abcde")
+L 03/28/2026 - 07:22:55: [admin.amxx] Login: "sus<1><STEAM_0:0:1144780358><>" became an admin (account "sus") (access "abcdefghijklmnopqrstuvwxz") (address "192.168.100.62")
+L 03/28/2026 - 07:22:58: [zc_achievements.amxx] [ZC Achievements] Failed to create table: Can't connect to MySQL server on '127.0.0.1' (10061)
+L 03/28/2026 - 07:23:00: [zc_achievements.amxx] [ZC Achievements] Failed to create table: Can't connect to MySQL server on '127.0.0.1' (10061)
+L 03/28/2026 - 07:23:02: [zc_leaderboard.amxx] [ZC Leaderboards] Initial cache refresh complete
+L 03/28/2026 - 07:23:02: [zc_daily_challenges.amxx] [ZC Daily Challenges] Failed to create table: Can't connect to MySQL server on '127.0.0.1' (10061)
+L 03/28/2026 - 07:23:05: [zc_daily_challenges.amxx] [ZC Daily Challenges] Failed to create table: Can't connect to MySQL server on '127.0.0.1' (10061)
+L 03/28/2026 - 07:23:07: [zc_player_profiles.amxx] [ZC Profiles] Failed to load profile for player 1: Can't connect to MySQL server on '127.0.0.1' (10061)
+L 03/28/2026 - 07:23:09: [zc_achievements.amxx] [ZC Achievements] Failed to load achievements for player 1: Can't connect to MySQL server on '127.0.0.1' (10061)
+L 03/28/2026 - 07:23:11: [zc_leaderboard.amxx] [ZC Leaderboards] Failed to refresh Highest Level leaderboard: Can't connect to MySQL server on '127.0.0.1' (10061)
+L 03/28/2026 - 07:23:14: [zc_leaderboard.amxx] [ZC Leaderboards] Failed to refresh Total XP leaderboard: Can't connect to MySQL server on '127.0.0.1' (10061)
+L 03/28/2026 - 07:23:16: [zc_leaderboard.amxx] [ZC Leaderboards] Failed to refresh Total Kills leaderboard: Can't connect to MySQL server on '127.0.0.1' (10061)
+L 03/28/2026 - 07:23:19: [zc_leaderboard.amxx] [ZC Leaderboards] Failed to refresh Total Infections leaderboard: Can't connect to MySQL server on '127.0.0.1' (10061)
+L 03/28/2026 - 07:23:21: [zc_leaderboard.amxx] [ZC Leaderboards] Failed to refresh Playtime leaderboard: Can't connect to MySQL server on '127.0.0.1' (10061)
+L 03/28/2026 - 07:23:23: [zc_leaderboard.amxx] [ZC Leaderboards] Failed to refresh Prestige Level leaderboard: Can't connect to MySQL server on '127.0.0.1' (10061)
+L 03/28/2026 - 07:23:25: [zc_leaderboard.amxx] [ZC Leaderboards] Failed to refresh Total Coins leaderboard: Can't connect to MySQL server on '127.0.0.1' (10061)
+L 03/28/2026 - 07:23:30: [zc_player_profiles.amxx] [ZC Profiles] Failed to load profile for player 2: Can't connect to MySQL server on '127.0.0.1' (10061)
+L 03/28/2026 - 07:23:32: [zc_achievements.amxx] [ZC Achievements] Failed to load achievements for player 2: Can't connect to MySQL server on '127.0.0.1' (10061)
+L 03/28/2026 - 07:23:35: [zc_player_profiles.amxx] [ZC Profiles] Failed to load profile for player 3: Can't connect to MySQL server on '127.0.0.1' (10061)
+L 03/28/2026 - 07:23:37: [zc_achievements.amxx] [ZC Achievements] Failed to load achievements for player 3: Can't connect to MySQL server on '127.0.0.1' (10061)
+L 03/28/2026 - 07:23:40: [zc_player_profiles.amxx] [ZC Profiles] Failed to load profile for player 4: Can't connect to MySQL server on '127.0.0.1' (10061)
+L 03/28/2026 - 07:23:42: [zc_achievements.amxx] [ZC Achievements] Failed to load achievements for player 4: Can't connect to MySQL server on '127.0.0.1' (10061)
+L 03/28/2026 - 07:23:45: [zc_player_profiles.amxx] [ZC Profiles] Failed to create new profile for player 1: Can't connect to MySQL server on '127.0.0.1' (10061)
+L 03/28/2026 - 07:23:47: [zc_player_profiles.amxx] [ZC Profiles] Failed to load profile for player 5: Can't connect to MySQL server on '127.0.0.1' (10061)
+L 03/28/2026 - 07:23:49: [zc_achievements.amxx] [ZC Achievements] Failed to load achievements for player 5: Can't connect to MySQL server on '127.0.0.1' (10061)
+L 03/28/2026 - 07:23:52: [zc_player_profiles.amxx] [ZC Profiles] Failed to load profile for player 6: Can't connect to MySQL server on '127.0.0.1' (10061)
+L 03/28/2026 - 07:23:54: [zc_achievements.amxx] [ZC Achievements] Failed to load achievements for player 6: Can't connect to MySQL server on '127.0.0.1' (10061)
+L 03/28/2026 - 07:23:56: [zc_player_profiles.amxx] [ZC Profiles] Failed to create new profile for player 2: Can't connect to MySQL server on '127.0.0.1' (10061)
+L 03/28/2026 - 07:23:59: [zc_player_profiles.amxx] [ZC Profiles] Failed to create new profile for player 3: Can't connect to MySQL server on '127.0.0.1' (10061)
+L 03/28/2026 - 07:24:01: [zc_player_profiles.amxx] [ZC Profiles] Failed to create new profile for player 4: Can't connect to MySQL server on '127.0.0.1' (10061)
+L 03/28/2026 - 07:24:04: [zc_player_profiles.amxx] [ZC Profiles] Failed to create new profile for player 5: Can't connect to MySQL server on '127.0.0.1' (10061)
+L 03/28/2026 - 07:24:06: [zc_player_profiles.amxx] [ZC Profiles] Failed to create new profile for player 6: Can't connect to MySQL server on '127.0.0.1' (10061)
+L 03/28/2026 - 07:25:01: -------- Mapchange to zm_foda --------
+L 03/28/2026 - 07:25:02: [zc_kill_effects.amxx] [ZC Kill Effects] zbeam/beam.spr not found, using flare6.spr
+L 03/28/2026 - 07:25:02: [zc_kill_effects.amxx] [ZC Kill Effects] Sprites precached successfully
+L 03/28/2026 - 07:25:02: [zc_balrog5.amxx] [ZC Balrog-V] Custom model not found, using fallback: models/v_galil.mdl
+L 03/28/2026 - 07:25:02: [zc_skull11.amxx] [ZC Skull-11] Custom model not found, using fallback: models/v_m4a1.mdl
+L 03/28/2026 - 07:25:02: [zc_thanatos7.amxx] [ZC Thanatos-7] Custom model not found, using fallback: models/v_m4a1.mdl
+L 03/28/2026 - 07:25:02: [zc_achievements.amxx] [ZC Achievements] No achievements loaded, creating defaults...
+L 03/28/2026 - 07:25:02: [zc_achievements.amxx] [ZC Achievements] Created 4 default achievements
+L 03/28/2026 - 07:25:02: [zc_achievements.amxx] [ZC Achievements] Loaded 4 achievements
+L 03/28/2026 - 07:25:02: [zc_prestige.amxx] [ZC Prestige] Creating default perks...
+L 03/28/2026 - 07:25:02: [zc_prestige.amxx] [ZC Prestige] Created 4 default perks
+L 03/28/2026 - 07:25:02: [zc_prestige.amxx] [ZC Prestige] System initialized with 4 perks
+L 03/28/2026 - 07:25:03: [zc_daily_challenges.amxx] [ZC Daily Challenges] Creating default templates...
+L 03/28/2026 - 07:25:03: [zc_daily_challenges.amxx] [ZC Daily Challenges] Created 6 default templates
+L 03/28/2026 - 07:25:03: [zc_daily_challenges.amxx] [ZC Daily Challenges] Loaded 6 challenge templates
+L 03/28/2026 - 07:25:03: [zc_kill_effects.amxx] [ZC Kill Effects] Creating default effects...
+L 03/28/2026 - 07:25:03: [zc_kill_effects.amxx] [ZC Kill Effects] Created 3 default effects
+L 03/28/2026 - 07:25:03: [zc_kill_effects.amxx] [ZC Kill Effects] Loaded 3 effects
+L 03/28/2026 - 07:25:03: [zc_mode.amxx] sus become VIP. (SteamID: "STEAM_0:0:1144780358") (IP: "192.168.100.62") (Flags: "abcde")
+L 03/28/2026 - 07:25:03: [admin.amxx] Login: "sus<1><STEAM_0:0:1144780358><>" became an admin (account "sus") (access "abcdefghijklmnopqrstuvwxz") (address "192.168.100.62")
+L 03/28/2026 - 07:25:05: [zc_player_profiles.amxx] [ZC Profiles] Failed to create table: Unknown MySQL server host 'host' (11001)
+L 03/28/2026 - 07:25:07: [zc_player_profiles.amxx] [ZC Profiles] Failed to create table: Unknown MySQL server host 'host' (11001)
+L 03/28/2026 - 07:25:10: [zc_achievements.amxx] [ZC Achievements] Failed to create table: Unknown MySQL server host 'host' (11001)
+L 03/28/2026 - 07:25:12: [zc_balrog5.amxx] [ZC Balrog-V] zp_extra_item_selected called - player: 1, itemid: 49, g_itemid: 47
+L 03/28/2026 - 07:25:12: [zc_balrog5.amxx] [ZC Balrog-V] Item ID mismatch - looking for 47, got 49
+L 03/28/2026 - 07:25:12: [zc_skull11.amxx] [ZC Skull-11] zp_extra_item_selected called - player: 1, itemid: 49, g_itemid: 48
+L 03/28/2026 - 07:25:12: [zc_skull11.amxx] [ZC Skull-11] Item ID mismatch - looking for 48, got 49
+L 03/28/2026 - 07:25:12: [zc_thanatos7.amxx] [ZC Thanatos-7] zp_extra_item_selected called - player: 1, itemid: 49, g_itemid: 49
+L 03/28/2026 - 07:25:12: [zc_thanatos7.amxx] [ZC Thanatos-7] Item matched! Calling Get_Thanatos7 for player 1
+L 03/28/2026 - 07:25:12: [zc_thanatos7.amxx] [ZC Thanatos-7] Get_Thanatos7 called for player 1
+L 03/28/2026 - 07:25:12: [zc_thanatos7.amxx] [ZC Thanatos-7] Player 1 is not alive! Cannot give weapon.
+L 03/28/2026 - 07:25:12: [zc_thanatos7.amxx] [ZC Thanatos-7] Get_Thanatos7 completed for player 1
+L 03/28/2026 - 07:25:12: [zc_achievements.amxx] [ZC Achievements] Failed to create table: Unknown MySQL server host 'host' (11001)
+L 03/28/2026 - 07:25:13: [zc_leaderboard.amxx] [ZC Leaderboards] Initial cache refresh complete
+L 03/28/2026 - 07:25:15: [zc_daily_challenges.amxx] [ZC Daily Challenges] Failed to create table: Unknown MySQL server host 'host' (11001)
+L 03/28/2026 - 07:25:17: [zc_daily_challenges.amxx] [ZC Daily Challenges] Failed to create table: Unknown MySQL server host 'host' (11001)
+L 03/28/2026 - 07:25:20: [zc_player_profiles.amxx] [ZC Profiles] Failed to load profile for player 1: Unknown MySQL server host 'host' (11001)
+L 03/28/2026 - 07:25:23: [zc_achievements.amxx] [ZC Achievements] Failed to load achievements for player 1: Unknown MySQL server host 'host' (11001)
+L 03/28/2026 - 07:25:24: [zc_balrog5.amxx] [ZC Balrog-V] zp_extra_item_selected called - player: 1, itemid: 49, g_itemid: 47
+L 03/28/2026 - 07:25:24: [zc_balrog5.amxx] [ZC Balrog-V] Item ID mismatch - looking for 47, got 49
+L 03/28/2026 - 07:25:24: [zc_skull11.amxx] [ZC Skull-11] zp_extra_item_selected called - player: 1, itemid: 49, g_itemid: 48
+L 03/28/2026 - 07:25:24: [zc_skull11.amxx] [ZC Skull-11] Item ID mismatch - looking for 48, got 49
+L 03/28/2026 - 07:25:24: [zc_thanatos7.amxx] [ZC Thanatos-7] zp_extra_item_selected called - player: 1, itemid: 49, g_itemid: 49
+L 03/28/2026 - 07:25:24: [zc_thanatos7.amxx] [ZC Thanatos-7] Item matched! Calling Get_Thanatos7 for player 1
+L 03/28/2026 - 07:25:24: [zc_thanatos7.amxx] [ZC Thanatos-7] Get_Thanatos7 called for player 1
+L 03/28/2026 - 07:25:24: [zc_thanatos7.amxx] [ZC Thanatos-7] Player 1 is not alive! Cannot give weapon.
+L 03/28/2026 - 07:25:24: [zc_thanatos7.amxx] [ZC Thanatos-7] Get_Thanatos7 completed for player 1
+L 03/28/2026 - 07:25:25: [zc_leaderboard.amxx] [ZC Leaderboards] Failed to refresh Highest Level leaderboard: Unknown MySQL server host 'host' (11001)
+L 03/28/2026 - 07:25:28: [zc_leaderboard.amxx] [ZC Leaderboards] Failed to refresh Total XP leaderboard: Unknown MySQL server host 'host' (11001)
+L 03/28/2026 - 07:25:30: [zc_leaderboard.amxx] [ZC Leaderboards] Failed to refresh Total Kills leaderboard: Unknown MySQL server host 'host' (11001)
+L 03/28/2026 - 07:25:32: [zc_balrog5.amxx] [ZC Balrog-V] zp_extra_item_selected called - player: 1, itemid: 47, g_itemid: 47
+L 03/28/2026 - 07:25:32: [zc_balrog5.amxx] [ZC Balrog-V] Item matched! Calling Get_Balrog5 for player 1
+L 03/28/2026 - 07:25:32: [zc_balrog5.amxx] [ZC Balrog-V] Get_Balrog5 called for player 1
+L 03/28/2026 - 07:25:32: [zc_balrog5.amxx] [ZC Balrog-V] Player 1 is not alive! Cannot give weapon.
+L 03/28/2026 - 07:25:32: [zc_balrog5.amxx] [ZC Balrog-V] Get_Balrog5 completed for player 1
+L 03/28/2026 - 07:25:32: [zc_skull11.amxx] [ZC Skull-11] zp_extra_item_selected called - player: 1, itemid: 47, g_itemid: 48
+L 03/28/2026 - 07:25:32: [zc_skull11.amxx] [ZC Skull-11] Item ID mismatch - looking for 48, got 47
+L 03/28/2026 - 07:25:32: [zc_thanatos7.amxx] [ZC Thanatos-7] zp_extra_item_selected called - player: 1, itemid: 47, g_itemid: 49
+L 03/28/2026 - 07:25:32: [zc_thanatos7.amxx] [ZC Thanatos-7] Item ID mismatch - looking for 49, got 47
+L 03/28/2026 - 07:25:33: [zc_leaderboard.amxx] [ZC Leaderboards] Failed to refresh Total Infections leaderboard: Unknown MySQL server host 'host' (11001)
+L 03/28/2026 - 07:25:37: [zc_leaderboard.amxx] [ZC Leaderboards] Failed to refresh Playtime leaderboard: Unknown MySQL server host 'host' (11001)
+L 03/28/2026 - 07:25:38: [zc_leaderboard.amxx] [ZC Leaderboards] Failed to refresh Prestige Level leaderboard: Unknown MySQL server host 'host' (11001)
+L 03/28/2026 - 07:25:40: [zc_leaderboard.amxx] [ZC Leaderboards] Failed to refresh Total Coins leaderboard: Unknown MySQL server host 'host' (11001)
+L 03/28/2026 - 07:25:45: [zc_player_profiles.amxx] [ZC Profiles] Failed to load profile for player 2: Unknown MySQL server host 'host' (11001)
+L 03/28/2026 - 07:25:48: [zc_achievements.amxx] [ZC Achievements] Failed to load achievements for player 2: Unknown MySQL server host 'host' (11001)
+L 03/28/2026 - 07:25:51: [zc_player_profiles.amxx] [ZC Profiles] Failed to load profile for player 3: Unknown MySQL server host 'host' (11001)
+L 03/28/2026 - 07:25:53: [zc_achievements.amxx] [ZC Achievements] Failed to load achievements for player 3: Unknown MySQL server host 'host' (11001)
+L 03/28/2026 - 07:25:56: [zc_player_profiles.amxx] [ZC Profiles] Failed to load profile for player 4: Unknown MySQL server host 'host' (11001)
+L 03/28/2026 - 07:25:58: [zc_achievements.amxx] [ZC Achievements] Failed to load achievements for player 4: Unknown MySQL server host 'host' (11001)
+L 03/28/2026 - 07:26:01: [zc_player_profiles.amxx] [ZC Profiles] Failed to load profile for player 5: Unknown MySQL server host 'host' (11001)
+L 03/28/2026 - 07:26:03: [zc_achievements.amxx] [ZC Achievements] Failed to load achievements for player 5: Unknown MySQL server host 'host' (11001)
+L 03/28/2026 - 07:26:06: [zc_player_profiles.amxx] [ZC Profiles] Failed to create new profile for player 1: Unknown MySQL server host 'host' (11001)
+L 03/28/2026 - 07:26:08: [zc_player_profiles.amxx] [ZC Profiles] Failed to load profile for player 6: Unknown MySQL server host 'host' (11001)
+L 03/28/2026 - 07:26:11: [zc_achievements.amxx] [ZC Achievements] Failed to load achievements for player 6: Unknown MySQL server host 'host' (11001)
+L 03/28/2026 - 07:26:13: [zc_player_profiles.amxx] [ZC Profiles] Failed to create new profile for player 2: Unknown MySQL server host 'host' (11001)
+L 03/28/2026 - 07:26:16: [zc_player_profiles.amxx] [ZC Profiles] Failed to create new profile for player 3: Unknown MySQL server host 'host' (11001)
+L 03/28/2026 - 07:26:18: [zc_player_profiles.amxx] [ZC Profiles] Failed to create new profile for player 4: Unknown MySQL server host 'host' (11001)
+L 03/28/2026 - 07:26:21: [zc_player_profiles.amxx] [ZC Profiles] Failed to create new profile for player 5: Unknown MySQL server host 'host' (11001)
+L 03/28/2026 - 07:26:24: [zc_player_profiles.amxx] [ZC Profiles] Failed to create new profile for player 6: Unknown MySQL server host 'host' (11001)
+L 03/28/2026 - 07:27:05: [zc_balrog5.amxx] [ZC Balrog-V] zp_extra_item_selected called - player: 1, itemid: 42, g_itemid: 47
+L 03/28/2026 - 07:27:05: [zc_balrog5.amxx] [ZC Balrog-V] Item ID mismatch - looking for 47, got 42
+L 03/28/2026 - 07:27:05: [zc_skull11.amxx] [ZC Skull-11] zp_extra_item_selected called - player: 1, itemid: 42, g_itemid: 48
+L 03/28/2026 - 07:27:05: [zc_skull11.amxx] [ZC Skull-11] Item ID mismatch - looking for 48, got 42
+L 03/28/2026 - 07:27:05: [zc_thanatos7.amxx] [ZC Thanatos-7] zp_extra_item_selected called - player: 1, itemid: 42, g_itemid: 49
+L 03/28/2026 - 07:27:05: [zc_thanatos7.amxx] [ZC Thanatos-7] Item ID mismatch - looking for 49, got 42
+L 03/28/2026 - 07:27:17: -------- Mapchange to zm_foda --------
+L 03/28/2026 - 07:27:17: [zc_kill_effects.amxx] [ZC Kill Effects] zbeam/beam.spr not found, using flare6.spr
+L 03/28/2026 - 07:27:17: [zc_kill_effects.amxx] [ZC Kill Effects] Sprites precached successfully
+L 03/28/2026 - 07:27:17: [zc_balrog5.amxx] [ZC Balrog-V] Custom model not found, using fallback: models/v_galil.mdl
+L 03/28/2026 - 07:27:17: [zc_skull11.amxx] [ZC Skull-11] Custom model not found, using fallback: models/v_m4a1.mdl
+L 03/28/2026 - 07:27:17: [zc_thanatos7.amxx] [ZC Thanatos-7] Custom model not found, using fallback: models/v_m4a1.mdl
+L 03/28/2026 - 07:27:18: [zc_achievements.amxx] [ZC Achievements] No achievements loaded, creating defaults...
+L 03/28/2026 - 07:27:18: [zc_achievements.amxx] [ZC Achievements] Created 4 default achievements
+L 03/28/2026 - 07:27:18: [zc_achievements.amxx] [ZC Achievements] Loaded 4 achievements
+L 03/28/2026 - 07:27:18: [zc_prestige.amxx] [ZC Prestige] Creating default perks...
+L 03/28/2026 - 07:27:18: [zc_prestige.amxx] [ZC Prestige] Created 4 default perks
+L 03/28/2026 - 07:27:18: [zc_prestige.amxx] [ZC Prestige] System initialized with 4 perks
+L 03/28/2026 - 07:27:18: [zc_daily_challenges.amxx] [ZC Daily Challenges] Creating default templates...
+L 03/28/2026 - 07:27:18: [zc_daily_challenges.amxx] [ZC Daily Challenges] Created 6 default templates
+L 03/28/2026 - 07:27:18: [zc_daily_challenges.amxx] [ZC Daily Challenges] Loaded 6 challenge templates
+L 03/28/2026 - 07:27:18: [zc_kill_effects.amxx] [ZC Kill Effects] Creating default effects...
+L 03/28/2026 - 07:27:18: [zc_kill_effects.amxx] [ZC Kill Effects] Created 3 default effects
+L 03/28/2026 - 07:27:18: [zc_kill_effects.amxx] [ZC Kill Effects] Loaded 3 effects
+L 03/28/2026 - 07:27:19: [zc_mode.amxx] sus become VIP. (SteamID: "STEAM_0:0:1144780358") (IP: "192.168.100.62") (Flags: "abcde")
+L 03/28/2026 - 07:27:19: [admin.amxx] Login: "sus<1><STEAM_0:0:1144780358><>" became an admin (account "sus") (access "abcdefghijklmnopqrstuvwxz") (address "192.168.100.62")
+L 03/28/2026 - 07:27:20: [zc_player_profiles.amxx] [ZC Profiles] Failed to create table: Unknown MySQL server host 'host' (11001)
+L 03/28/2026 - 07:27:23: [zc_player_profiles.amxx] [ZC Profiles] Failed to create table: Unknown MySQL server host 'host' (11001)
+L 03/28/2026 - 07:27:25: [zc_achievements.amxx] [ZC Achievements] Failed to create table: Unknown MySQL server host 'host' (11001)
+L 03/28/2026 - 07:27:28: [zc_achievements.amxx] [ZC Achievements] Failed to create table: Unknown MySQL server host 'host' (11001)
+L 03/28/2026 - 07:27:28: [zc_leaderboard.amxx] [ZC Leaderboards] Initial cache refresh complete
+L 03/28/2026 - 07:27:30: [zc_daily_challenges.amxx] [ZC Daily Challenges] Failed to create table: Unknown MySQL server host 'host' (11001)
+L 03/28/2026 - 07:27:33: [zc_daily_challenges.amxx] [ZC Daily Challenges] Failed to create table: Unknown MySQL server host 'host' (11001)
+L 03/28/2026 - 07:27:35: [zc_player_profiles.amxx] [ZC Profiles] Failed to load profile for player 1: Unknown MySQL server host 'host' (11001)
+L 03/28/2026 - 07:27:38: [zc_achievements.amxx] [ZC Achievements] Failed to load achievements for player 1: Unknown MySQL server host 'host' (11001)
+L 03/28/2026 - 07:27:40: [zc_leaderboard.amxx] [ZC Leaderboards] Failed to refresh Highest Level leaderboard: Unknown MySQL server host 'host' (11001)
+L 03/28/2026 - 07:27:43: [zc_leaderboard.amxx] [ZC Leaderboards] Failed to refresh Total XP leaderboard: Unknown MySQL server host 'host' (11001)
+L 03/28/2026 - 07:27:43: [zc_balrog5.amxx] [ZC Balrog-V] zp_extra_item_selected called - player: 1, itemid: 47, g_itemid: 47
+L 03/28/2026 - 07:27:43: [zc_balrog5.amxx] [ZC Balrog-V] Item matched! Calling Get_Balrog5 for player 1
+L 03/28/2026 - 07:27:43: [zc_balrog5.amxx] [ZC Balrog-V] Get_Balrog5 called for player 1
+L 03/28/2026 - 07:27:43: [zc_balrog5.amxx] [ZC Balrog-V] Player 1 is not alive! Cannot give weapon.
+L 03/28/2026 - 07:27:43: [zc_balrog5.amxx] [ZC Balrog-V] Get_Balrog5 completed for player 1
+L 03/28/2026 - 07:27:43: [zc_skull11.amxx] [ZC Skull-11] zp_extra_item_selected called - player: 1, itemid: 47, g_itemid: 48
+L 03/28/2026 - 07:27:43: [zc_thanatos7.amxx] [ZC Thanatos-7] zp_extra_item_selected called - player: 1, itemid: 47, g_itemid: 49
+L 03/28/2026 - 07:27:46: [zc_leaderboard.amxx] [ZC Leaderboards] Failed to refresh Total Kills leaderboard: Unknown MySQL server host 'host' (11001)
+L 03/28/2026 - 07:27:48: [zc_leaderboard.amxx] [ZC Leaderboards] Failed to refresh Total Infections leaderboard: Unknown MySQL server host 'host' (11001)
+L 03/28/2026 - 07:27:51: [zc_leaderboard.amxx] [ZC Leaderboards] Failed to refresh Playtime leaderboard: Unknown MySQL server host 'host' (11001)
+L 03/28/2026 - 07:27:53: [zc_leaderboard.amxx] [ZC Leaderboards] Failed to refresh Prestige Level leaderboard: Unknown MySQL server host 'host' (11001)
+L 03/28/2026 - 07:27:56: [zc_leaderboard.amxx] [ZC Leaderboards] Failed to refresh Total Coins leaderboard: Unknown MySQL server host 'host' (11001)
+L 03/28/2026 - 07:28:01: [zc_player_profiles.amxx] [ZC Profiles] Failed to load profile for player 2: Unknown MySQL server host 'host' (11001)
+L 03/28/2026 - 07:28:03: [zc_achievements.amxx] [ZC Achievements] Failed to load achievements for player 2: Unknown MySQL server host 'host' (11001)
+L 03/28/2026 - 07:28:06: [zc_player_profiles.amxx] [ZC Profiles] Failed to load profile for player 3: Unknown MySQL server host 'host' (11001)
+L 03/28/2026 - 07:28:08: [zc_achievements.amxx] [ZC Achievements] Failed to load achievements for player 3: Unknown MySQL server host 'host' (11001)
+L 03/28/2026 - 07:28:11: [zc_player_profiles.amxx] [ZC Profiles] Failed to load profile for player 4: Unknown MySQL server host 'host' (11001)
+L 03/28/2026 - 07:28:13: [zc_achievements.amxx] [ZC Achievements] Failed to load achievements for player 4: Unknown MySQL server host 'host' (11001)
+L 03/28/2026 - 07:28:16: [zc_player_profiles.amxx] [ZC Profiles] Failed to load profile for player 5: Unknown MySQL server host 'host' (11001)
+L 03/28/2026 - 07:28:19: [zc_achievements.amxx] [ZC Achievements] Failed to load achievements for player 5: Unknown MySQL server host 'host' (11001)
+L 03/28/2026 - 07:28:21: [zc_player_profiles.amxx] [ZC Profiles] Failed to create new profile for player 1: Unknown MySQL server host 'host' (11001)
+L 03/28/2026 - 07:28:24: [zc_player_profiles.amxx] [ZC Profiles] Failed to load profile for player 6: Unknown MySQL server host 'host' (11001)
+L 03/28/2026 - 07:28:26: [zc_achievements.amxx] [ZC Achievements] Failed to load achievements for player 6: Unknown MySQL server host 'host' (11001)
+L 03/28/2026 - 07:28:29: [zc_player_profiles.amxx] [ZC Profiles] Failed to create new profile for player 2: Unknown MySQL server host 'host' (11001)
+L 03/28/2026 - 07:28:31: [zc_player_profiles.amxx] [ZC Profiles] Failed to create new profile for player 3: Unknown MySQL server host 'host' (11001)
+L 03/28/2026 - 07:28:34: [zc_player_profiles.amxx] [ZC Profiles] Failed to create new profile for player 4: Unknown MySQL server host 'host' (11001)
+L 03/28/2026 - 07:28:36: [zc_player_profiles.amxx] [ZC Profiles] Failed to create new profile for player 5: Unknown MySQL server host 'host' (11001)
+L 03/28/2026 - 07:28:39: [zc_player_profiles.amxx] [ZC Profiles] Failed to create new profile for player 6: Unknown MySQL server host 'host' (11001)
+L 03/28/2026 - 07:29:20: [zc_balrog5.amxx] [ZC Balrog-V] zp_extra_item_selected called - player: 1, itemid: 46, g_itemid: 47
+L 03/28/2026 - 07:29:20: [zc_skull11.amxx] [ZC Skull-11] zp_extra_item_selected called - player: 1, itemid: 46, g_itemid: 48
+L 03/28/2026 - 07:29:20: [zc_thanatos7.amxx] [ZC Thanatos-7] zp_extra_item_selected called - player: 1, itemid: 46, g_itemid: 49
+L 03/28/2026 - 07:29:31: [zc_balrog5.amxx] [ZC Balrog-V] zp_extra_item_selected called - player: 1, itemid: 46, g_itemid: 47
+L 03/28/2026 - 07:29:31: [zc_skull11.amxx] [ZC Skull-11] zp_extra_item_selected called - player: 1, itemid: 46, g_itemid: 48
+L 03/28/2026 - 07:29:31: [zc_thanatos7.amxx] [ZC Thanatos-7] zp_extra_item_selected called - player: 1, itemid: 46, g_itemid: 49
+L 03/28/2026 - 07:31:21: [zc_balrog5.amxx] [ZC Balrog-V] zp_extra_item_selected called - player: 1, itemid: 47, g_itemid: 47
+L 03/28/2026 - 07:31:21: [zc_balrog5.amxx] [ZC Balrog-V] Item matched! Calling Get_Balrog5 for player 1
+L 03/28/2026 - 07:31:21: [zc_balrog5.amxx] [ZC Balrog-V] Get_Balrog5 called for player 1
+L 03/28/2026 - 07:31:21: [zc_balrog5.amxx] [ZC Balrog-V] Player 1 is not alive! Cannot give weapon.
+L 03/28/2026 - 07:31:21: [zc_balrog5.amxx] [ZC Balrog-V] Get_Balrog5 completed for player 1
+L 03/28/2026 - 07:31:21: [zc_skull11.amxx] [ZC Skull-11] zp_extra_item_selected called - player: 1, itemid: 47, g_itemid: 48
+L 03/28/2026 - 07:31:21: [zc_thanatos7.amxx] [ZC Thanatos-7] zp_extra_item_selected called - player: 1, itemid: 47, g_itemid: 49
+L 03/28/2026 - 07:31:30: -------- Mapchange to zm_foda --------
+L 03/28/2026 - 07:31:31: [zc_kill_effects.amxx] [ZC Kill Effects] zbeam/beam.spr not found, using flare6.spr
+L 03/28/2026 - 07:31:31: [zc_kill_effects.amxx] [ZC Kill Effects] Sprites precached successfully
+L 03/28/2026 - 07:31:31: [zc_balrog5.amxx] [ZC Balrog-V] Custom model not found, using fallback: models/v_galil.mdl
+L 03/28/2026 - 07:31:31: [zc_skull11.amxx] [ZC Skull-11] Custom model not found, using fallback: models/v_m4a1.mdl
+L 03/28/2026 - 07:31:31: [zc_thanatos7.amxx] [ZC Thanatos-7] Custom model not found, using fallback: models/v_m4a1.mdl
+L 03/28/2026 - 07:31:31: [zc_achievements.amxx] [ZC Achievements] No achievements loaded, creating defaults...
+L 03/28/2026 - 07:31:31: [zc_achievements.amxx] [ZC Achievements] Created 4 default achievements
+L 03/28/2026 - 07:31:31: [zc_achievements.amxx] [ZC Achievements] Loaded 4 achievements
+L 03/28/2026 - 07:31:31: [zc_prestige.amxx] [ZC Prestige] Creating default perks...
+L 03/28/2026 - 07:31:31: [zc_prestige.amxx] [ZC Prestige] Created 4 default perks
+L 03/28/2026 - 07:31:32: [zc_prestige.amxx] [ZC Prestige] System initialized with 4 perks
+L 03/28/2026 - 07:31:32: [zc_daily_challenges.amxx] [ZC Daily Challenges] Creating default templates...
+L 03/28/2026 - 07:31:32: [zc_daily_challenges.amxx] [ZC Daily Challenges] Created 6 default templates
+L 03/28/2026 - 07:31:32: [zc_daily_challenges.amxx] [ZC Daily Challenges] Loaded 6 challenge templates
+L 03/28/2026 - 07:31:32: [zc_kill_effects.amxx] [ZC Kill Effects] Creating default effects...
+L 03/28/2026 - 07:31:32: [zc_kill_effects.amxx] [ZC Kill Effects] Created 3 default effects
+L 03/28/2026 - 07:31:32: [zc_kill_effects.amxx] [ZC Kill Effects] Loaded 3 effects
+L 03/28/2026 - 07:31:32: [zc_mode.amxx] sus become VIP. (SteamID: "STEAM_0:0:1144780358") (IP: "192.168.100.62") (Flags: "abcde")
+L 03/28/2026 - 07:31:32: [admin.amxx] Login: "sus<1><STEAM_0:0:1144780358><>" became an admin (account "sus") (access "abcdefghijklmnopqrstuvwxz") (address "192.168.100.62")
+L 03/28/2026 - 07:31:34: [zc_player_profiles.amxx] [ZC Profiles] Failed to create table: Unknown MySQL server host 'host' (11001)
+L 03/28/2026 - 07:31:36: [zc_player_profiles.amxx] [ZC Profiles] Failed to create table: Unknown MySQL server host 'host' (11001)
+L 03/28/2026 - 07:31:39: [zc_achievements.amxx] [ZC Achievements] Failed to create table: Unknown MySQL server host 'host' (11001)
+L 03/28/2026 - 07:31:41: [zc_achievements.amxx] [ZC Achievements] Failed to create table: Unknown MySQL server host 'host' (11001)
+L 03/28/2026 - 07:31:42: [zc_leaderboard.amxx] [ZC Leaderboards] Initial cache refresh complete
+L 03/28/2026 - 07:31:44: [zc_daily_challenges.amxx] [ZC Daily Challenges] Failed to create table: Unknown MySQL server host 'host' (11001)
+L 03/28/2026 - 07:31:46: [zc_daily_challenges.amxx] [ZC Daily Challenges] Failed to create table: Unknown MySQL server host 'host' (11001)
+L 03/28/2026 - 07:31:49: [zc_player_profiles.amxx] [ZC Profiles] Failed to load profile for player 1: Unknown MySQL server host 'host' (11001)
+L 03/28/2026 - 07:31:52: [zc_achievements.amxx] [ZC Achievements] Failed to load achievements for player 1: Unknown MySQL server host 'host' (11001)
+L 03/28/2026 - 07:31:54: [zc_leaderboard.amxx] [ZC Leaderboards] Failed to refresh Highest Level leaderboard: Unknown MySQL server host 'host' (11001)
+L 03/28/2026 - 07:31:57: [zc_leaderboard.amxx] [ZC Leaderboards] Failed to refresh Total XP leaderboard: Unknown MySQL server host 'host' (11001)
+L 03/28/2026 - 07:31:59: [zc_leaderboard.amxx] [ZC Leaderboards] Failed to refresh Total Kills leaderboard: Unknown MySQL server host 'host' (11001)
+L 03/28/2026 - 07:32:01: [zc_balrog5.amxx] [ZC Balrog-V] zp_extra_item_selected called - player: 1, itemid: 40, g_itemid: 47
+L 03/28/2026 - 07:32:01: [zc_skull11.amxx] [ZC Skull-11] zp_extra_item_selected called - player: 1, itemid: 40, g_itemid: 48
+L 03/28/2026 - 07:32:01: [zc_thanatos7.amxx] [ZC Thanatos-7] zp_extra_item_selected called - player: 1, itemid: 40, g_itemid: 49
+L 03/28/2026 - 07:32:02: [zc_leaderboard.amxx] [ZC Leaderboards] Failed to refresh Total Infections leaderboard: Unknown MySQL server host 'host' (11001)
+L 03/28/2026 - 07:32:04: [zc_leaderboard.amxx] [ZC Leaderboards] Failed to refresh Playtime leaderboard: Unknown MySQL server host 'host' (11001)
+L 03/28/2026 - 07:32:05: [zc_balrog5.amxx] [ZC Balrog-V] zp_extra_item_selected called - player: 1, itemid: 47, g_itemid: 47
+L 03/28/2026 - 07:32:05: [zc_balrog5.amxx] [ZC Balrog-V] Item matched! Calling Get_Balrog5 for player 1
+L 03/28/2026 - 07:32:05: [zc_balrog5.amxx] [ZC Balrog-V] Get_Balrog5 called for player 1
+L 03/28/2026 - 07:32:06: [zc_balrog5.amxx] [ZC Balrog-V] Player 1 is not alive yet, setting flag for weapon
+L 03/28/2026 - 07:32:06: [zc_balrog5.amxx] [ZC Balrog-V] Get_Balrog5 completed for player 1
+L 03/28/2026 - 07:32:06: [zc_skull11.amxx] [ZC Skull-11] zp_extra_item_selected called - player: 1, itemid: 47, g_itemid: 48
+L 03/28/2026 - 07:32:06: [zc_thanatos7.amxx] [ZC Thanatos-7] zp_extra_item_selected called - player: 1, itemid: 47, g_itemid: 49
+L 03/28/2026 - 07:32:07: [zc_leaderboard.amxx] [ZC Leaderboards] Failed to refresh Prestige Level leaderboard: Unknown MySQL server host 'host' (11001)
+L 03/28/2026 - 07:32:09: [zc_leaderboard.amxx] [ZC Leaderboards] Failed to refresh Total Coins leaderboard: Unknown MySQL server host 'host' (11001)
+L 03/28/2026 - 07:32:14: [zc_player_profiles.amxx] [ZC Profiles] Failed to load profile for player 2: Unknown MySQL server host 'host' (11001)
+L 03/28/2026 - 07:32:17: [zc_achievements.amxx] [ZC Achievements] Failed to load achievements for player 2: Unknown MySQL server host 'host' (11001)
+L 03/28/2026 - 07:32:19: [zc_player_profiles.amxx] [ZC Profiles] Failed to load profile for player 3: Unknown MySQL server host 'host' (11001)
+L 03/28/2026 - 07:32:22: [zc_achievements.amxx] [ZC Achievements] Failed to load achievements for player 3: Unknown MySQL server host 'host' (11001)
+L 03/28/2026 - 07:32:24: [zc_player_profiles.amxx] [ZC Profiles] Failed to load profile for player 4: Unknown MySQL server host 'host' (11001)
+L 03/28/2026 - 07:32:27: [zc_achievements.amxx] [ZC Achievements] Failed to load achievements for player 4: Unknown MySQL server host 'host' (11001)
+L 03/28/2026 - 07:32:30: [zc_player_profiles.amxx] [ZC Profiles] Failed to load profile for player 5: Unknown MySQL server host 'host' (11001)
+L 03/28/2026 - 07:32:32: [zc_achievements.amxx] [ZC Achievements] Failed to load achievements for player 5: Unknown MySQL server host 'host' (11001)
+L 03/28/2026 - 07:32:35: [zc_player_profiles.amxx] [ZC Profiles] Failed to create new profile for player 1: Unknown MySQL server host 'host' (11001)
+L 03/28/2026 - 07:32:37: [zc_player_profiles.amxx] [ZC Profiles] Failed to load profile for player 6: Unknown MySQL server host 'host' (11001)
+L 03/28/2026 - 07:32:40: [zc_achievements.amxx] [ZC Achievements] Failed to load achievements for player 6: Unknown MySQL server host 'host' (11001)
+L 03/28/2026 - 07:32:42: [zc_player_profiles.amxx] [ZC Profiles] Failed to create new profile for player 2: Unknown MySQL server host 'host' (11001)
+L 03/28/2026 - 07:32:45: [zc_player_profiles.amxx] [ZC Profiles] Failed to create new profile for player 3: Unknown MySQL server host 'host' (11001)
+L 03/28/2026 - 07:32:47: [zc_player_profiles.amxx] [ZC Profiles] Failed to create new profile for player 4: Unknown MySQL server host 'host' (11001)
+L 03/28/2026 - 07:32:50: [zc_player_profiles.amxx] [ZC Profiles] Failed to create new profile for player 5: Unknown MySQL server host 'host' (11001)
+L 03/28/2026 - 07:32:52: [zc_player_profiles.amxx] [ZC Profiles] Failed to create new profile for player 6: Unknown MySQL server host 'host' (11001)
+L 03/28/2026 - 07:34:27: [zc_balrog5.amxx] [ZC Balrog-V] zp_extra_item_selected called - player: 1, itemid: 2, g_itemid: 47
+L 03/28/2026 - 07:34:27: [zc_skull11.amxx] [ZC Skull-11] zp_extra_item_selected called - player: 1, itemid: 2, g_itemid: 48
+L 03/28/2026 - 07:34:27: [zc_thanatos7.amxx] [ZC Thanatos-7] zp_extra_item_selected called - player: 1, itemid: 2, g_itemid: 49
+L 03/28/2026 - 07:34:35: [zc_balrog5.amxx] [ZC Balrog-V] zp_extra_item_selected called - player: 1, itemid: 47, g_itemid: 47
+L 03/28/2026 - 07:34:35: [zc_balrog5.amxx] [ZC Balrog-V] Item matched! Calling Get_Balrog5 for player 1
+L 03/28/2026 - 07:34:35: [zc_balrog5.amxx] [ZC Balrog-V] Get_Balrog5 called for player 1
+L 03/28/2026 - 07:34:36: [zc_balrog5.amxx] [ZC Balrog-V] Player 1 is not alive yet, setting flag for weapon
+L 03/28/2026 - 07:34:36: [zc_balrog5.amxx] [ZC Balrog-V] Get_Balrog5 completed for player 1
+L 03/28/2026 - 07:34:36: [zc_skull11.amxx] [ZC Skull-11] zp_extra_item_selected called - player: 1, itemid: 47, g_itemid: 48
+L 03/28/2026 - 07:34:36: [zc_thanatos7.amxx] [ZC Thanatos-7] zp_extra_item_selected called - player: 1, itemid: 47, g_itemid: 49
+L 03/28/2026 - 07:36:29: [zc_balrog5.amxx] [ZC Balrog-V] zp_extra_item_selected called - player: 1, itemid: 44, g_itemid: 47
+L 03/28/2026 - 07:36:29: [zc_skull11.amxx] [ZC Skull-11] zp_extra_item_selected called - player: 1, itemid: 44, g_itemid: 48
+L 03/28/2026 - 07:36:29: [zc_thanatos7.amxx] [ZC Thanatos-7] zp_extra_item_selected called - player: 1, itemid: 44, g_itemid: 49
+L 03/28/2026 - 07:36:33: [zc_leaderboard.amxx] [ZC Leaderboards] Periodic cache refresh complete
+L 03/28/2026 - 07:36:35: [zc_leaderboard.amxx] [ZC Leaderboards] Failed to refresh Highest Level leaderboard: Unknown MySQL server host 'host' (11001)
+L 03/28/2026 - 07:36:38: [zc_leaderboard.amxx] [ZC Leaderboards] Failed to refresh Total XP leaderboard: Unknown MySQL server host 'host' (11001)
+L 03/28/2026 - 07:36:41: [zc_leaderboard.amxx] [ZC Leaderboards] Failed to refresh Total Kills leaderboard: Unknown MySQL server host 'host' (11001)
+L 03/28/2026 - 07:36:43: [zc_leaderboard.amxx] [ZC Leaderboards] Failed to refresh Total Infections leaderboard: Unknown MySQL server host 'host' (11001)
+L 03/28/2026 - 07:36:46: [zc_leaderboard.amxx] [ZC Leaderboards] Failed to refresh Playtime leaderboard: Unknown MySQL server host 'host' (11001)
+L 03/28/2026 - 07:36:48: [zc_leaderboard.amxx] [ZC Leaderboards] Failed to refresh Prestige Level leaderboard: Unknown MySQL server host 'host' (11001)
+L 03/28/2026 - 07:36:51: [zc_leaderboard.amxx] [ZC Leaderboards] Failed to refresh Total Coins leaderboard: Unknown MySQL server host 'host' (11001)
+L 03/28/2026 - 07:37:38: [zc_balrog5.amxx] [ZC Balrog-V] zp_extra_item_selected called - player: 1, itemid: 2, g_itemid: 47
+L 03/28/2026 - 07:37:38: [zc_skull11.amxx] [ZC Skull-11] zp_extra_item_selected called - player: 1, itemid: 2, g_itemid: 48
+L 03/28/2026 - 07:37:38: [zc_thanatos7.amxx] [ZC Thanatos-7] zp_extra_item_selected called - player: 1, itemid: 2, g_itemid: 49
+L 03/28/2026 - 07:40:21: [zc_balrog5.amxx] [ZC Balrog-V] zp_extra_item_selected called - player: 1, itemid: 49, g_itemid: 47
+L 03/28/2026 - 07:40:21: [zc_skull11.amxx] [ZC Skull-11] zp_extra_item_selected called - player: 1, itemid: 49, g_itemid: 48
+L 03/28/2026 - 07:40:21: [zc_thanatos7.amxx] [ZC Thanatos-7] zp_extra_item_selected called - player: 1, itemid: 49, g_itemid: 49
+L 03/28/2026 - 07:40:21: [zc_thanatos7.amxx] [ZC Thanatos-7] Item matched! Calling Get_Thanatos7 for player 1
+L 03/28/2026 - 07:40:21: [zc_thanatos7.amxx] [ZC Thanatos-7] Get_Thanatos7 called for player 1
+L 03/28/2026 - 07:40:21: [zc_thanatos7.amxx] [ZC Thanatos-7] Player 1 is not alive yet, setting flag for weapon
+L 03/28/2026 - 07:40:21: [zc_thanatos7.amxx] [ZC Thanatos-7] Get_Thanatos7 completed for player 1

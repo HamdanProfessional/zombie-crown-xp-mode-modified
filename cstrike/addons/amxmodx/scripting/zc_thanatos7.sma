@@ -106,7 +106,7 @@ public zp_extra_item_selected(player, itemid)
 	{
 		Get_Thanatos7(player)
 	}
-	return PLUGIN_CONTINUE
+	return PLUGIN_HANDLED
 }
 
 public plugin_precache()
@@ -185,33 +185,21 @@ public Event_NewRound()
 
 public Get_Thanatos7(id)
 {
-	if(!is_player(id, 1))
-		return
-
 	Set_BitVar(g_Had_Thanatos7, id)
 	give_item(id, weapon_thanatos7)
 
-	new Ent = get_pdata_cbase(id, 373, 5)
-	if(pev_valid(Ent))
-	{
-		set_pdata_int(Ent, 51, 90, 4)
-		set_pdata_int(Ent, 52, 90, 4)
-	}
+	// Clip & Ammo
+	static Ent; Ent = fm_get_user_weapon_entity(id, CSW_THANATOS7)
+	if(!pev_valid(Ent)) return
 
-	// Update WeaponList
-	message_begin(MSG_ONE, g_MsgWeaponList, _, id)
-	write_string("weapon_thanatos7")
-	write_byte(4) // PrimaryAmmoType
-	write_byte(90) // MaxAmmo1
-	write_byte(-1) // MaxAmmo2
-	write_byte(-1) // Slot
-	write_byte(0) // Position
-	write_byte(4) // WeaponId
-	write_byte(14) // Flags
+	cs_set_weapon_ammo(Ent, 90)
+	cs_set_user_bpammo(id, CSW_THANATOS7, 90)
+
+	message_begin(MSG_ONE_UNRELIABLE, g_MsgCurWeapon, _, id)
+	write_byte(1)
+	write_byte(CSW_THANATOS7)
+	write_byte(90)
 	message_end()
-
-	engclient_cmd(id, weapon_thanatos7)
-	ExecuteHamB(Ham_Item_Deploy, get_pdata_cbase(id, 368, 5))
 }
 
 public Event_CurWeapon(id)

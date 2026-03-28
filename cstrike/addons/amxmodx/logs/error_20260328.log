@@ -23,3 +23,109 @@ L 03/28/2026 - 07:12:51: [AMXX]    [0] zc_random_legend.sma::plugin_init (line 1
 L 03/28/2026 - 07:13:32: [AMXX] Displaying debug trace (plugin "zc_leaderboard.amxx")
 L 03/28/2026 - 07:13:32: [AMXX] Run time error 4: index out of bounds 
 L 03/28/2026 - 07:13:32: [AMXX]    [0] zc_leaderboard.sma::HandleLeaderboardRefresh (line 219)
+L 03/28/2026 - 07:18:22: [AMXX] Displaying debug trace (plugin "zc_leaderboard.amxx")
+L 03/28/2026 - 07:18:22: [AMXX] Run time error 4: index out of bounds 
+L 03/28/2026 - 07:18:22: [AMXX]    [0] zc_leaderboard.sma::HandleLeaderboardRefresh (line 219)
+L 03/28/2026 - 07:22:51: Start of error session.
+L 03/28/2026 - 07:22:51: Info (map "zm_foda") (file "addons/amxmodx/logs/error_20260328.log")
+L 03/28/2026 - 07:22:51: Function "give_gun_silverak" was not found
+L 03/28/2026 - 07:22:51: [AMXX] Displaying debug trace (plugin "zc_silver_ak.amxx")
+L 03/28/2026 - 07:22:51: [AMXX] Run time error 19: function not found 
+L 03/28/2026 - 07:22:51: [AMXX]    [0] zc_silver_ak.sma::plugin_init (line 36)
+L 03/28/2026 - 07:22:51: Function "give_gun_diamondak" was not found
+L 03/28/2026 - 07:22:51: [AMXX] Displaying debug trace (plugin "zc_diamond_ak.amxx")
+L 03/28/2026 - 07:22:51: [AMXX] Run time error 19: function not found 
+L 03/28/2026 - 07:22:51: [AMXX]    [0] zc_diamond_ak.sma::plugin_init (line 36)
+L 03/28/2026 - 07:22:51: Function "give_gun_sm4a1" was not found
+L 03/28/2026 - 07:22:51: [AMXX] Displaying debug trace (plugin "zc_member_silver_m4.amxx")
+L 03/28/2026 - 07:22:51: [AMXX] Run time error 19: function not found 
+L 03/28/2026 - 07:22:51: [AMXX]    [0] zc_member_silver_m4.sma::plugin_init (line 37)
+L 03/28/2026 - 07:22:51: Function "give_gun_goldenak" was not found
+L 03/28/2026 - 07:22:51: [AMXX] Displaying debug trace (plugin "zc_member_gak47.amxx")
+L 03/28/2026 - 07:22:51: [AMXX] Run time error 19: function not found 
+L 03/28/2026 - 07:22:51: [AMXX]    [0] zc_member_gak47.sma::plugin_init (line 37)
+L 03/28/2026 - 07:22:51: [HAMSANDWICH] Function fw_TakeDamage not found.
+L 03/28/2026 - 07:22:51: [AMXX] Displaying debug trace (plugin "zc_random_legend.amxx")
+L 03/28/2026 - 07:22:51: [AMXX] Run time error 10: native error (native "RegisterHam")
+L 03/28/2026 - 07:22:51: [AMXX]    [0] zc_random_legend.sma::plugin_init (line 18)
+L 03/28/2026 - 07:23:28: [AMXX] Displaying debug trace (plugin "zc_leaderboard.amxx")
+L 03/28/2026 - 07:23:28: [AMXX] Run time error 4: index out of bounds 
+L 03/28/2026 - 07:23:28: [AMXX]    [0] zc_leaderboard.sma::HandleLeaderboardRefresh (line 219)
+L 03/28/2026 - 07:25:03: Start of error session.
+L 03/28/2026 - 07:25:03: Info (map "zm_foda") (file "addons/amxmodx/logs/error_20260328.log")
+L 03/28/2026 - 07:25:03: Function "give_gun_silverak" was not found
+L 03/28/2026 - 07:25:03: [AMXX] Displaying debug trace (plugin "zc_silver_ak.amxx")
+L 03/28/2026 - 07:25:03: [AMXX] Run time error 19: function not found 
+L 03/28/2026 - 07:25:03: [AMXX]    [0] zc_silver_ak.sma::plugin_init (line 36)
+L 03/28/2026 - 07:25:03: Function "give_gun_diamondak" was not found
+L 03/28/2026 - 07:25:03: [AMXX] Displaying debug trace (plugin "zc_diamond_ak.amxx")
+L 03/28/2026 - 07:25:03: [AMXX] Run time error 19: function not found 
+L 03/28/2026 - 07:25:03: [AMXX]    [0] zc_diamond_ak.sma::plugin_init (line 36)
+L 03/28/2026 - 07:25:03: Function "give_gun_sm4a1" was not found
+L 03/28/2026 - 07:25:03: [AMXX] Displaying debug trace (plugin "zc_member_silver_m4.amxx")
+L 03/28/2026 - 07:25:03: [AMXX] Run time error 19: function not found 
+L 03/28/2026 - 07:25:03: [AMXX]    [0] zc_member_silver_m4.sma::plugin_init (line 37)
+L 03/28/2026 - 07:25:03: Function "give_gun_goldenak" was not found
+L 03/28/2026 - 07:25:03: [AMXX] Displaying debug trace (plugin "zc_member_gak47.amxx")
+L 03/28/2026 - 07:25:03: [AMXX] Run time error 19: function not found 
+L 03/28/2026 - 07:25:03: [AMXX]    [0] zc_member_gak47.sma::plugin_init (line 37)
+L 03/28/2026 - 07:25:03: [HAMSANDWICH] Function fw_TakeDamage not found.
+L 03/28/2026 - 07:25:03: [AMXX] Displaying debug trace (plugin "zc_random_legend.amxx")
+L 03/28/2026 - 07:25:03: [AMXX] Run time error 10: native error (native "RegisterHam")
+L 03/28/2026 - 07:25:03: [AMXX]    [0] zc_random_legend.sma::plugin_init (line 18)
+L 03/28/2026 - 07:25:43: [AMXX] Displaying debug trace (plugin "zc_leaderboard.amxx")
+L 03/28/2026 - 07:25:43: [AMXX] Run time error 4: index out of bounds 
+L 03/28/2026 - 07:25:43: [AMXX]    [0] zc_leaderboard.sma::HandleLeaderboardRefresh (line 219)
+L 03/28/2026 - 07:27:18: Start of error session.
+L 03/28/2026 - 07:27:18: Info (map "zm_foda") (file "addons/amxmodx/logs/error_20260328.log")
+L 03/28/2026 - 07:27:18: Function "give_gun_silverak" was not found
+L 03/28/2026 - 07:27:18: [AMXX] Displaying debug trace (plugin "zc_silver_ak.amxx")
+L 03/28/2026 - 07:27:18: [AMXX] Run time error 19: function not found 
+L 03/28/2026 - 07:27:18: [AMXX]    [0] zc_silver_ak.sma::plugin_init (line 36)
+L 03/28/2026 - 07:27:18: Function "give_gun_diamondak" was not found
+L 03/28/2026 - 07:27:18: [AMXX] Displaying debug trace (plugin "zc_diamond_ak.amxx")
+L 03/28/2026 - 07:27:18: [AMXX] Run time error 19: function not found 
+L 03/28/2026 - 07:27:18: [AMXX]    [0] zc_diamond_ak.sma::plugin_init (line 36)
+L 03/28/2026 - 07:27:18: Function "give_gun_sm4a1" was not found
+L 03/28/2026 - 07:27:18: [AMXX] Displaying debug trace (plugin "zc_member_silver_m4.amxx")
+L 03/28/2026 - 07:27:18: [AMXX] Run time error 19: function not found 
+L 03/28/2026 - 07:27:18: [AMXX]    [0] zc_member_silver_m4.sma::plugin_init (line 37)
+L 03/28/2026 - 07:27:18: Function "give_gun_goldenak" was not found
+L 03/28/2026 - 07:27:18: [AMXX] Displaying debug trace (plugin "zc_member_gak47.amxx")
+L 03/28/2026 - 07:27:18: [AMXX] Run time error 19: function not found 
+L 03/28/2026 - 07:27:18: [AMXX]    [0] zc_member_gak47.sma::plugin_init (line 37)
+L 03/28/2026 - 07:27:18: [HAMSANDWICH] Function fw_TakeDamage not found.
+L 03/28/2026 - 07:27:18: [AMXX] Displaying debug trace (plugin "zc_random_legend.amxx")
+L 03/28/2026 - 07:27:18: [AMXX] Run time error 10: native error (native "RegisterHam")
+L 03/28/2026 - 07:27:18: [AMXX]    [0] zc_random_legend.sma::plugin_init (line 18)
+L 03/28/2026 - 07:27:58: [AMXX] Displaying debug trace (plugin "zc_leaderboard.amxx")
+L 03/28/2026 - 07:27:58: [AMXX] Run time error 4: index out of bounds 
+L 03/28/2026 - 07:27:58: [AMXX]    [0] zc_leaderboard.sma::HandleLeaderboardRefresh (line 219)
+L 03/28/2026 - 07:31:32: Start of error session.
+L 03/28/2026 - 07:31:32: Info (map "zm_foda") (file "addons/amxmodx/logs/error_20260328.log")
+L 03/28/2026 - 07:31:32: Function "give_gun_silverak" was not found
+L 03/28/2026 - 07:31:32: [AMXX] Displaying debug trace (plugin "zc_silver_ak.amxx")
+L 03/28/2026 - 07:31:32: [AMXX] Run time error 19: function not found 
+L 03/28/2026 - 07:31:32: [AMXX]    [0] zc_silver_ak.sma::plugin_init (line 36)
+L 03/28/2026 - 07:31:32: Function "give_gun_diamondak" was not found
+L 03/28/2026 - 07:31:32: [AMXX] Displaying debug trace (plugin "zc_diamond_ak.amxx")
+L 03/28/2026 - 07:31:32: [AMXX] Run time error 19: function not found 
+L 03/28/2026 - 07:31:32: [AMXX]    [0] zc_diamond_ak.sma::plugin_init (line 36)
+L 03/28/2026 - 07:31:32: Function "give_gun_sm4a1" was not found
+L 03/28/2026 - 07:31:32: [AMXX] Displaying debug trace (plugin "zc_member_silver_m4.amxx")
+L 03/28/2026 - 07:31:32: [AMXX] Run time error 19: function not found 
+L 03/28/2026 - 07:31:32: [AMXX]    [0] zc_member_silver_m4.sma::plugin_init (line 37)
+L 03/28/2026 - 07:31:32: Function "give_gun_goldenak" was not found
+L 03/28/2026 - 07:31:32: [AMXX] Displaying debug trace (plugin "zc_member_gak47.amxx")
+L 03/28/2026 - 07:31:32: [AMXX] Run time error 19: function not found 
+L 03/28/2026 - 07:31:32: [AMXX]    [0] zc_member_gak47.sma::plugin_init (line 37)
+L 03/28/2026 - 07:31:32: [HAMSANDWICH] Function fw_TakeDamage not found.
+L 03/28/2026 - 07:31:32: [AMXX] Displaying debug trace (plugin "zc_random_legend.amxx")
+L 03/28/2026 - 07:31:32: [AMXX] Run time error 10: native error (native "RegisterHam")
+L 03/28/2026 - 07:31:32: [AMXX]    [0] zc_random_legend.sma::plugin_init (line 18)
+L 03/28/2026 - 07:32:12: [AMXX] Displaying debug trace (plugin "zc_leaderboard.amxx")
+L 03/28/2026 - 07:32:12: [AMXX] Run time error 4: index out of bounds 
+L 03/28/2026 - 07:32:12: [AMXX]    [0] zc_leaderboard.sma::HandleLeaderboardRefresh (line 219)
+L 03/28/2026 - 07:36:53: [AMXX] Displaying debug trace (plugin "zc_leaderboard.amxx")
+L 03/28/2026 - 07:36:53: [AMXX] Run time error 4: index out of bounds 
+L 03/28/2026 - 07:36:53: [AMXX]    [0] zc_leaderboard.sma::HandleLeaderboardRefresh (line 219)

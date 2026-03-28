@@ -96,7 +96,7 @@ public zp_extra_item_selected(player, itemid)
 	{
 		Get_Balrog5(player)
 	}
-	return PLUGIN_CONTINUE
+	return PLUGIN_HANDLED
 }
 
 public plugin_precache()
@@ -161,33 +161,21 @@ public client_disconnect(id)
 
 public Get_Balrog5(id)
 {
-	if(!is_player(id, 1))
-		return
-
 	Set_BitVar(g_Had_Balrog5, id)
 	give_item(id, weapon_balrog5)
 
-	new Ent = get_pdata_cbase(id, 373, 5)
-	if(pev_valid(Ent))
-	{
-		set_pdata_int(Ent, 51, 90, 4)
-		set_pdata_int(Ent, 52, 90, 4)
-	}
+	// Clip & Ammo
+	static Ent; Ent = fm_get_user_weapon_entity(id, CSW_BALROG5)
+	if(!pev_valid(Ent)) return
 
-	// Update WeaponList
-	message_begin(MSG_ONE, g_MsgWeaponList, _, id)
-	write_string("weapon_balrog5")
-	write_byte(4) // PrimaryAmmoType
-	write_byte(90) // MaxAmmo1
-	write_byte(-1) // MaxAmmo2
-	write_byte(-1) // Slot
-	write_byte(0) // Position
-	write_byte(4) // WeaponId
-	write_byte(14) // Flags
+	cs_set_weapon_ammo(Ent, 90)
+	cs_set_user_bpammo(id, CSW_BALROG5, 90)
+
+	message_begin(MSG_ONE_UNRELIABLE, g_MsgCurWeapon, _, id)
+	write_byte(1)
+	write_byte(CSW_BALROG5)
+	write_byte(90)
 	message_end()
-
-	engclient_cmd(id, weapon_balrog5)
-	ExecuteHamB(Ham_Item_Deploy, get_pdata_cbase(id, 368, 5))
 }
 
 public Event_CurWeapon(id)
