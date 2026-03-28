@@ -1,11 +1,10 @@
 #include <amxmodx>
 #include <fakemeta>
-#include <fakemeta_util>
 #include <hamsandwich>
 #include <xs>
 
 #define PLUGIN "[ZC] Ultimate Bot Enhancement"
-#define VERSION "3.0"
+#define VERSION "4.0"
 #define AUTHOR "Zombie Crown Team"
 
 // CVars
@@ -16,16 +15,19 @@ new cvar_aggressive
 new bool:g_ZombieRound
 new g_MaxPlayers
 
-// Player tracking for bots to learn from
+// Player tracking
 new Float:player_last_origin[33][3]
 new Float:player_last_vel[33][3]
 new player_last_buttons[33]
 new bool:player_is_jumping[33]
+new Float:player_last_seen_time[33]
 
 // Bot state
 new Float:bot_last_jump_time[33]
+new Float:bot_last_strafe_time[33]
 new Float:bot_target_update_time[33]
 new bot_target[33]
+new bot_strafe_dir[33]  // 0 = left, 1 = right
 
 public plugin_init()
 {
@@ -49,8 +51,9 @@ public plugin_init()
 	RegisterHam(Ham_Weapon_PrimaryAttack, "weapon_elite", "fw_Weapon_PrimaryAttack_Pre", 0)
 	RegisterHam(Ham_Weapon_PrimaryAttack, "weapon_fiveseven", "fw_Weapon_PrimaryAttack_Pre", 0)
 
-	// Track player movement
+	// Track player movement and control bot actions
 	register_forward(FM_PlayerPreThink, "fw_PlayerPreThink")
+	register_forward(FM_CmdStart, "fw_CmdStart")
 
 	// Bot think - update every 0.1 seconds
 	set_task(0.1, "Bot_Think", _, _, _, "b")
@@ -59,7 +62,7 @@ public plugin_init()
 	register_logevent("Event_RoundStart", 2, "1=Round_Start")
 }
 
-// Track real players for bots to learn from
+// Track real players
 public fw_PlayerPreThink(id)
 {
 	if(!is_user_alive(id))
@@ -67,7 +70,6 @@ public fw_PlayerPreThink(id)
 	if(is_user_bot(id))
 		return FMRES_IGNORED
 
-	// Track player movement
 	new Float:origin[3], Float:vel[3], buttons
 	pev(id, pev_origin, origin)
 	pev(id, pev_velocity, vel)
@@ -83,11 +85,113 @@ public fw_PlayerPreThink(id)
 
 	player_last_buttons[id] = buttons
 	player_is_jumping[id] = (vel[2] > 100.0) ? true : false
+	player_last_seen_time[id] = get_gametime()
 
 	return FMRES_IGNORED
 }
 
-// Perfect aim - remove spread for bots
+// Control bot movement
+public fw_CmdStart(id, uc_handle)
+{
+	if(!get_pcvar_num(cvar_enabled))
+		return FMRES_IGNORED
+	if(!is_user_bot(id))
+		return FMRES_IGNORED
+	if(!is_user_alive(id))
+		return FMRES_IGNORED
+
+	new team = get_user_team(id)
+	new Float:time = get_gametime()
+
+	// Zombie behavior
+	if(team == 1 && g_ZombieRound)
+	{
+		new target = bot_target[id]
+
+		if(target > 0 && is_user_alive(target))
+		{
+			new Float:bot_origin[3], Float:target_origin[3]
+			pev(id, pev_origin, bot_origin)
+			pev(target, pev_origin, target_origin)
+
+			new Float:dist = get_distance_f(bot_origin, target_origin)
+
+			// Strafe while chasing
+			if(dist > 100.0 && dist < 400.0)
+			{
+				if(time - bot_last_strafe_time[id] > 0.3)
+				{
+					bot_last_strafe_time[id] = time
+					bot_strafe_dir[id] = !bot_strafe_dir[id]
+				}
+
+				// Add strafe to movement
+				new buttons = get_uc(uc_handle, UC_Buttons)
+
+				if(bot_strafe_dir[id] == 0)
+					buttons |= IN_MOVELEFT
+				else
+					buttons |= IN_MOVERIGHT
+
+				// Random jump while strafing
+				new flags = pev(id, pev_flags)
+				if((flags & FL_ONGROUND) && random_num(0, 100) < 15)
+				{
+					buttons |= IN_JUMP
+					new Float:vel[3]
+					pev(id, pev_velocity, vel)
+					vel[2] = 260.0
+					set_pev(id, pev_velocity, vel)
+				}
+
+				set_uc(uc_handle, UC_Buttons, buttons)
+			}
+
+			// Duck randomly
+			if(random_num(0, 100) < 5)
+			{
+				new buttons = get_uc(uc_handle, UC_Buttons)
+				buttons |= IN_DUCK
+				set_uc(uc_handle, UC_Buttons, buttons)
+			}
+		}
+	}
+	// Human bot behavior
+	else
+	{
+		// Strafe while shooting
+		new buttons = get_uc(uc_handle, UC_Buttons)
+		if(buttons & IN_ATTACK)
+		{
+			if(time - bot_last_strafe_time[id] > 0.2)
+			{
+				bot_last_strafe_time[id] = time
+				bot_strafe_dir[id] = !bot_strafe_dir[id]
+			}
+
+			if(bot_strafe_dir[id] == 0)
+			{
+				buttons |= IN_MOVELEFT
+				buttons &= ~IN_MOVERIGHT
+			}
+			else
+			{
+				buttons |= IN_MOVERIGHT
+				buttons &= ~IN_MOVELEFT
+			}
+
+			// Random duck
+			if(random_num(0, 100) < 20)
+				buttons |= IN_DUCK
+
+			set_uc(uc_handle, UC_Buttons, buttons)
+		}
+	}
+
+	return FMRES_HANDLED
+}
+
+// Perfect aim
 public fw_Weapon_PrimaryAttack_Pre(Ent)
 {
 	if(!get_pcvar_num(cvar_perfect_aim))
@@ -101,9 +205,7 @@ public fw_Weapon_PrimaryAttack_Pre(Ent)
 	if(!is_user_bot(owner))
 		return HAM_IGNORED
 
-	// Remove spread for perfect accuracy
 	set_pdata_float(Ent, 62, 0.0, 4)
-
 	return HAM_IGNORED
 }
 
@@ -120,7 +222,6 @@ public Bot_Think()
 		if(!is_user_alive(id))
 			continue
 
-		// Instant reaction time
 		set_pdata_float(id, 237, 0.001, 5)
 		set_pdata_float(id, 83, 0.001, 5)
 
@@ -155,11 +256,17 @@ public Zombie_Bot_Think(id)
 		new Float:dist = get_distance_f(bot_origin, target_origin)
 		new Float:height_diff = target_origin[2] - bot_origin[2]
 
-		// Face target
+		// Predict where player will be
+		new Float:pred_origin[3]
+		pred_origin[0] = target_origin[0] + player_last_vel[target][0] * 0.15
+		pred_origin[1] = target_origin[1] + player_last_vel[target][1] * 0.15
+		pred_origin[2] = target_origin[2]
+
+		// Face predicted position
 		new Float:dir[3]
-		dir[0] = target_origin[0] - bot_origin[0]
-		dir[1] = target_origin[1] - bot_origin[1]
-		dir[2] = target_origin[2] - bot_origin[2]
+		dir[0] = pred_origin[0] - bot_origin[0]
+		dir[1] = pred_origin[1] - bot_origin[1]
+		dir[2] = pred_origin[2] - bot_origin[2]
 
 		new Float:viewangle[3]
 		vector_to_angle(dir, viewangle)
@@ -170,7 +277,6 @@ public Zombie_Bot_Think(id)
 		// Attack if close enough
 		if(dist < 70.0)
 		{
-			// In attack range - swing knife
 			new buttons = pev(id, pev_button)
 			if(!(buttons & IN_ATTACK))
 			{
@@ -179,25 +285,21 @@ public Zombie_Bot_Think(id)
 		}
 		else
 		{
-			// Not in range - move toward target
+			// Chase target
 			new flags = pev(id, pev_flags)
-
-			// Check if should jump
 			new bool:should_jump = false
 
-			// Jump if target is above
+			// Smart jumping
 			if(height_diff > 50.0 && (flags & FL_ONGROUND))
 				should_jump = true
 
-			// Jump if player is jumping (learn from them)
 			if(player_is_jumping[target] && (flags & FL_ONGROUND))
 				should_jump = true
 
-			// Jump occasionally to be unpredictable
-			if((flags & FL_ONGROUND) && random_num(0, 100) < 3)
+			// Jump over obstacles
+			if((flags & FL_ONGROUND) && random_num(0, 100) < 5)
 				should_jump = true
 
-			// Execute jump
 			if(should_jump && (time - bot_last_jump_time[id] > 0.5))
 			{
 				bot_last_jump_time[id] = time
@@ -207,7 +309,7 @@ public Zombie_Bot_Think(id)
 				set_pev(id, pev_velocity, vel)
 			}
 
-			// Push toward target (gentle push, let game handle movement)
+			// Move toward target
 			new Float:push_dir[2]
 			push_dir[0] = dir[0]
 			push_dir[1] = dir[1]
@@ -219,15 +321,15 @@ public Zombie_Bot_Think(id)
 				push_dir[1] /= len
 			}
 
-			// Apply gentle force toward target
 			new Float:vel[3]
 			pev(id, pev_velocity, vel)
 
-			// Only modify if on ground
 			if(flags & FL_ONGROUND)
 			{
-				vel[0] = push_dir[0] * 200.0
-				vel[1] = push_dir[1] * 200.0
+				// Faster when far, slower when close
+				new Float:speed = (dist > 200.0) ? 250.0 : 180.0
+				vel[0] = push_dir[0] * speed
+				vel[1] = push_dir[1] * speed
 				set_pev(id, pev_velocity, vel)
 			}
 		}
@@ -244,18 +346,20 @@ public Human_Bot_Think(id)
 		pev(id, pev_origin, bot_origin)
 		pev(target, pev_origin, target_origin)
 
-		// Aim at target
+		// Predict target movement
+		new Float:target_vel[3]
+		pev(target, pev_velocity, target_vel)
+
+		new Float:predict_time = get_distance_f(bot_origin, target_origin) / 1500.0
+		target_origin[0] += target_vel[0] * predict_time
+		target_origin[1] += target_vel[1] * predict_time
+		target_origin[2] += target_vel[2] * predict_time
+
+		// Aim at predicted position
 		new Float:dir[3]
 		dir[0] = target_origin[0] - bot_origin[0]
 		dir[1] = target_origin[1] - bot_origin[1]
 		dir[2] = target_origin[2] - bot_origin[2]
-
-		// Predict movement slightly
-		new Float:target_vel[3]
-		pev(target, pev_velocity, target_vel)
-
-		dir[0] += target_vel[0] * 0.1
-		dir[1] += target_vel[1] * 0.1
 
 		new Float:viewangle[3]
 		vector_to_angle(dir, viewangle)
@@ -283,7 +387,7 @@ Find_Nearest_Human(id)
 		if(get_user_team(i) == team)
 			continue
 		if(is_user_bot(i))
-			continue  // Only target real players
+			continue
 
 		new Float:origin[3], Float:my_origin[3]
 		pev(i, pev_origin, origin)
@@ -340,7 +444,9 @@ public Event_NewRound()
 	{
 		bot_target[i] = 0
 		bot_last_jump_time[i] = 0.0
+		bot_last_strafe_time[i] = 0.0
 		bot_target_update_time[i] = 0.0
+		bot_strafe_dir[i] = 0
 		player_is_jumping[i] = false
 	}
 }
