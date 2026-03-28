@@ -3,134 +3,131 @@
 #include <hamsandwich>
 
 #define PLUGIN "[ZC] No Landing Slowdown"
-#define VERSION "1.0"
+#define VERSION "1.1"
 #define AUTHOR "Zombie Crown Team"
 
 new cvar_enabled
-new Float:g_LandTime[33]
+new bool:g_InAir[33]
 
 public plugin_init()
 {
 	register_plugin(PLUGIN, VERSION, AUTHOR)
-
 	cvar_enabled = register_cvar("zc_no_land_slow", "1")
 
-	// Hook player think to check for landing
-	RegisterHam(Ham_Player_PreThink, "player", "fw_PlayerPreThink")
-	RegisterHam(Ham_Player_PostThink, "player", "fw_PlayerPostThink", 1)
-
-	// Hook when player touches ground
-	register_forward(FM_Touch, "fw_Touch")
+	// Hook when player lands
+	RegisterHam(Ham_Player_Jump, "player", "fw_Player_Jump_Post", 1)
+	RegisterHam(Ham_Player_PreThink, "player", "fw_Player_PreThink")
+	RegisterHam(Ham_Player_PostThink, "player", "fw_Player_PostThink", 1)
 }
 
-public fw_PlayerPreThink(id)
+public fw_Player_Jump_Post(id)
+{
+	if(!get_pcvar_num(cvar_enabled))
+		return
+	if(!is_user_alive(id))
+		return
+
+	g_InAir[id] = true
+}
+
+public fw_Player_PreThink(id)
 {
 	if(!get_pcvar_num(cvar_enabled))
 		return HAM_IGNORED
 	if(!is_user_alive(id))
 		return HAM_IGNORED
 
-	// Get player flags
+	static oldflags[33]
 	new flags = pev(id, pev_flags)
 
-	// Check if player just landed (FL_ONGROUND bit is set now but wasn't before)
+	// Check if player just landed (was in air, now on ground)
+	if(g_InAir[id] && (flags & FL_ONGROUND) && !(oldflags[id] & FL_ONGROUND))
+	{
+		g_InAir[id] = false
+
+		// Get current velocity before CS modifies it
+		new Float:vel[3]
+		pev(id, pev_velocity, vel)
+
+		// Store horizontal velocity
+		new Float:preserve_vel[3]
+		preserve_vel[0] = vel[0]
+		preserve_vel[1] = vel[1]
+		preserve_vel[2] = 0.0
+
+		// Set it in PostThink
+		set_pev(id, pev_velocity, preserve_vel)
+
+		// Remove fall damage
+		set_pdata_float(id, 251, 0.0, 5) // m_flFallVelocity
+
+		// Prevent friction
+		set_pdata_float(id, 229, 0.0, 5) // m_fFriction
+	}
+
+	// Track if player goes back in air
 	if(flags & FL_ONGROUND)
 	{
 		new Float:vel[3]
 		pev(id, pev_velocity, vel)
-
-		// If player has significant downward velocity, they just landed
-		if(vel[2] < -100.0)
+		if(vel[2] > 50.0)
 		{
-			g_LandTime[id] = get_gametime()
-
-			// Preserve horizontal momentum
-			// Remove the slowdown that CS applies after landing
-
-			// Also reduce fall damage
-			set_pdata_int(id, 244, 0, 5) // m_fFallVelocity
+			g_InAir[id] = true
 		}
 	}
 
+	oldflags[id] = flags
 	return HAM_IGNORED
 }
 
-public fw_PlayerPostThink(id)
+public fw_Player_PostThink(id)
 {
 	if(!get_pcvar_num(cvar_enabled))
 		return
-
 	if(!is_user_alive(id))
 		return
 
-	// Check if recently landed (within 0.5 seconds)
+	static Float:last_land_time[33]
+	new flags = pev(id, pev_flags)
 	new Float:time = get_gametime()
-	if(time - g_LandTime[id] < 0.5)
+
+	// For 0.3 seconds after landing, preserve horizontal speed
+	if(flags & FL_ONGROUND && time - last_land_time[id] < 0.3)
 	{
-		// Preserve momentum - don't apply slowdown
 		new Float:vel[3]
 		pev(id, pev_velocity, vel)
 
-		// Ensure horizontal velocity is maintained
-		// CS normally reduces this after landing
-		if(floatabs(vel[0]) > 1.0 || floatabs(vel[1]) > 1.0)
+		// Ensure we're not stuck and maintain movement
+		if(floatabs(vel[0]) > 5.0 || floatabs(vel[1]) > 5.0)
 		{
-			// Maintain current speed
-			set_pev(id, pev_velocity, vel)
-
-			// Clear any friction that might be applied
-			set_pdata_float(id, 229, 0.0, 5) // m_fFriction
-		}
-	}
-}
-
-public fw_Touch(ent, id)
-{
-	if(!get_pcvar_num(cvar_enabled))
-		return FMRES_IGNORED
-
-	if(!is_user_alive(id))
-		return FMRES_IGNORED
-
-	// When player touches ground (world or brushes)
-	static classname[32]
-	pev(ent, pev_classname, classname, charsmax(classname))
-
-	if(equal(classname, "worldspawn") || equal(classname, "func_wall") || equal(classname, "func_breakable"))
-	{
-		new flags = pev(id, pev_flags)
-
-		// If player is in air and now touching ground
-		if(flags & FL_ONGROUND)
-		{
-			new Float:vel[3]
-			pev(id, pev_velocity, vel)
-
-			// Preserve momentum when landing
-			if(floatabs(vel[0]) > 1.0 || floatabs(vel[1]) > 1.0)
+			// Check if player is trying to move
+			new move_type = pev(id, pev_movetype)
+			if(move_type == MOVETYPE_WALK)
 			{
-				// Don't let CS apply landing slowdown
+				// Keep the momentum
 				set_pev(id, pev_velocity, vel)
 
-				// Prevent fall damage
-				set_pdata_int(id, 244, 0, 5) // m_fFallVelocity
+				// Zero out friction to prevent slowdown
+				set_pdata_float(id, 229, 0.0, 5)
 			}
 		}
 	}
 
-	return FMRES_IGNORED
+	// Detect landing
+	static oldflags[33]
+	if((flags & FL_ONGROUND) && !(oldflags[id] & FL_ONGROUND))
+	{
+		last_land_time[id] = time
+
+		// Completely disable fall velocity
+		set_pdata_float(id, 251, 0.0, 5)
+		set_pdata_int(id, 244, 0, 5)
+	}
+
+	oldflags[id] = flags
 }
 
-// Also hook fall damage to completely eliminate it
-public client_PreThink(id)
+public client_disconnect(id)
 {
-	if(!get_pcvar_num(cvar_enabled))
-		return
-
-	if(!is_user_alive(id))
-		return
-
-	// Completely disable fall damage
-	set_pdata_float(id, 251, 0.0, 5) // m_flFallVelocity
-	set_pdata_int(id, 244, 0, 5) // m_fFallVelocity
+	g_InAir[id] = false
 }
