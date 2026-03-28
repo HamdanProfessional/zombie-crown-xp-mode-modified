@@ -146,3 +146,7 @@
 [2026-03-28 08:22:30][0,0] : StartAutoReconnect() will start in 123 seconds
 [2026-03-28 08:24:33][1,28] : Connect() starting connection (eNetQOSLevelMedium, 208.111.133.84:27017, UDP)
 [2026-03-28 08:24:38][1,28] : ConnectFailed('Connection Failed') (208.111.133.84:27017, UDP)
+[2026-03-28 08:24:38][0,0] : StartAutoReconnect() will start in 74 seconds
+[2026-03-28 08:25:52][1,30] : Connect() starting connection (eNetQOSLevelMedium, 208.111.133.84:27017, UDP)
+[2026-03-28 08:25:57][1,30] : ConnectFailed('Connection Failed') (208.111.133.84:27017, UDP)
+[2026-03-28 08:25:57][0,0] : StartAutoReconnect() will start in 170 seconds

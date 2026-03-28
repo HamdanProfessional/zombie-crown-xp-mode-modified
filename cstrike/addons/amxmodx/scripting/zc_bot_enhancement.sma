@@ -5,46 +5,39 @@
 #include <xs>
 
 #define PLUGIN "[ZC] Ultimate Bot Enhancement"
-#define VERSION "2.1"
+#define VERSION "3.0"
 #define AUTHOR "Zombie Crown Team"
 
-// Enable all features by default
+// CVars
 new cvar_enabled
-new cvar_bot_dodge
-new cvar_bot_swarm
-new cvar_bot_team
-new cvar_zombie_mirror
 new cvar_perfect_aim
-
-new player_moving[33]
-new Float:player_last_vel[33][3]
-new player_last_buttons[33]
-
-new bool:bot_mirror_mode[33]
-new bot_mirror_target[33]
-new Float:last_mirror_update[33]
-new bot_swarm_target[33]
+new cvar_aggressive
 
 new bool:g_ZombieRound
 new g_MaxPlayers
+
+// Player tracking for bots to learn from
+new Float:player_last_origin[33][3]
+new Float:player_last_vel[33][3]
+new player_last_buttons[33]
+new bool:player_is_jumping[33]
+
+// Bot state
+new Float:bot_last_jump_time[33]
+new Float:bot_target_update_time[33]
+new bot_target[33]
 
 public plugin_init()
 {
 	register_plugin(PLUGIN, VERSION, AUTHOR)
 
 	cvar_enabled = register_cvar("zc_bot_enhanced", "1")
-	cvar_bot_dodge = register_cvar("zc_bot_dodge", "80")
-	cvar_bot_swarm = register_cvar("zc_bot_swarm", "1")
-	cvar_bot_team = register_cvar("zc_bot_team", "1")
-	cvar_zombie_mirror = register_cvar("zc_bot_zombie_mirror", "1")
 	cvar_perfect_aim = register_cvar("zc_bot_perfect_aim", "1")
+	cvar_aggressive = register_cvar("zc_bot_aggressive", "1")
 
 	g_MaxPlayers = get_maxplayers()
 
-	register_forward(FM_CmdStart, "fw_CmdStart")
-	register_forward(FM_PlayerPreThink, "fw_PlayerPreThink_Post", 1)
-
-	// Hook think for perfect aim
+	// Perfect aim for bots
 	RegisterHam(Ham_Weapon_PrimaryAttack, "weapon_ak47", "fw_Weapon_PrimaryAttack_Pre", 0)
 	RegisterHam(Ham_Weapon_PrimaryAttack, "weapon_m4a1", "fw_Weapon_PrimaryAttack_Pre", 0)
 	RegisterHam(Ham_Weapon_PrimaryAttack, "weapon_awp", "fw_Weapon_PrimaryAttack_Pre", 0)
@@ -53,131 +46,45 @@ public plugin_init()
 	RegisterHam(Ham_Weapon_PrimaryAttack, "weapon_tmp", "fw_Weapon_PrimaryAttack_Pre", 0)
 	RegisterHam(Ham_Weapon_PrimaryAttack, "weapon_p90", "fw_Weapon_PrimaryAttack_Pre", 0)
 	RegisterHam(Ham_Weapon_PrimaryAttack, "weapon_deagle", "fw_Weapon_PrimaryAttack_Pre", 0)
+	RegisterHam(Ham_Weapon_PrimaryAttack, "weapon_elite", "fw_Weapon_PrimaryAttack_Pre", 0)
+	RegisterHam(Ham_Weapon_PrimaryAttack, "weapon_fiveseven", "fw_Weapon_PrimaryAttack_Pre", 0)
 
+	// Track player movement
+	register_forward(FM_PlayerPreThink, "fw_PlayerPreThink")
+
+	// Bot think - update every 0.1 seconds
 	set_task(0.1, "Bot_Think", _, _, _, "b")
 
 	register_event("HLTV", "Event_NewRound", "a", "1=0", "2=0")
 	register_logevent("Event_RoundStart", 2, "1=Round_Start")
 }
 
-public fw_PlayerPreThink_Post(id)
+// Track real players for bots to learn from
+public fw_PlayerPreThink(id)
 {
 	if(!is_user_alive(id))
 		return FMRES_IGNORED
 	if(is_user_bot(id))
 		return FMRES_IGNORED
 
-	new Float:vel[3], buttons
+	// Track player movement
+	new Float:origin[3], Float:vel[3], buttons
+	pev(id, pev_origin, origin)
 	pev(id, pev_velocity, vel)
 	pev(id, pev_button, buttons)
+
+	player_last_origin[id][0] = origin[0]
+	player_last_origin[id][1] = origin[1]
+	player_last_origin[id][2] = origin[2]
 
 	player_last_vel[id][0] = vel[0]
 	player_last_vel[id][1] = vel[1]
 	player_last_vel[id][2] = vel[2]
-	player_last_buttons[id] = buttons
 
-	new Float:speed = floatsqroot(vel[0]*vel[0] + vel[1]*vel[1])
-	if(speed > 50.0)
-		player_moving[id] = 1
-	else
-		player_moving[id] = 0
+	player_last_buttons[id] = buttons
+	player_is_jumping[id] = (vel[2] > 100.0) ? true : false
 
 	return FMRES_IGNORED
-}
-
-public fw_CmdStart(id, uc_handle)
-{
-	if(!get_pcvar_num(cvar_enabled))
-		return FMRES_IGNORED
-	if(!is_user_bot(id))
-		return FMRES_IGNORED
-
-	new buttons = get_uc(uc_handle, UC_Buttons)
-
-	if(bot_mirror_mode[id])
-	{
-		new target = bot_mirror_target[id]
-
-		if(target > 0 && is_user_alive(target))
-		{
-			new Float:time = get_gametime()
-
-			if(time - last_mirror_update[id] >= 0.3)
-			{
-				last_mirror_update[id] = time
-
-				// Copy player's movement - learn from real player
-				if(player_last_buttons[target] & IN_JUMP)
-					buttons |= IN_JUMP  // Jump when player jumps
-				if(player_last_buttons[target] & IN_DUCK)
-					buttons |= IN_DUCK
-				if(player_last_buttons[target] & IN_FORWARD)
-					buttons |= IN_FORWARD
-				if(player_last_buttons[target] & IN_BACK)
-					buttons |= IN_BACK
-				if(player_last_buttons[target] & IN_MOVELEFT)
-					buttons |= IN_MOVELEFT
-				if(player_last_buttons[target] & IN_MOVERIGHT)
-					buttons |= IN_MOVERIGHT
-
-				// Match player's horizontal speed only (don't copy vertical)
-				new Float:target_speed = floatsqroot(player_last_vel[target][0]*player_last_vel[target][0] + player_last_vel[target][1]*player_last_vel[target][1])
-				if(target_speed > 50.0)
-				{
-					new Float:vel[3]
-					new flags = pev(id, pev_flags)
-					pev(id, pev_velocity, vel)
-
-					// Only copy horizontal movement
-					vel[0] = player_last_vel[target][0]
-					vel[1] = player_last_vel[target][1]
-
-					// Only add Z velocity if on ground and player jumped
-					if((flags & FL_ONGROUND) && (player_last_buttons[target] & IN_JUMP))
-						vel[2] = 260.0
-					// Otherwise let gravity work naturally
-					else if(!(flags & FL_ONGROUND) && vel[2] > 0.0)
-						vel[2] *= 0.9  // Slight dampening while falling
-
-					set_pev(id, pev_velocity, vel)
-				}
-			}
-		}
-		else
-		{
-			bot_mirror_mode[id] = false
-			bot_mirror_target[id] = 0
-		}
-	}
-	else
-	{
-		// Dodge when attacking
-		if(buttons & IN_ATTACK)
-		{
-			if(random_num(0, 100) < get_pcvar_num(cvar_bot_dodge))
-			{
-				if(random_num(0, 1))
-				{
-					buttons |= IN_MOVERIGHT
-					buttons &= ~IN_MOVELEFT
-				}
-				else
-				{
-					buttons |= IN_MOVELEFT
-					buttons &= ~IN_MOVERIGHT
-				}
-
-				if(random_num(0, 100) < 20)
-					buttons |= IN_JUMP
-			}
-
-			if(random_num(0, 100) < 30)
-				buttons |= IN_DUCK
-		}
-	}
-
-	set_uc(uc_handle, UC_Buttons, buttons)
-	return FMRES_HANDLED
 }
 
 // Perfect aim - remove spread for bots
@@ -205,7 +112,7 @@ public Bot_Think()
 	if(!get_pcvar_num(cvar_enabled))
 		return
 
-	new id
+	static id
 	for(id = 1; id <= g_MaxPlayers; id++)
 	{
 		if(!is_user_bot(id))
@@ -214,12 +121,12 @@ public Bot_Think()
 			continue
 
 		// Instant reaction time
-		set_pdata_float(id, 237, 0.001, 5) // m_flNextAttack
-		set_pdata_float(id, 83, 0.001, 5)  // m_flNextAttack
+		set_pdata_float(id, 237, 0.001, 5)
+		set_pdata_float(id, 83, 0.001, 5)
 
 		new team = get_user_team(id)
 
-		if(team == 1)
+		if(team == 1 && g_ZombieRound)
 			Zombie_Bot_Think(id)
 		else
 			Human_Bot_Think(id)
@@ -228,8 +135,16 @@ public Bot_Think()
 
 public Zombie_Bot_Think(id)
 {
-	// Zombies ONLY target and learn from real players (never other bots)
-	new target = Find_Nearest_Human_Target(id)
+	new Float:time = get_gametime()
+
+	// Find target every 0.2 seconds
+	if(time - bot_target_update_time[id] >= 0.2)
+	{
+		bot_target_update_time[id] = time
+		bot_target[id] = Find_Nearest_Human(id)
+	}
+
+	new target = bot_target[id]
 
 	if(target > 0)
 	{
@@ -239,128 +154,12 @@ public Zombie_Bot_Think(id)
 
 		new Float:dist = get_distance_f(bot_origin, target_origin)
 		new Float:height_diff = target_origin[2] - bot_origin[2]
-		new flags = pev(id, pev_flags)
-		new onground = (flags & FL_ONGROUND) ? 1 : 0
 
-		// Player is moving or hard to reach? Enter mirror/learn mode
-		if(player_moving[target] || (height_diff > 60.0 && dist > 120.0))
-		{
-			if(get_pcvar_num(cvar_zombie_mirror))
-			{
-				// Learn from real player's movement
-				bot_mirror_mode[id] = true
-				bot_mirror_target[id] = target
-			}
-		}
-		else
-		{
-			bot_mirror_mode[id] = false
-			bot_swarm_target[id] = target
-
-			// Direct approach - chase the player on ground
-			new Float:dir[3]
-			dir[0] = target_origin[0] - bot_origin[0]
-			dir[1] = target_origin[1] - bot_origin[1]
-			dir[2] = 0.0  // Keep horizontal only
-
-			new Float:len = floatsqroot(dir[0]*dir[0] + dir[1]*dir[1])
-			if(len > 0.0)
-			{
-				dir[0] /= len
-				dir[1] /= len
-			}
-
-			// Face target instantly
-			new Float:viewangle[3]
-			vector_to_angle(dir, viewangle)
-			set_pev(id, pev_v_angle, viewangle)
-			set_pev(id, pev_angles, viewangle)
-			set_pev(id, pev_fixangle, 1)
-
-			// Get current velocity
-			new Float:vel[3]
-			pev(id, pev_velocity, vel)
-
-			// Only set horizontal speed
-			vel[0] = dir[0] * 300.0
-			vel[1] = dir[1] * 300.0
-
-			// Smart jumping - ONLY when on ground
-			if(onground)
-			{
-				// Jump if target is significantly above
-				if(height_diff > 50.0)
-				{
-					vel[2] = 270.0
-				}
-				// Jump if player just jumped
-				else if(player_last_buttons[target] & IN_JUMP)
-				{
-					vel[2] = 260.0
-				}
-				// Otherwise stay on ground
-				else
-				{
-					vel[2] = 0.0
-				}
-			}
-			// In air - let gravity work, don't add more Z velocity
-			else
-			{
-				// Don't modify Z velocity while in air
-				if(vel[2] > 0.0)
-					vel[2] *= 0.95  // Slight dampening
-			}
-
-			set_pev(id, pev_velocity, vel)
-		}
-	}
-}
-
-public Human_Bot_Think(id)
-{
-	if(get_pcvar_num(cvar_bot_swarm))
-		Swarm_Think(id)
-
-	if(get_pcvar_num(cvar_bot_team))
-		Team_Coordination(id)
-}
-
-public Swarm_Think(id)
-{
-	new target = Find_Nearest_Enemy(id)
-
-	if(target > 0)
-	{
-		bot_swarm_target[id] = target
-
-		new Float:target_origin[3], Float:my_origin[3]
-		pev(target, pev_origin, target_origin)
-		pev(id, pev_origin, my_origin)
-
-		// Predict target movement
-		new Float:target_vel[3]
-		pev(target, pev_velocity, target_vel)
-
-		new Float:predict_time = get_distance_f(my_origin, target_origin) / 1200.0
-		target_origin[0] += target_vel[0] * predict_time
-		target_origin[1] += target_vel[1] * predict_time
-		target_origin[2] += target_vel[2] * predict_time
-
-		// Aim at predicted position (horizontal only for movement)
+		// Face target
 		new Float:dir[3]
-		dir[0] = target_origin[0] - my_origin[0]
-		dir[1] = target_origin[1] - my_origin[1]
-		dir[2] = target_origin[2] - my_origin[2]
-
-		// For aiming, use full direction
-		new Float:len = floatsqroot(dir[0]*dir[0] + dir[1]*dir[1] + dir[2]*dir[2])
-		if(len > 0.0)
-		{
-			dir[0] /= len
-			dir[1] /= len
-			dir[2] /= len
-		}
+		dir[0] = target_origin[0] - bot_origin[0]
+		dir[1] = target_origin[1] - bot_origin[1]
+		dir[2] = target_origin[2] - bot_origin[2]
 
 		new Float:viewangle[3]
 		vector_to_angle(dir, viewangle)
@@ -368,52 +167,110 @@ public Swarm_Think(id)
 		set_pev(id, pev_angles, viewangle)
 		set_pev(id, pev_fixangle, 1)
 
-		// If zombie, move fast toward target (horizontal only)
-		new team = get_user_team(id)
-		if(g_ZombieRound && team == 1)
+		// Attack if close enough
+		if(dist < 70.0)
 		{
-			new Float:vel[3]
-			new flags = pev(id, pev_flags)
-			pev(id, pev_velocity, vel)
-
-			// Only horizontal movement
-			vel[0] = dir[0] * 320.0
-			vel[1] = dir[1] * 320.0
-
-			// Only jump if on ground and target is above
-			if(flags & FL_ONGROUND)
+			// In attack range - swing knife
+			new buttons = pev(id, pev_button)
+			if(!(buttons & IN_ATTACK))
 			{
-				new Float:height_diff = target_origin[2] - my_origin[2]
-				if(height_diff > 50.0)
-					vel[2] = 260.0
+				set_pev(id, pev_button, buttons | IN_ATTACK)
+			}
+		}
+		else
+		{
+			// Not in range - move toward target
+			new flags = pev(id, pev_flags)
+
+			// Check if should jump
+			new bool:should_jump = false
+
+			// Jump if target is above
+			if(height_diff > 50.0 && (flags & FL_ONGROUND))
+				should_jump = true
+
+			// Jump if player is jumping (learn from them)
+			if(player_is_jumping[target] && (flags & FL_ONGROUND))
+				should_jump = true
+
+			// Jump occasionally to be unpredictable
+			if((flags & FL_ONGROUND) && random_num(0, 100) < 3)
+				should_jump = true
+
+			// Execute jump
+			if(should_jump && (time - bot_last_jump_time[id] > 0.5))
+			{
+				bot_last_jump_time[id] = time
+				new Float:vel[3]
+				pev(id, pev_velocity, vel)
+				vel[2] = 270.0
+				set_pev(id, pev_velocity, vel)
 			}
 
-			set_pev(id, pev_velocity, vel)
+			// Push toward target (gentle push, let game handle movement)
+			new Float:push_dir[2]
+			push_dir[0] = dir[0]
+			push_dir[1] = dir[1]
+
+			new Float:len = floatsqroot(push_dir[0]*push_dir[0] + push_dir[1]*push_dir[1])
+			if(len > 0.0)
+			{
+				push_dir[0] /= len
+				push_dir[1] /= len
+			}
+
+			// Apply gentle force toward target
+			new Float:vel[3]
+			pev(id, pev_velocity, vel)
+
+			// Only modify if on ground
+			if(flags & FL_ONGROUND)
+			{
+				vel[0] = push_dir[0] * 200.0
+				vel[1] = push_dir[1] * 200.0
+				set_pev(id, pev_velocity, vel)
+			}
 		}
 	}
 }
 
-public Team_Coordination(id)
+public Human_Bot_Think(id)
 {
-	// All bots target same enemy
-	new i
-	for(i = 1; i <= g_MaxPlayers; i++)
-	{
-		if(i == id)
-			continue
-		if(!is_user_bot(i))
-			continue
-		if(!is_user_alive(i))
-			continue
+	new target = Find_Nearest_Enemy(id)
 
-		if(bot_swarm_target[i] > 0 && is_user_alive(bot_swarm_target[i]))
-			bot_swarm_target[id] = bot_swarm_target[i]
+	if(target > 0)
+	{
+		new Float:bot_origin[3], Float:target_origin[3]
+		pev(id, pev_origin, bot_origin)
+		pev(target, pev_origin, target_origin)
+
+		// Aim at target
+		new Float:dir[3]
+		dir[0] = target_origin[0] - bot_origin[0]
+		dir[1] = target_origin[1] - bot_origin[1]
+		dir[2] = target_origin[2] - bot_origin[2]
+
+		// Predict movement slightly
+		new Float:target_vel[3]
+		pev(target, pev_velocity, target_vel)
+
+		dir[0] += target_vel[0] * 0.1
+		dir[1] += target_vel[1] * 0.1
+
+		new Float:viewangle[3]
+		vector_to_angle(dir, viewangle)
+		set_pev(id, pev_v_angle, viewangle)
+		set_pev(id, pev_angles, viewangle)
+		set_pev(id, pev_fixangle, 1)
+
+		// Attack
+		new buttons = pev(id, pev_button)
+		set_pev(id, pev_button, buttons | IN_ATTACK)
 	}
 }
 
-Find_Nearest_Human_Target(id)
+Find_Nearest_Human(id)
 {
-	// Find nearest REAL player (never bots)
 	new target = 0
 	new Float:nearest_dist = 9999.0
 	new team = get_user_team(id)
@@ -426,7 +283,7 @@ Find_Nearest_Human_Target(id)
 		if(get_user_team(i) == team)
 			continue
 		if(is_user_bot(i))
-			continue  // Skip ALL bots
+			continue  // Only target real players
 
 		new Float:origin[3], Float:my_origin[3]
 		pev(i, pev_origin, origin)
@@ -442,11 +299,6 @@ Find_Nearest_Human_Target(id)
 	}
 
 	return target
-}
-
-Find_Nearest_Target(id)
-{
-	return Find_Nearest_Human_Target(id)
 }
 
 Find_Nearest_Enemy(id)
@@ -486,10 +338,10 @@ public Event_NewRound()
 	new i
 	for(i = 1; i <= g_MaxPlayers; i++)
 	{
-		bot_swarm_target[i] = 0
-		bot_mirror_mode[i] = false
-		bot_mirror_target[i] = 0
-		player_moving[i] = 0
+		bot_target[i] = 0
+		bot_last_jump_time[i] = 0.0
+		bot_target_update_time[i] = 0.0
+		player_is_jumping[i] = false
 	}
 }
 
