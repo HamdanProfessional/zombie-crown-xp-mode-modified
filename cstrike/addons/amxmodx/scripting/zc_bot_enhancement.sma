@@ -5,15 +5,16 @@
 #include <xs>
 
 #define PLUGIN "[ZC] Ultimate Bot Enhancement"
-#define VERSION "2.0"
+#define VERSION "2.1"
 #define AUTHOR "Zombie Crown Team"
 
+// Enable all features by default
 new cvar_enabled
 new cvar_bot_dodge
 new cvar_bot_swarm
 new cvar_bot_team
 new cvar_zombie_mirror
-new cvar_mirror_delay
+new cvar_perfect_aim
 
 new player_moving[33]
 new Float:player_last_vel[33][3]
@@ -36,13 +37,22 @@ public plugin_init()
 	cvar_bot_swarm = register_cvar("zc_bot_swarm", "1")
 	cvar_bot_team = register_cvar("zc_bot_team", "1")
 	cvar_zombie_mirror = register_cvar("zc_bot_zombie_mirror", "1")
-	cvar_mirror_delay = register_cvar("zc_bot_mirror_delay", "0.5")
+	cvar_perfect_aim = register_cvar("zc_bot_perfect_aim", "1")
 
 	g_MaxPlayers = get_maxplayers()
 
 	register_forward(FM_CmdStart, "fw_CmdStart")
 	register_forward(FM_PlayerPreThink, "fw_PlayerPreThink_Post", 1)
-	RegisterHam(Ham_TraceAttack, "player", "fw_TraceAttack_Post", 1)
+
+	// Hook think for perfect aim
+	RegisterHam(Ham_Weapon_PrimaryAttack, "weapon_ak47", "fw_Weapon_PrimaryAttack_Pre", 0)
+	RegisterHam(Ham_Weapon_PrimaryAttack, "weapon_m4a1", "fw_Weapon_PrimaryAttack_Pre", 0)
+	RegisterHam(Ham_Weapon_PrimaryAttack, "weapon_awp", "fw_Weapon_PrimaryAttack_Pre", 0)
+	RegisterHam(Ham_Weapon_PrimaryAttack, "weapon_m249", "fw_Weapon_PrimaryAttack_Pre", 0)
+	RegisterHam(Ham_Weapon_PrimaryAttack, "weapon_mp5navy", "fw_Weapon_PrimaryAttack_Pre", 0)
+	RegisterHam(Ham_Weapon_PrimaryAttack, "weapon_tmp", "fw_Weapon_PrimaryAttack_Pre", 0)
+	RegisterHam(Ham_Weapon_PrimaryAttack, "weapon_p90", "fw_Weapon_PrimaryAttack_Pre", 0)
+	RegisterHam(Ham_Weapon_PrimaryAttack, "weapon_deagle", "fw_Weapon_PrimaryAttack_Pre", 0)
 
 	set_task(0.1, "Bot_Think", _, _, _, "b")
 
@@ -90,13 +100,13 @@ public fw_CmdStart(id, uc_handle)
 
 		if(target > 0 && is_user_alive(target))
 		{
-			new Float:delay = get_pcvar_float(cvar_mirror_delay)
 			new Float:time = get_gametime()
 
-			if(time - last_mirror_update[id] >= delay)
+			if(time - last_mirror_update[id] >= 0.3)
 			{
 				last_mirror_update[id] = time
 
+				// Copy player's movement
 				if(player_last_buttons[target] & IN_JUMP)
 					buttons |= IN_JUMP
 				if(player_last_buttons[target] & IN_DUCK)
@@ -110,12 +120,16 @@ public fw_CmdStart(id, uc_handle)
 				if(player_last_buttons[target] & IN_MOVERIGHT)
 					buttons |= IN_MOVERIGHT
 
+				// Match player's speed
 				new Float:target_speed = floatsqroot(player_last_vel[target][0]*player_last_vel[target][0] + player_last_vel[target][1]*player_last_vel[target][1])
-				if(target_speed > 50.0 && (player_last_buttons[target] & IN_JUMP))
+				if(target_speed > 50.0)
 				{
 					new Float:vel[3]
 					pev(id, pev_velocity, vel)
-					vel[2] = 300.0
+					vel[0] = player_last_vel[target][0]
+					vel[1] = player_last_vel[target][1]
+					if(player_last_buttons[target] & IN_JUMP)
+						vel[2] = 300.0
 					set_pev(id, pev_velocity, vel)
 				}
 			}
@@ -128,6 +142,7 @@ public fw_CmdStart(id, uc_handle)
 	}
 	else
 	{
+		// Dodge when attacking
 		if(buttons & IN_ATTACK)
 		{
 			if(random_num(0, 100) < get_pcvar_num(cvar_bot_dodge))
@@ -156,53 +171,24 @@ public fw_CmdStart(id, uc_handle)
 	return FMRES_HANDLED
 }
 
-public fw_TraceAttack_Post(Victim, Attacker, Float:Damage, Float:Direction[3], Tr, DamageBits)
+// Perfect aim - remove spread for bots
+public fw_Weapon_PrimaryAttack_Pre(Ent)
 {
+	if(!get_pcvar_num(cvar_perfect_aim))
+		return HAM_IGNORED
 	if(!get_pcvar_num(cvar_enabled))
 		return HAM_IGNORED
-	if(!is_user_bot(Attacker))
-		return HAM_IGNORED
-	if(!is_user_alive(Victim))
+	if(!pev_valid(Ent))
 		return HAM_IGNORED
 
-	new weapon = get_user_weapon(Attacker)
-	if(weapon == CSW_KNIFE)
+	new owner = get_pdata_cbase(Ent, 41, 4)
+	if(!is_user_bot(owner))
 		return HAM_IGNORED
 
-	new Float:start[3], Float:viewofs[3], Float:end[3]
-	pev(Attacker, pev_origin, start)
-	pev(Attacker, pev_view_ofs, viewofs)
-	start[0] += viewofs[0]
-	start[1] += viewofs[1]
-	start[2] += viewofs[2]
+	// Remove spread for perfect accuracy
+	set_pdata_float(Ent, 62, 0.0, 4)
 
-	new Float:target[3]
-	pev(Victim, pev_origin, target)
-
-	if(random_num(0, 100) < 60)
-		target[2] += 25.0
-	else
-		target[2] += 10.0
-
-	new Float:dir[3]
-	dir[0] = target[0] - start[0]
-	dir[1] = target[1] - start[1]
-	dir[2] = target[2] - start[2]
-
-	new Float:len = floatsqroot(dir[0]*dir[0] + dir[1]*dir[1] + dir[2]*dir[2])
-	if(len > 0.0)
-	{
-		dir[0] = dir[0] / len * 8192.0
-		dir[1] = dir[1] / len * 8192.0
-		dir[2] = dir[2] / len * 8192.0
-	}
-
-	end[0] = start[0] + dir[0]
-	end[1] = start[1] + dir[1]
-	end[2] = start[2] + dir[2]
-
-	SetHamParamVector(3, end)
-	return HAM_HANDLED
+	return HAM_IGNORED
 }
 
 public Bot_Think()
@@ -218,8 +204,9 @@ public Bot_Think()
 		if(!is_user_alive(id))
 			continue
 
-		set_pdata_float(id, 237, 0.001, 5)
-		set_pdata_float(id, 83, 0.001, 5)
+		// Instant reaction time
+		set_pdata_float(id, 237, 0.001, 5) // m_flNextAttack
+		set_pdata_float(id, 83, 0.001, 5)  // m_flNextAttack
 
 		new team = get_user_team(id)
 
@@ -232,29 +219,7 @@ public Bot_Think()
 
 public Zombie_Bot_Think(id)
 {
-	new target = 0
-	new Float:nearest_dist = 9999.0
-
-	new i
-	for(i = 1; i <= g_MaxPlayers; i++)
-	{
-		if(!is_user_alive(i))
-			continue
-		if(is_user_bot(i))
-			continue
-
-		new Float:origin[3], Float:my_origin[3]
-		pev(i, pev_origin, origin)
-		pev(id, pev_origin, my_origin)
-
-		new Float:dist = get_distance_f(my_origin, origin)
-
-		if(dist < nearest_dist)
-		{
-			nearest_dist = dist
-			target = i
-		}
-	}
+	new target = Find_Nearest_Target(id)
 
 	if(target > 0)
 	{
@@ -262,9 +227,11 @@ public Zombie_Bot_Think(id)
 		pev(id, pev_origin, bot_origin)
 		pev(target, pev_origin, target_origin)
 
+		new Float:dist = get_distance_f(bot_origin, target_origin)
 		new Float:height_diff = target_origin[2] - bot_origin[2]
 
-		if((height_diff > 100.0 && get_distance_f(bot_origin, target_origin) > 200.0) || (player_moving[target]))
+		// If target is high up or moving fast, use mirror mode
+		if((height_diff > 80.0 && dist > 150.0) || player_moving[target])
 		{
 			if(get_pcvar_num(cvar_zombie_mirror))
 			{
@@ -277,6 +244,7 @@ public Zombie_Bot_Think(id)
 			bot_mirror_mode[id] = false
 			bot_swarm_target[id] = target
 
+			// Direct approach
 			new Float:dir[3]
 			dir[0] = target_origin[0] - bot_origin[0]
 			dir[1] = target_origin[1] - bot_origin[1]
@@ -290,17 +258,21 @@ public Zombie_Bot_Think(id)
 				dir[2] /= len
 			}
 
-			new Float:vel[3]
-			vel[0] = dir[0] * 400.0
-			vel[1] = dir[1] * 400.0
-			vel[2] = dir[2] * 200.0
-
-			set_pev(id, pev_velocity, vel)
-
+			// Face target instantly
 			new Float:viewangle[3]
 			vector_to_angle(dir, viewangle)
 			set_pev(id, pev_v_angle, viewangle)
 			set_pev(id, pev_angles, viewangle)
+			set_pev(id, pev_fixangle, 1)
+
+			// Move toward target fast
+			new Float:vel[3]
+			pev(id, pev_velocity, vel)
+			vel[0] = dir[0] * 350.0
+			vel[1] = dir[1] * 350.0
+			if(height_diff > 20.0)
+				vel[2] = dir[2] * 300.0
+			set_pev(id, pev_velocity, vel)
 		}
 	}
 }
@@ -315,6 +287,78 @@ public Human_Bot_Think(id)
 }
 
 public Swarm_Think(id)
+{
+	new target = Find_Nearest_Enemy(id)
+
+	if(target > 0)
+	{
+		bot_swarm_target[id] = target
+
+		new Float:target_origin[3], Float:my_origin[3]
+		pev(target, pev_origin, target_origin)
+		pev(id, pev_origin, my_origin)
+
+		// Predict target movement
+		new Float:target_vel[3]
+		pev(target, pev_velocity, target_vel)
+
+		new Float:predict_time = get_distance_f(my_origin, target_origin) / 1200.0
+		target_origin[0] += target_vel[0] * predict_time
+		target_origin[1] += target_vel[1] * predict_time
+		target_origin[2] += target_vel[2] * predict_time
+
+		// Aim at predicted position
+		new Float:dir[3]
+		dir[0] = target_origin[0] - my_origin[0]
+		dir[1] = target_origin[1] - my_origin[1]
+		dir[2] = target_origin[2] - my_origin[2]
+
+		new Float:len = floatsqroot(dir[0]*dir[0] + dir[1]*dir[1] + dir[2]*dir[2])
+		if(len > 0.0)
+		{
+			dir[0] /= len
+			dir[1] /= len
+			dir[2] /= len
+		}
+
+		new Float:viewangle[3]
+		vector_to_angle(dir, viewangle)
+		set_pev(id, pev_v_angle, viewangle)
+		set_pev(id, pev_angles, viewangle)
+		set_pev(id, pev_fixangle, 1)
+
+		// If zombie, move fast toward target
+		new team = get_user_team(id)
+		if(g_ZombieRound && team == 1)
+		{
+			new Float:vel[3]
+			pev(id, pev_velocity, vel)
+			vel[0] = dir[0] * 320.0
+			vel[1] = dir[1] * 320.0
+			set_pev(id, pev_velocity, vel)
+		}
+	}
+}
+
+public Team_Coordination(id)
+{
+	// All bots target same enemy
+	new i
+	for(i = 1; i <= g_MaxPlayers; i++)
+	{
+		if(i == id)
+			continue
+		if(!is_user_bot(i))
+			continue
+		if(!is_user_alive(i))
+			continue
+
+		if(bot_swarm_target[i] > 0 && is_user_alive(bot_swarm_target[i]))
+			bot_swarm_target[id] = bot_swarm_target[i]
+	}
+}
+
+Find_Nearest_Target(id)
 {
 	new target = 0
 	new Float:nearest_dist = 9999.0
@@ -343,68 +387,37 @@ public Swarm_Think(id)
 		}
 	}
 
-	if(target > 0)
-	{
-		bot_swarm_target[id] = target
-
-		new Float:target_origin[3], Float:my_origin[3]
-		pev(target, pev_origin, target_origin)
-		pev(id, pev_origin, my_origin)
-
-		new Float:target_vel[3]
-		pev(target, pev_velocity, target_vel)
-
-		new Float:predict_time = get_distance_f(my_origin, target_origin) / 1000.0
-		target_origin[0] += target_vel[0] * predict_time
-		target_origin[1] += target_vel[1] * predict_time
-		target_origin[2] += target_vel[2] * predict_time
-
-		new Float:dir[3]
-		dir[0] = target_origin[0] - my_origin[0]
-		dir[1] = target_origin[1] - my_origin[1]
-		dir[2] = target_origin[2] - my_origin[2]
-
-		new Float:len = floatsqroot(dir[0]*dir[0] + dir[1]*dir[1] + dir[2]*dir[2])
-		if(len > 0.0)
-		{
-			dir[0] /= len
-			dir[1] /= len
-			dir[2] /= len
-		}
-
-		new Float:viewangle[3]
-		vector_to_angle(dir, viewangle)
-
-		set_pev(id, pev_v_angle, viewangle)
-		set_pev(id, pev_angles, viewangle)
-		set_pev(id, pev_fixangle, 1)
-
-		if(g_ZombieRound && team == 1)
-		{
-			new Float:vel[3]
-			pev(id, pev_velocity, vel)
-			vel[0] = dir[0] * 300.0
-			vel[1] = dir[1] * 300.0
-			set_pev(id, pev_velocity, vel)
-		}
-	}
+	return target
 }
 
-public Team_Coordination(id)
+Find_Nearest_Enemy(id)
 {
+	new target = 0
+	new Float:nearest_dist = 9999.0
+	new team = get_user_team(id)
+
 	new i
 	for(i = 1; i <= g_MaxPlayers; i++)
 	{
-		if(i == id)
-			continue
-		if(!is_user_bot(i))
-			continue
 		if(!is_user_alive(i))
 			continue
+		if(get_user_team(i) == team)
+			continue
 
-		if(bot_swarm_target[i] > 0 && is_user_alive(bot_swarm_target[i]))
-			bot_swarm_target[id] = bot_swarm_target[i]
+		new Float:origin[3], Float:my_origin[3]
+		pev(i, pev_origin, origin)
+		pev(id, pev_origin, my_origin)
+
+		new Float:dist = get_distance_f(my_origin, origin)
+
+		if(dist < nearest_dist)
+		{
+			nearest_dist = dist
+			target = i
+		}
 	}
+
+	return target
 }
 
 public Event_NewRound()
