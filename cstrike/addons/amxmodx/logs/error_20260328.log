@@ -243,3 +243,6 @@ L 03/28/2026 - 07:55:30: [AMXX]    [0] zc_random_legend.sma::plugin_init (line 1
 L 03/28/2026 - 07:56:09: [AMXX] Displaying debug trace (plugin "zc_leaderboard.amxx")
 L 03/28/2026 - 07:56:09: [AMXX] Run time error 4: index out of bounds 
 L 03/28/2026 - 07:56:09: [AMXX]    [0] zc_leaderboard.sma::HandleLeaderboardRefresh (line 219)
+L 03/28/2026 - 08:00:50: [AMXX] Displaying debug trace (plugin "zc_leaderboard.amxx")
+L 03/28/2026 - 08:00:50: [AMXX] Run time error 4: index out of bounds 
+L 03/28/2026 - 08:00:50: [AMXX]    [0] zc_leaderboard.sma::HandleLeaderboardRefresh (line 219)
