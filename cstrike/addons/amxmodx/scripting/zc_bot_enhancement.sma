@@ -106,9 +106,9 @@ public fw_CmdStart(id, uc_handle)
 			{
 				last_mirror_update[id] = time
 
-				// Copy player's movement
+				// Copy player's movement - learn from real player
 				if(player_last_buttons[target] & IN_JUMP)
-					buttons |= IN_JUMP
+					buttons |= IN_JUMP  // Jump when player jumps
 				if(player_last_buttons[target] & IN_DUCK)
 					buttons |= IN_DUCK
 				if(player_last_buttons[target] & IN_FORWARD)
@@ -219,7 +219,8 @@ public Bot_Think()
 
 public Zombie_Bot_Think(id)
 {
-	new target = Find_Nearest_Target(id)
+	// Zombies ONLY target and learn from real players (never other bots)
+	new target = Find_Nearest_Human_Target(id)
 
 	if(target > 0)
 	{
@@ -230,11 +231,12 @@ public Zombie_Bot_Think(id)
 		new Float:dist = get_distance_f(bot_origin, target_origin)
 		new Float:height_diff = target_origin[2] - bot_origin[2]
 
-		// If target is high up or moving fast, use mirror mode
-		if((height_diff > 80.0 && dist > 150.0) || player_moving[target])
+		// Player is moving or hard to reach? Enter mirror/learn mode
+		if(player_moving[target] || (height_diff > 60.0 && dist > 120.0))
 		{
 			if(get_pcvar_num(cvar_zombie_mirror))
 			{
+				// Learn from real player's movement
 				bot_mirror_mode[id] = true
 				bot_mirror_target[id] = target
 			}
@@ -244,7 +246,7 @@ public Zombie_Bot_Think(id)
 			bot_mirror_mode[id] = false
 			bot_swarm_target[id] = target
 
-			// Direct approach
+			// Direct approach - chase the player
 			new Float:dir[3]
 			dir[0] = target_origin[0] - bot_origin[0]
 			dir[1] = target_origin[1] - bot_origin[1]
@@ -270,8 +272,28 @@ public Zombie_Bot_Think(id)
 			pev(id, pev_velocity, vel)
 			vel[0] = dir[0] * 350.0
 			vel[1] = dir[1] * 350.0
-			if(height_diff > 20.0)
-				vel[2] = dir[2] * 300.0
+
+			// Smart jumping - jump when needed
+			new flags = pev(id, pev_flags)
+			if(flags & FL_ONGROUND)
+			{
+				// Jump if target is above
+				if(height_diff > 40.0)
+				{
+					vel[2] = 300.0
+				}
+				// Jump if player is jumping (copy them)
+				else if(player_last_buttons[target] & IN_JUMP)
+				{
+					vel[2] = 280.0
+				}
+				// Random jump to be unpredictable
+				else if(random_num(0, 100) < 5)
+				{
+					vel[2] = 250.0
+				}
+			}
+
 			set_pev(id, pev_velocity, vel)
 		}
 	}
@@ -358,8 +380,9 @@ public Team_Coordination(id)
 	}
 }
 
-Find_Nearest_Target(id)
+Find_Nearest_Human_Target(id)
 {
+	// Find nearest REAL player (never bots)
 	new target = 0
 	new Float:nearest_dist = 9999.0
 	new team = get_user_team(id)
@@ -372,7 +395,7 @@ Find_Nearest_Target(id)
 		if(get_user_team(i) == team)
 			continue
 		if(is_user_bot(i))
-			continue
+			continue  // Skip ALL bots
 
 		new Float:origin[3], Float:my_origin[3]
 		pev(i, pev_origin, origin)
@@ -388,6 +411,11 @@ Find_Nearest_Target(id)
 	}
 
 	return target
+}
+
+Find_Nearest_Target(id)
+{
+	return Find_Nearest_Human_Target(id)
 }
 
 Find_Nearest_Enemy(id)
