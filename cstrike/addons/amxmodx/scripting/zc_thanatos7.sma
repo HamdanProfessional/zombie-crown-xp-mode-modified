@@ -27,6 +27,10 @@
 #define P_MODEL "models/p_thanatos7.mdl"
 #define W_MODEL "models/w_thanatos7.mdl"
 
+#define V_MODEL_FALLBACK "models/v_m4a1.mdl"
+#define P_MODEL_FALLBACK "models/p_m4a1.mdl"
+#define W_MODEL_FALLBACK "models/w_m4a1.mdl"
+
 new const WeaponSounds[8][] =
 {
 	"weapons/thanatos7-1.wav",
@@ -57,6 +61,7 @@ new g_Had_Thanatos7, g_BeamSpr, g_RailSpr, g_MaxPlayers
 new g_itemid
 new g_MsgCurWeapon, g_MsgWeaponList
 new g_Charging[33]
+new g_VModel[64], g_PModel[64], g_WModel[64]
 new Float:g_ChargeStartTime[33]
 
 // Safety
@@ -106,9 +111,41 @@ public zp_extra_item_selected(player, itemid)
 
 public plugin_precache()
 {
-	engfunc(EngFunc_PrecacheModel, V_MODEL)
-	engfunc(EngFunc_PrecacheModel, P_MODEL)
-	engfunc(EngFunc_PrecacheModel, W_MODEL)
+	// Check if custom models exist, use fallbacks if not
+	if(file_exists(V_MODEL))
+	{
+		copy(g_VModel, charsmax(g_VModel), V_MODEL)
+		engfunc(EngFunc_PrecacheModel, V_MODEL)
+		log_amx("[ZC Thanatos-7] Using custom model: %s", V_MODEL)
+	}
+	else
+	{
+		copy(g_VModel, charsmax(g_VModel), V_MODEL_FALLBACK)
+		engfunc(EngFunc_PrecacheModel, V_MODEL_FALLBACK)
+		log_amx("[ZC Thanatos-7] Custom model not found, using fallback: %s", V_MODEL_FALLBACK)
+	}
+
+	if(file_exists(P_MODEL))
+	{
+		copy(g_PModel, charsmax(g_PModel), P_MODEL)
+		engfunc(EngFunc_PrecacheModel, P_MODEL)
+	}
+	else
+	{
+		copy(g_PModel, charsmax(g_PModel), P_MODEL_FALLBACK)
+		engfunc(EngFunc_PrecacheModel, P_MODEL_FALLBACK)
+	}
+
+	if(file_exists(W_MODEL))
+	{
+		copy(g_WModel, charsmax(g_WModel), W_MODEL)
+		engfunc(EngFunc_PrecacheModel, W_MODEL)
+	}
+	else
+	{
+		copy(g_WModel, charsmax(g_WModel), W_MODEL_FALLBACK)
+		engfunc(EngFunc_PrecacheModel, W_MODEL_FALLBACK)
+	}
 
 	for(new i = 0; i < sizeof(WeaponSounds); i++)
 		engfunc(EngFunc_PrecacheSound, WeaponSounds[i])
@@ -188,8 +225,8 @@ public Event_CurWeapon(id)
 		if(g_OldWeapon[id] != CSW_THANATOS7)
 		{
 			g_OldWeapon[id] = CSW_THANATOS7
-			set_pev(id, pev_viewmodel2, V_MODEL)
-			set_pev(id, pev_weaponmodel2, P_MODEL)
+			set_pev(id, pev_viewmodel2, g_VModel)
+			set_pev(id, pev_weaponmodel2, g_PModel)
 		}
 	} else {
 		g_OldWeapon[id] = CSWID
@@ -283,7 +320,7 @@ public fw_SetModel(ent)
 		if(!pev_valid(Weapon))
 			return FMRES_IGNORED
 
-		engfunc(EngFunc_SetModel, ent, W_MODEL)
+		engfunc(EngFunc_SetModel, ent, g_WModel)
 		return FMRES_SUPERCEDE
 	}
 
@@ -302,8 +339,8 @@ public fw_Item_Deploy_Post(Ent)
 
 	if(Get_BitVar(g_Had_Thanatos7, id))
 	{
-		set_pev(id, pev_viewmodel2, V_MODEL)
-		set_pev(id, pev_weaponmodel2, P_MODEL)
+		set_pev(id, pev_viewmodel2, g_VModel)
+		set_pev(id, pev_weaponmodel2, g_PModel)
 
 		set_pdata_string(id, (492 * 4), WEAPON_ANIM_EXT, -1, 20)
 
