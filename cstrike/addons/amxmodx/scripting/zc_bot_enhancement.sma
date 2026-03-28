@@ -2,18 +2,23 @@
 #include <fakemeta>
 #include <hamsandwich>
 #include <xs>
+#include <zombieplague>
 
 #define PLUGIN "[ZC] Ultimate Bot Enhancement"
-#define VERSION "4.0"
+#define VERSION "5.0"
 #define AUTHOR "Zombie Crown Team"
 
 // CVars
 new cvar_enabled
 new cvar_perfect_aim
-new cvar_aggressive
+new cvar_bot_items
 
 new bool:g_ZombieRound
 new g_MaxPlayers
+
+// Item IDs
+new g_itemid_knife_blink = -1
+new g_itemid_zombie_madness = -1
 
 // Player tracking
 new Float:player_last_origin[33][3]
@@ -25,9 +30,13 @@ new Float:player_last_seen_time[33]
 // Bot state
 new Float:bot_last_jump_time[33]
 new Float:bot_last_strafe_time[33]
+new Float:bot_last_doublejump_time[33]
+new Float:bot_last_item_time[33]
 new Float:bot_target_update_time[33]
 new bot_target[33]
 new bot_strafe_dir[33]  // 0 = left, 1 = right
+new bool:bot_can_doublejump[33]
+new bool:bot_has_jumped_once[33]
 
 public plugin_init()
 {
@@ -35,7 +44,7 @@ public plugin_init()
 
 	cvar_enabled = register_cvar("zc_bot_enhanced", "1")
 	cvar_perfect_aim = register_cvar("zc_bot_perfect_aim", "1")
-	cvar_aggressive = register_cvar("zc_bot_aggressive", "1")
+	cvar_bot_items = register_cvar("zc_bot_buy_items", "1")
 
 	g_MaxPlayers = get_maxplayers()
 
@@ -54,12 +63,25 @@ public plugin_init()
 	// Track player movement and control bot actions
 	register_forward(FM_PlayerPreThink, "fw_PlayerPreThink")
 	register_forward(FM_CmdStart, "fw_CmdStart")
+	register_forward(FM_StartFrame, "fw_StartFrame")
 
 	// Bot think - update every 0.1 seconds
 	set_task(0.1, "Bot_Think", _, _, _, "b")
 
 	register_event("HLTV", "Event_NewRound", "a", "1=0", "2=0")
 	register_logevent("Event_RoundStart", 2, "1=Round_Start")
+}
+
+public plugin_precache()
+{
+	// Get item IDs after ZP loads
+	set_task(1.0, "Init_Items")
+}
+
+public Init_Items()
+{
+	g_itemid_knife_blink = zp_get_extra_item_id("Knife Blink")
+	g_itemid_zombie_madness = zp_get_extra_item_id("Zombie Madness")
 }
 
 // Track real players
@@ -90,6 +112,58 @@ public fw_PlayerPreThink(id)
 	return FMRES_IGNORED
 }
 
+// Handle bot stacking (disable collision when player is high)
+public fw_StartFrame()
+{
+	if(!get_pcvar_num(cvar_enabled))
+		return FMRES_IGNORED
+
+	new bool:player_high = false
+	new Float:player_highest_z = -9999.0
+
+	// Check if any player is very high
+	new i
+	for(i = 1; i <= g_MaxPlayers; i++)
+	{
+		if(!is_user_alive(i))
+			continue
+		if(is_user_bot(i))
+			continue
+
+		new Float:origin[3]
+		pev(i, pev_origin, origin)
+
+		if(origin[2] > player_highest_z)
+			player_highest_z = origin[2]
+	}
+
+	// If player is high, enable stacking
+	if(player_highest_z > 200.0)
+		player_high = true
+
+	// Enable/disable bot collision based on player height
+	for(i = 1; i <= g_MaxPlayers; i++)
+	{
+		if(!is_user_alive(i))
+			continue
+		if(!is_user_bot(i))
+			continue
+
+		if(player_high)
+		{
+			// Disable solid with other bots (allow stacking)
+			set_pev(i, pev_solid, SOLID_NOT)
+		}
+		else
+		{
+			// Re-enable solid
+			set_pev(i, pev_solid, SOLID_SLIDEBOX)
+		}
+	}
+
+	return FMRES_IGNORED
+}
+
 // Control bot movement
 public fw_CmdStart(id, uc_handle)
 {
@@ -115,6 +189,7 @@ public fw_CmdStart(id, uc_handle)
 			pev(target, pev_origin, target_origin)
 
 			new Float:dist = get_distance_f(bot_origin, target_origin)
+			new Float:height_diff = target_origin[2] - bot_origin[2]
 
 			// Strafe while chasing
 			if(dist > 100.0 && dist < 400.0)
@@ -153,6 +228,43 @@ public fw_CmdStart(id, uc_handle)
 				new buttons = get_uc(uc_handle, UC_Buttons)
 				buttons |= IN_DUCK
 				set_uc(uc_handle, UC_Buttons, buttons)
+			}
+
+			// Double jump if target is very high
+			if(height_diff > 100.0)
+			{
+				new flags = pev(id, pev_flags)
+				if((flags & FL_ONGROUND) && !bot_has_jumped_once[id])
+				{
+					// First jump
+					bot_has_jumped_once[id] = true
+					bot_last_doublejump_time[id] = time
+
+					new buttons = get_uc(uc_handle, UC_Buttons)
+					buttons |= IN_JUMP
+					set_uc(uc_handle, UC_Buttons, buttons)
+
+					new Float:vel[3]
+					pev(id, pev_velocity, vel)
+					vel[2] = 300.0
+					set_pev(id, pev_velocity, vel)
+				}
+				else if(!(flags & FL_ONGROUND) && bot_has_jumped_once[id] && (time - bot_last_doublejump_time[id] < 0.3))
+				{
+					// Double jump in air
+					if(time - bot_last_doublejump_time[id] > 0.15)
+					{
+						new Float:vel[3]
+						pev(id, pev_velocity, vel)
+						vel[2] = 280.0
+						set_pev(id, pev_velocity, vel)
+						bot_has_jumped_once[id] = false
+					}
+				}
+			}
+			else if(pev(id, pev_flags) & FL_ONGROUND)
+			{
+				bot_has_jumped_once[id] = false
 			}
 		}
 	}
@@ -273,6 +385,29 @@ public Zombie_Bot_Think(id)
 		set_pev(id, pev_v_angle, viewangle)
 		set_pev(id, pev_angles, viewangle)
 		set_pev(id, pev_fixangle, 1)
+
+		// Buy items occasionally
+		if(get_pcvar_num(cvar_bot_items) && (time - bot_last_item_time[id] > 30.0))
+		{
+			// Buy knife blink if target is far or high
+			if((dist > 300.0 || height_diff > 80.0) && g_itemid_knife_blink != -1)
+			{
+				if(random_num(0, 100) < 30)
+				{
+					zp_force_buy_extra_item(id, g_itemid_knife_blink, 1)
+					bot_last_item_time[id] = time
+				}
+			}
+			// Buy zombie madness if close to target
+			else if(dist < 200.0 && g_itemid_zombie_madness != -1)
+			{
+				if(random_num(0, 100) < 25)
+				{
+					zp_force_buy_extra_item(id, g_itemid_zombie_madness, 1)
+					bot_last_item_time[id] = time
+				}
+			}
+		}
 
 		// Attack if close enough
 		if(dist < 70.0)
@@ -445,8 +580,12 @@ public Event_NewRound()
 		bot_target[i] = 0
 		bot_last_jump_time[i] = 0.0
 		bot_last_strafe_time[i] = 0.0
+		bot_last_doublejump_time[i] = 0.0
+		bot_last_item_time[i] = 0.0
 		bot_target_update_time[i] = 0.0
 		bot_strafe_dir[i] = 0
+		bot_can_doublejump[i] = false
+		bot_has_jumped_once[i] = false
 		player_is_jumping[i] = false
 	}
 }
