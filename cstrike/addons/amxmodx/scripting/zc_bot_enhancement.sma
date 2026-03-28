@@ -5,7 +5,7 @@
 #include <zombiecrown>
 
 #define PLUGIN "[ZC] Ultimate Bot Enhancement"
-#define VERSION "5.1"
+#define VERSION "5.2"
 #define AUTHOR "Zombie Crown Team"
 
 // CVars
@@ -31,12 +31,10 @@ new bool:player_is_jumping[33]
 // Bot state
 new Float:bot_last_jump_time[33]
 new Float:bot_last_strafe_time[33]
-new Float:bot_last_doublejump_time[33]
 new Float:bot_last_item_time[33]
 new Float:bot_target_update_time[33]
 new bot_target[33]
 new bot_strafe_dir[33]
-new bool:bot_has_jumped_once[33]
 new bool:bot_stacking_enabled[33]
 
 public plugin_init()
@@ -66,12 +64,13 @@ public plugin_init()
 	register_forward(FM_PlayerPreThink, "fw_PlayerPreThink")
 	register_forward(FM_CmdStart, "fw_CmdStart")
 	register_forward(FM_StartFrame, "fw_StartFrame")
+	register_forward(FM_AddToFullPack, "fw_AddToFullPack_Post", 1)
 
 	// Bot think - update every 0.1 seconds
 	set_task(0.1, "Bot_Think", _, _, _, "b")
 
 	// Initialize items after ZP loads
-	set_task(5.0, "Init_Items")
+	set_task(2.0, "Init_Items")
 
 	register_event("HLTV", "Event_NewRound", "a", "1=0", "2=0")
 	register_logevent("Event_RoundStart", 2, "1=Round_Start")
@@ -122,6 +121,31 @@ public fw_PlayerPreThink(id)
 	return FMRES_IGNORED
 }
 
+// Handle bot stacking - make bots non-solid to each other
+public fw_AddToFullPack_Post(es_handle, e, ent, host, hostflags, player, pSet)
+{
+	if(!get_pcvar_num(cvar_enabled))
+		return FMRES_IGNORED
+	if(!is_user_bot(ent))
+		return FMRES_IGNORED
+	if(!is_user_alive(ent))
+		return FMRES_IGNORED
+
+	new team = get_user_team(ent)
+
+	// Only zombies need stacking
+	if(team == 1 && g_ZombieRound)
+	{
+		// Make bots non-solid to each other
+		set_es(es_handle, ES_Solid, SOLID_TRIGGER)
+
+		if(get_pcvar_num(cvar_debug) && random_num(0, 100) < 1)
+			log_amx("[ZC Bot] Bot %d set to SOLID_TRIGGER (stacking enabled)", ent)
+	}
+
+	return FMRES_IGNORED
+}
+
 // Handle bot stacking (disable collision when player is high)
 public fw_StartFrame()
 {
@@ -148,7 +172,7 @@ public fw_StartFrame()
 	}
 
 	// If player is high, enable stacking
-	if(player_highest_z > 200.0)
+	if(player_highest_z > 150.0)
 		player_high = true
 
 	// Enable/disable bot collision based on player height
@@ -159,22 +183,31 @@ public fw_StartFrame()
 		if(!is_user_bot(i))
 			continue
 
-		if(player_high)
+		new team = get_user_team(i)
+
+		// Only zombies need stacking
+		if(team == 1 && g_ZombieRound)
 		{
-			// Disable solid with other bots (allow stacking)
-			if(!bot_stacking_enabled[i])
+			if(player_high || bot_stacking_enabled[i])
 			{
-				set_pev(i, pev_solid, SOLID_NOT)
-				bot_stacking_enabled[i] = true
+				// Always make zombies non-solid to each other
+				if(!bot_stacking_enabled[i])
+				{
+					set_pev(i, pev_solid, SOLID_TRIGGER)
+					bot_stacking_enabled[i] = true
+
+					if(get_pcvar_num(cvar_debug))
+						log_amx("[ZC Bot] Bot %d stacking enabled (player high: %d)", i, player_high)
+				}
 			}
-		}
-		else
-		{
-			// Re-enable solid
-			if(bot_stacking_enabled[i])
+			else
 			{
-				set_pev(i, pev_solid, SOLID_SLIDEBOX)
-				bot_stacking_enabled[i] = false
+				// Re-enable solid when player is not high
+				if(bot_stacking_enabled[i])
+				{
+					set_pev(i, pev_solid, SOLID_SLIDEBOX)
+					bot_stacking_enabled[i] = false
+				}
 			}
 		}
 	}
@@ -210,9 +243,9 @@ public fw_CmdStart(id, uc_handle)
 			new Float:height_diff = target_origin[2] - bot_origin[2]
 
 			// Strafe while chasing
-			if(dist > 100.0 && dist < 400.0)
+			if(dist > 50.0 && dist < 500.0)
 			{
-				if(time - bot_last_strafe_time[id] > 0.3)
+				if(time - bot_last_strafe_time[id] > 0.2)
 				{
 					bot_last_strafe_time[id] = time
 					bot_strafe_dir[id] = !bot_strafe_dir[id]
@@ -226,66 +259,45 @@ public fw_CmdStart(id, uc_handle)
 				else
 					buttons |= IN_MOVERIGHT
 
-				// Random jump while strafing
-				new flags = pev(id, pev_flags)
-				if((flags & FL_ONGROUND) && random_num(0, 100) < 15)
-				{
-					buttons |= IN_JUMP
-					new Float:vel[3]
-					pev(id, pev_velocity, vel)
-					vel[2] = 260.0
-					set_pev(id, pev_velocity, vel)
-				}
-
 				set_uc(uc_handle, UC_Buttons, buttons)
 			}
 
+			// Double jump always (never single jump)
+			if((height_diff > 30.0 || player_is_jumping[target] || dist > 150.0))
+			{
+				new flags = pev(id, pev_flags)
+				if(flags & FL_ONGROUND)
+				{
+					if(time - bot_last_jump_time[id] > 0.3)
+					{
+						bot_last_jump_time[id] = time
+
+						// First jump
+						new buttons = get_uc(uc_handle, UC_Buttons)
+						buttons |= IN_JUMP
+						set_uc(uc_handle, UC_Buttons, buttons)
+
+						// Immediately add second jump velocity
+						new Float:vel[3]
+						pev(id, pev_velocity, vel)
+						vel[2] = 320.0  // Higher jump for first part
+						set_pev(id, pev_velocity, vel)
+
+						// Force second jump almost immediately
+						set_task(0.05, "Do_Second_Jump", id)
+
+						if(get_pcvar_num(cvar_debug))
+							log_amx("[ZC Bot] Bot %d double jumping (height: %.1f)", id, height_diff)
+					}
+				}
+			}
+
 			// Duck randomly
-			if(random_num(0, 100) < 5)
+			if(random_num(0, 100) < 8)
 			{
 				new buttons = get_uc(uc_handle, UC_Buttons)
 				buttons |= IN_DUCK
 				set_uc(uc_handle, UC_Buttons, buttons)
-			}
-
-			// Double jump if target is very high
-			if(height_diff > 100.0)
-			{
-				new flags = pev(id, pev_flags)
-				if((flags & FL_ONGROUND) && !bot_has_jumped_once[id])
-				{
-					// First jump
-					bot_has_jumped_once[id] = true
-					bot_last_doublejump_time[id] = time
-
-					new buttons = get_uc(uc_handle, UC_Buttons)
-					buttons |= IN_JUMP
-					set_uc(uc_handle, UC_Buttons, buttons)
-
-					new Float:vel[3]
-					pev(id, pev_velocity, vel)
-					vel[2] = 300.0
-					set_pev(id, pev_velocity, vel)
-
-					if(get_pcvar_num(cvar_debug))
-						log_amx("[ZC Bot] Bot %d double jumping (height diff: %.1f)", id, height_diff)
-				}
-				else if(!(flags & FL_ONGROUND) && bot_has_jumped_once[id] && (time - bot_last_doublejump_time[id] < 0.3))
-				{
-					// Double jump in air
-					if(time - bot_last_doublejump_time[id] > 0.15)
-					{
-						new Float:vel[3]
-						pev(id, pev_velocity, vel)
-						vel[2] = 280.0
-						set_pev(id, pev_velocity, vel)
-						bot_has_jumped_once[id] = false
-					}
-				}
-			}
-			else if(pev(id, pev_flags) & FL_ONGROUND)
-			{
-				bot_has_jumped_once[id] = false
 			}
 		}
 	}
@@ -322,6 +334,23 @@ public fw_CmdStart(id, uc_handle)
 	}
 
 	return FMRES_HANDLED
+}
+
+// Second part of double jump
+public Do_Second_Jump(id)
+{
+	if(!is_user_alive(id))
+		return
+	if(!is_user_bot(id))
+		return
+
+	new Float:vel[3]
+	pev(id, pev_velocity, vel)
+	vel[2] += 200.0  // Add second jump boost
+	set_pev(id, pev_velocity, vel)
+
+	if(get_pcvar_num(cvar_debug))
+		log_amx("[ZC Bot] Bot %d second jump executed", id)
 }
 
 // Perfect aim
@@ -407,25 +436,29 @@ public Zombie_Bot_Think(id)
 		set_pev(id, pev_angles, viewangle)
 		set_pev(id, pev_fixangle, 1)
 
-		// Buy items occasionally
-		if(get_pcvar_num(cvar_bot_items) && g_items_initialized && (time - bot_last_item_time[id] > 30.0))
+		// Buy items more frequently
+		if(get_pcvar_num(cvar_bot_items) && g_items_initialized && (time - bot_last_item_time[id] > 5.0))
 		{
-			// Buy knife blink if target is far or high
-			if((dist > 300.0 || height_diff > 80.0) && g_itemid_knife_blink != -1)
+			new bool:bought_item = false
+
+			// Buy knife blink if target is far or high (70% chance)
+			if((dist > 250.0 || height_diff > 60.0) && g_itemid_knife_blink != -1)
 			{
-				if(random_num(0, 100) < 30)
+				if(random_num(0, 100) < 70)
 				{
 					zp_force_buy_extra_item(id, g_itemid_knife_blink, 1)
 					bot_last_item_time[id] = time
+					bought_item = true
 
 					if(get_pcvar_num(cvar_debug))
 						log_amx("[ZC Bot] Bot %d bought Knife Blink (dist: %.1f, height: %.1f)", id, dist, height_diff)
 				}
 			}
-			// Buy zombie madness if close to target
-			else if(dist < 200.0 && g_itemid_zombie_madness != -1)
+
+			// Buy zombie madness if close to target (60% chance)
+			if(!bought_item && dist < 250.0 && g_itemid_zombie_madness != -1)
 			{
-				if(random_num(0, 100) < 25)
+				if(random_num(0, 100) < 60)
 				{
 					zp_force_buy_extra_item(id, g_itemid_zombie_madness, 1)
 					bot_last_item_time[id] = time
@@ -449,27 +482,6 @@ public Zombie_Bot_Think(id)
 		{
 			// Chase target
 			new flags = pev(id, pev_flags)
-			new bool:should_jump = false
-
-			// Smart jumping
-			if(height_diff > 50.0 && (flags & FL_ONGROUND))
-				should_jump = true
-
-			if(player_is_jumping[target] && (flags & FL_ONGROUND))
-				should_jump = true
-
-			// Jump over obstacles
-			if((flags & FL_ONGROUND) && random_num(0, 100) < 5)
-				should_jump = true
-
-			if(should_jump && (time - bot_last_jump_time[id] > 0.5))
-			{
-				bot_last_jump_time[id] = time
-				new Float:vel[3]
-				pev(id, pev_velocity, vel)
-				vel[2] = 270.0
-				set_pev(id, pev_velocity, vel)
-			}
 
 			// Move toward target
 			new Float:push_dir[2]
@@ -489,7 +501,7 @@ public Zombie_Bot_Think(id)
 			if(flags & FL_ONGROUND)
 			{
 				// Faster when far, slower when close
-				new Float:speed = (dist > 200.0) ? 250.0 : 180.0
+				new Float:speed = (dist > 200.0) ? 280.0 : 200.0
 				vel[0] = push_dir[0] * speed
 				vel[1] = push_dir[1] * speed
 				set_pev(id, pev_velocity, vel)
@@ -607,13 +619,14 @@ public Event_NewRound()
 		bot_target[i] = 0
 		bot_last_jump_time[i] = 0.0
 		bot_last_strafe_time[i] = 0.0
-		bot_last_doublejump_time[i] = 0.0
 		bot_last_item_time[i] = 0.0
 		bot_target_update_time[i] = 0.0
 		bot_strafe_dir[i] = 0
-		bot_has_jumped_once[i] = false
 		bot_stacking_enabled[i] = false
 	}
+
+	// Remove any pending tasks
+	remove_task(0, 0)
 }
 
 public Event_RoundStart()
